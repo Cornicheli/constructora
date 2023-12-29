@@ -1,0 +1,19 @@
+{
+      "aboutUs": [
+            {
+                  "image": "https://www.svgrepo.com/show/364275/bookmarks-simple-fill.svg",
+                  "title": "MEJOR CALIDAD",
+                  "subTitle": " Innovamos en la construcción de sistemas modulares, estructurales y sustentables, que nos permiten desarrollos sin límites."
+            },
+            {
+                  "image": "https://cdn-icons-png.flaticon.com/512/37/37663.png",
+                  "title": "MENOR TIEMPO",
+                  "subTitle": "Aplicando los avances tecnológicos a los nuevos desafíos constructivos conseguimos optimizar materiales y plazos de realización."
+            },
+            {
+                  "image": "https://cdn-icons-png.flaticon.com/512/17/17115.png",
+                  "title": "ESPECIALISTAS",
+                  "subTitle": "Contamos con un grupo de asesoramiento que te orientará en el desarrollo de tu proyecto."
+            }
+      ]
+}
