@@ -1,6 +1,6 @@
 import { Nav, Carrousel, Proyect } from './components'
-import { LayoutAboutUs, LayoutTypologies } from './layout'
-import Footer from './components/Footer'
+import { LayoutAboutUs, LayoutTypologies, LayoutFooter } from './layout'
+// import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -10,7 +10,8 @@ const App = () => {
       <LayoutAboutUs />
       <Proyect />
       <LayoutTypologies />
-      <Footer />
+      {/* <Footer /> */}
+      <LayoutFooter />
     </div>
   )
 }
