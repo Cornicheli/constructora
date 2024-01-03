@@ -19,7 +19,7 @@ const LayoutFooter: React.FC = () => {
             <>
                   <div className="header">
 
-                        <div className="inner-header flex justify-evenly items-center">
+                        <div className="inner-header flex justify-evenly items-center flex-wrap">
 
                               <div className="flex flex-col my-5 w-72 items-center justify-center">
                                     <div className='h-36 w-72'>
