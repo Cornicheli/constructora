@@ -1,5 +1,5 @@
 import { Nav, Carrousel, Proyect } from './components'
-import { LayoutAboutUs, LayoutTypologies, LayoutFooter } from './layout'
+import { LayoutAboutUs, LayoutTypologies } from './layout'
 // import Footer from './components/Footer'
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       <Proyect />
       <LayoutTypologies />
       {/* <Footer /> */}
-      <LayoutFooter />
+      {/* <LayoutFooter /> */}
     </div>
   )
 }

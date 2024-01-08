@@ -6,7 +6,7 @@ const Proyect = () => {
       return (
             <section className='relative'>
                   <div className="absolute -top-20" id="proyect" />
-                  <h1 className='text-4xl text-center font-bold text-[#1b1b1c] pt-10'>Proyectos</h1>
+                  <h1 className='text-4xl text-center font-bold text-[#0E2230] pt-10'>Proyectos</h1>
                   <div className=" flex flex-wrap flex-row gap-10 items-center justify-center py-10">
                         {
                               proyect.proyect.map((item, index) =>
@@ -15,7 +15,7 @@ const Proyect = () => {
                                                 <img className="w-full h-full rounded-t-xl bg-cover" src={item.image} alt="Image" />
                                           </div>
                                           <div className=" w-full flex flex-col justify-center h-1/4">
-                                                <h1 className='font-semibold text-[#1b1b1cd3] ml-5 text-lg'>{item.title}</h1>
+                                                <h1 className='font-semibold text-[#0E2230] ml-5 text-lg'>{item.title}</h1>
                                                 <h1 className='font-medium text-[#1b1b1cab] ml-5'>{item.subTitle}</h1>
                                           </div>
                                     </div>
