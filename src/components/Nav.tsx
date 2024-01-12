@@ -14,7 +14,7 @@ const Nav = () => {
       const [open, setOpen] = useState(false);
       return (
             <div className='shadow-md w-full top-0 fixed z-10 left-0 '>
-                  <div className='flex items-center justify-between bg-white px-9'>
+                  <div className='flex items-center justify-between bg-white '>
                         <span className='h-26 w-72'>
                               <img className='w-72 h-full bg-cover' src={image} />
                         </span>

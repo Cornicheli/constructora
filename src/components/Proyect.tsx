@@ -10,7 +10,7 @@ const Proyect = () => {
                   <div className=" flex flex-wrap flex-row gap-10 items-center justify-center py-10">
                         {
                               proyect.proyect.map((item, index) =>
-                                    <div className="flex flex-col items-center justify-center w-[450px] h-80 m-auto border-2 shadow-lg rounded-xl mx-5 my-5 hover:scale-105 transition duration-100 ease-out md:ease-in" key={index}>
+                                    <div className="flex flex-col items-center justify-center h-80 m-auto border-2 shadow-lg rounded-xl mx-5 my-5 hover:scale-105 transition duration-100 ease-out md:ease-in w-[375px] md:w-[450px] lg:w-[375px] 2xl:w-[475px]" key={index}>
                                           <div className=" w-full h-4/5 overflow-hidden rounded-t-xl">
                                                 <img className="w-full h-full rounded-t-xl bg-cover" src={item.image} alt="Image" />
                                           </div>
