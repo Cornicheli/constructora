@@ -1,49 +1,49 @@
 {
       "proyect": [
             {
-                  "image": "https://i.pinimg.com/736x/b4/8e/40/b48e4041157fbeccadcc883a8e7b5da8.jpg",
-                  "title": "Casa La Folie",
-                  "subTitle": "Costa Esmeralda"
-            },
-            {
-                  "image": "https://canalhogar.com/wp-content/uploads/2023/10/25-planos-y-Disenos-de-Casas-de-2-Pisos-Modernas-800x600.jpg",
-                  "title": "Casa Aliwen",
-                  "subTitle": "Barrio La Herradura"
+                  "image": "https://www.lafaustinavgb.com.ar/wp-content/uploads/2022/05/la-faustina-casas-de-campo-villa-general-belgrano-3.jpg",
+                  "title": "La Faustina",
+                  "subTitle": "Casas De Campo"
             },
             {
                   "image": "https://media.puntal.com.ar/p/02759468c2c4fc5208f662132e28f20a/adjuntos/270/imagenes/001/177/0001177193/web-casa-bosquejpg.jpg",
-                  "title": "Casa Punta Perdíz",
+                  "title": "Punta Perdíz",
                   "subTitle": "Cariló"
             },
             {
                   "image": "https://resizer.glanacion.com/resizer/v2/durante-la-noche-el-techo-iluminado-enfatiza-su-6RI26MUUCZBJLCZ7W5YGEF7RM4.png?auth=9b195024dd39ecb93ffd2f00c36c0bce8440874ffcad907b98a4faff5dfeb373&width=420&height=280&quality=70&smart=true",
-                  "title": "Casa Magnolia",
+                  "title": "Magnolia",
                   "subTitle": "Pinamar"
             },
             {
-                  "image": "https://gruponelmar.com.ar/wp-content/uploads/2023/03/render2-1024x635.jpg",
-                  "title": "Los Pinos · Oost",
-                  "subTitle": "Mar de Ostende"
+                  "image": "https://static1.sosiva451.com/49787511/77ba268a-1b59-45e4-9864-9e7741d72560_u_large.jpg",
+                  "title": "Nordelta",
+                  "subTitle": "Av Los Lagos"
             },
             {
-                  "image": "https://images.homify.com/v1488238919/p/photo/image/1872149/R4.jpg",
-                  "title": "Casa La Herradura",
-                  "subTitle": "Isla del Golf · Pinamar"
+                  "image": "https://imgar.zonapropcdn.com/avisos/resize/1/00/50/81/81/34/1200x1200/1845294646.jpg?isFirstImage=true",
+                  "title": "Canning",
+                  "subTitle": "La Alameda"
             },
             {
-                  "image": "https://i.pinimg.com/736x/d5/94/93/d59493ce88764c1dfd9b0fabb207fe9e.jpg",
-                  "title": "Casa Isla",
-                  "subTitle": "Isla del Golf · Pinamar"
+                  "image": "https://static1.sosiva451.com/37275621/9dc9d0fd-b049-4da6-a18b-dfadc1605264_u_large.jpg",
+                  "title": "Nordelta",
+                  "subTitle": "Barrio Los Lagos"
             },
             {
-                  "image": "https://casactualdiseno.com/wp-content/uploads/2021/07/qe_01.jpg",
-                  "title": "Casa Senderos",
-                  "subTitle": "Barrio Senderos II Costa Esmeralda"
+                  "image": "https://imgar.zonapropcdn.com/avisos/resize/1/00/51/27/40/53/1200x1200/1857806482.jpg?isFirstImage=true",
+                  "title": "Canning",
+                  "subTitle": "Los Jazmines"
             },
             {
-                  "image": "https://casactualdiseno.com/wp-content/uploads/2021/06/de_3-Photo.jpg",
-                  "title": "Casa Senderos",
-                  "subTitle": "Barrio Senderos II Costa Esmeralda"
+                  "image": "https://imgar.zonapropcdn.com/avisos/resize/1/00/52/22/50/50/1200x1200/1878866508.jpg?isFirstImage=true",
+                  "title": "Escobar",
+                  "subTitle": "Puertos Del Lago"
+            },
+            {
+                  "image": "https://static1.sosiva451.com/09844641/84c69c0d-77d5-49f2-be7b-a033bafcbfa5_u_large.jpg",
+                  "title": " Nordelta",
+                  "subTitle": "Los Lagos"
             }
       ]
 }

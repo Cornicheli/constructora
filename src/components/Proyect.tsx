@@ -28,3 +28,11 @@ const Proyect = () => {
 }
 
 export default Proyect
+
+
+
+// {
+//       "image": "https://canalhogar.com/wp-content/uploads/2023/10/25-planos-y-Disenos-de-Casas-de-2-Pisos-Modernas-800x600.jpg",
+//       "title": "Aliwen",
+//       "subTitle": "Barrio La Herradura"
+// },
