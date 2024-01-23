@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 
-function App() {
+function Carrousel() {
       const slides = [
             {
                   url: 'https://www.waterair.com/wp-content/uploads/2021/10/choisir-sa-piscine.jpg',
@@ -96,4 +96,4 @@ function App() {
       );
 }
 
-export default App;
+export default Carrousel;

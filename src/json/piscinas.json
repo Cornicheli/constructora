@@ -1,0 +1,29 @@
+{
+      "piscinas": [
+            {
+                  "title": "Marcado",
+                  "subTitle": "Una vez finalizada la excavación, se darán las pendientes exactas del fondo de la piscina.",
+                  "image": "https://www.lafaustinavgb.com.ar/wp-content/uploads/2022/05/la-faustina-casas-de-campo-villa-general-belgrano-3.jpg"
+            },
+            {
+                  "title": "Armadura",
+                  "subTitle": "Sobre el encofrado se colocará una doble capa de armadura, cuya cuantía y separaciones dependerán, en cada caso, del tipo de terreno y de las distintas profundidades de agua. Todo esto según los cálculos del equipo técnico.",
+                  "image": "https://www.lafaustinavgb.com.ar/wp-content/uploads/2022/05/la-faustina-casas-de-campo-villa-general-belgrano-3.jpg"
+            },
+            {
+                  "title": "Excavacion",
+                  "subTitle": "Sobre el encofrado y la armadura se proyectará una capa de Hormigón en piso y paredes. El espesor de la capa dependerá del tipo de terreno, de las profundidades de agua y se hará según los cálculos de nuestro departamento técnico.",
+                  "image": "https://www.lafaustinavgb.com.ar/wp-content/uploads/2022/05/la-faustina-casas-de-campo-villa-general-belgrano-3.jpg"
+            },
+            {
+                  "title": "Hormigon",
+                  "subTitle": "Se colocará una vez finalizado el revoque. Los mismos pueden ser nacionales o importados con distintos tipos de guardas.",
+                  "image": "https://i.ytimg.com/vi/1F9JimAh7Pw/maxresdefault.jpg"
+            },
+            {
+                  "title": "Revestimiento",
+                  "subTitle": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis minus voluptates ut incidunt voluptatem reprehenderit voluptas impedit inventore iure eos?",
+                  "image": "https://i.ytimg.com/vi/N_1gCFQVOVc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA_1qD6A2SlFecsaKy3_jnId9LePQ"
+            }
+      ]
+}

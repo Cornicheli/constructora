@@ -10,11 +10,13 @@ const Nav = () => {
             { name: "Tipologias", link: "#tipologias" },
             { name: "Proyectos", link: "#proyect" },
             { name: "Contacto", link: "#footer" },
+            { name: "Piscinas", link: "#piscinas" },
       ];
+
       const [open, setOpen] = useState(false);
       return (
             <div className='shadow-md w-full top-0 fixed z-10 left-0 '>
-                  <div className='flex items-center justify-between bg-white '>
+                  <div className='flex items-center justify-between bg-white'>
                         <span className='h-26 w-72'>
                               <img className='w-72 h-full bg-cover' src={image} />
                         </span>

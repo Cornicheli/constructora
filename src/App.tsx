@@ -1,6 +1,7 @@
 import { Nav, Carrousel, Proyect } from './components'
+import CardModels from './components/CardModels'
 import { LayoutAboutUs, LayoutTypologies } from './layout'
-// import Footer from './components/Footer'
+import LayoutPiscinas from './layout/LayoutPiscinas'
 
 const App = () => {
   return (
@@ -9,9 +10,9 @@ const App = () => {
       <Carrousel />
       <LayoutAboutUs />
       <Proyect />
+      <LayoutPiscinas />
+      <CardModels />
       <LayoutTypologies />
-      {/* <Footer /> */}
-      {/* <LayoutFooter /> */}
     </div>
   )
 }

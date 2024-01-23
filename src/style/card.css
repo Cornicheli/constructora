@@ -1,0 +1,42 @@
+.item-card {
+      width: 350px;
+      height: 380px;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 1;
+      transition: opacity 500ms;
+      position: relative;
+}
+
+.txt {
+      position: absolute;
+      opacity: 1;
+      z-index: 9999;
+}
+
+.item-card:hover .txt {
+      opacity: 1;
+      transition: opacity 500ms;
+}
+
+.item-card h2 {
+      font-size: 25px;
+}
+
+.item-card h2:after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 2px;
+      background-color: white;
+      transition: width .5s .2s;
+}
+
+.item-card:hover h2:after {
+      width: 100%;
+}
