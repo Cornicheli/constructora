@@ -1,20 +1,19 @@
-import { Nav, Carrousel, Proyect } from './components'
-import CardModels from './components/CardModels'
-import { LayoutAboutUs, LayoutTypologies } from './layout'
-import LayoutPiscinas from './layout/LayoutPiscinas'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Nav } from './components';
+import Constructora from "./pages/Constructora";
+import Piscinas from './pages/Piscinas';
 
 const App = () => {
   return (
-    <div className=" w-ful h-full">
+    <BrowserRouter >
       <Nav />
-      <Carrousel />
-      <LayoutAboutUs />
-      <Proyect />
-      <LayoutPiscinas />
-      <CardModels />
-      <LayoutTypologies />
-    </div>
-  )
-}
+      <Routes>
+        <Route path='/' element={<Constructora />} />
+        <Route path='/piscinas' element={<Piscinas />} />
+      </Routes>
 
-export default App
+    </BrowserRouter>
+  );
+};
+
+export default App;

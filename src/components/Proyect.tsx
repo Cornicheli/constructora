@@ -4,8 +4,8 @@ import '../style/footer.css'
 // grid grid-flow-row-dense grid-cols-1 gap-y-10 mt-10 mb-16 w-full md:grid-cols-1 lg:grid-cols-3
 const Proyect = () => {
       return (
-            <section className='relative'>
-                  <div className="absolute -top-20" id="proyect" />
+            <section className='relative' id='proyect'>
+                  <div className="absolute -top-20" />
                   <h1 className='text-4xl text-center font-bold text-[#0E2230] pt-10'>Proyectos</h1>
                   <div className=" flex flex-wrap flex-row gap-10 items-center justify-center py-10">
                         {

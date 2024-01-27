@@ -3,7 +3,6 @@ import typologies from "../json/typologies.json";
 const Typologies = () => {
       return (
             // grid grid-flow-row-dense grid-cols-1 gap-x-8 gap-y-5 md:grid-cols-1 lg:grid-cols-1 h-min-96 mt-10
-
             <>
                   <div className="flex flex-col items-center justify-center w-3/4">
                         <h1 className=" text-4xl text-center font-bold  text-white">

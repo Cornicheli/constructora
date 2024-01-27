@@ -15,9 +15,7 @@ import image from '../assets/images.png'
 const Footer = () => {
 
       return (
-            <div
-                  className="grid grid-flow-row-dense grid-cols-1 gap-x-8 gap-y-5 lg:grid-cols-3 md:grid-cols-1 bg-[#ffffffcd] justify-items-center items-center h-min-96"
-                  id='footer'>
+            <div className="grid grid-flow-row-dense grid-cols-1 gap-x-8 gap-y-5 lg:grid-cols-3 md:grid-cols-1 bg-[#ffffffcd] justify-items-center items-center h-min-96"            >
                   <div className="flex flex-col my-5 w-72 items-center justify-center">
                         <div className='h-32 w-72'>
                               <img className='w-80 h-28 bg-cover' src={image} />

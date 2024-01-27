@@ -17,7 +17,7 @@ import whatsapp from '../assets/whatsapp.png'
 const LayoutFooter: React.FC = () => {
       return (
             <>
-                  <div className="header">
+                  <div className="header" id='footer'>
 
                         <svg
                               className="waves"

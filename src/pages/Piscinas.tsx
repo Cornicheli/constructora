@@ -1,56 +1,39 @@
+import { Carrousel } from "../components"
+import CardModels from "../components/CardModels"
+import { LayoutFooter } from "../layout"
+import LayoutPiscinas from "../layout/LayoutPiscinas"
+import '../style/card.css'
 
 const Piscinas = () => {
 
-      const piscinas = [
-            {
-                  "title": "Marcado",
-                  "subTitle": "Una vez finalizada la excavación, se darán las pendientes exactas del fondo de la piscina.",
-                  "image": "https://www.lafaustinavgb.com.ar/wp-content/uploads/2022/05/la-faustina-casas-de-campo-villa-general-belgrano-3.jpg",
-            },
-            {
-                  "title": "Excavacion",
-                  "subTitle": "Se ejecuta mediante máquina excavadora, previo trazado de la piscina sobre el terreno.",
-                  "image": "https://www.excavacionesmuchamiel.com/wp-content/uploads/2021/07/excavaciones-muchamiel-piscinas.jpeg",
-            },
-            {
-                  "title": "Armadura",
-                  "subTitle": "Sobre el encofrado se colocará una doble capa de armadura, cuya cuantía y separaciones dependerán, en cada caso, del tipo de terreno y de las distintas profundidades de agua. Todo esto según los cálculos del equipo técnico.",
-                  "image": "https://www.lafaustinavgb.com.ar/wp-content/uploads/2022/05/la-faustina-casas-de-campo-villa-general-belgrano-3.jpg",
-            },
-            {
-                  "title": "Excavacion",
-                  "subTitle": "Sobre el encofrado y la armadura se proyectará una capa de Hormigón en piso y paredes. El espesor de la capa dependerá del tipo de terreno, de las profundidades de agua y se hará según los cálculos de nuestro departamento técnico.",
-                  "image": "https://www.lafaustinavgb.com.ar/wp-content/uploads/2022/05/la-faustina-casas-de-campo-villa-general-belgrano-3.jpg",
-            }
-            ,
-            {
-                  "title": "Hormigon",
-                  "subTitle": "Se colocará una vez finalizado el revoque. Los mismos pueden ser nacionales o importados con distintos tipos de guardas.",
-                  "image": "https://i.ytimg.com/vi/1F9JimAh7Pw/maxresdefault.jpg",
-            },
-            {
-                  "title": "Revestimiento",
-                  "subTitle": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis minus voluptates ut incidunt voluptatem reprehenderit voluptas impedit inventore iure eos?",
-                  "image": "https://i.ytimg.com/vi/N_1gCFQVOVc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA_1qD6A2SlFecsaKy3_jnId9LePQ",
-            }
-
-      ]
-
       return (
-            <main id="piscinas" className="flex items-center justify-center flex-col">
-                  <section className='flex items-center justify-center flex-wrap'>
-                        {
-                              piscinas.map((item, index) =>
-                                    // <div className="h-80 flex-wrap bg-cover relative m-5 rounded-xl w-[375px] md:w-[450px] lg:w-[375px] 2xl:w-[475px]" key={index} style={{ backgroundImage: `url(${item.image})` }}>
-                                    <div key={index} className='item-card relative rounded-xl h-80 w-[375px] md:w-[450px] lg:w-[375px] 2xl:w-[475px]'>
-                                          <img className='h-100 w-100 rounded-xl bg-cover' src={item.image} alt='products' />
-                                          <h1 className='absolute bottom-5 w-full text-center font-semibold text-white text-xl'>{item.title}</h1>
-                                          <h3 className="txt">{item.subTitle}</h3>
-                                    </div>
-                              )
-                        }
-                  </section>
-            </main>
+            <span id="piscinas">
+                  <Carrousel />
+                  <main className=' flex flex-col xl:flex-row flex-wrap justify-center items-center h-auto m-12 w-full'>
+                        <figure className="w-[350px] h-[500px] lg:w-[450px] lg:h-[550px] ">
+                              <img
+                                    className="w-full h-full rounded-xl bg-cover"
+                                    src="https://www.elmueble.com/medio/2022/07/20/porche-de-canizo-con-sofas-al-lado-de-una-piscina-00546518_92a7d570_1280x1920.jpg"
+                                    alt="imagen-pileta"
+                              />
+                        </figure>
+                        <div className='grid grid-cols-1 grid-rows-1'>
+                              <section className="lg:w-[600px] lg:ml-20">
+                                    <p className="text-[#1b1b1cab] font-bold my-4">REALIZAMOS LAS MEJORES PISCINAS</p>
+                                    <h1 className='my-4 font-semibold text-3xl text-[#0E2230] '>Somos constructores de <br /> piscinas y expertos en su mantenimiento</h1>
+                                    <h3 className="text-lg my-4">La experiencia en las piscina de hormigon elaborado segun plano en vivienda unifamiliar
+                                          y mantenimiento con extensa trayectoria de más de cuarenta años. Esta continuidad y permanencia en el mercado permite ofrecer la mayor garantía en sistemas constructivos y servicios para piscinas domiciliarias, clubes, estancias e instituciones deportivas en cualquier punto del país.
+                                    </h3>
+                                    <p className="text-[#1b1b1cab] font-bold my-4 text-base">Nos ubicamos en Berazategui centro, Prov. Bs As.</p>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419512.4122877679!2d-58.70162527817395!3d-34.76967881954899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f1029b21ec7%3A0xcd3bcc3bd993eaca!2sBerazategui%20centro!5e0!3m2!1ses!2sar!4v1706205807964!5m2!1ses!2sar"
+                                          width="450" height="250" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                              </section>
+                        </div>
+                  </main>
+                  <LayoutPiscinas />
+                  <CardModels />
+                  <LayoutFooter />
+            </span>
       )
 }
 
