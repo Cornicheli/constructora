@@ -43,8 +43,8 @@ const CardModels = () => {
                         Nuestros servicios
                   </h1>
                   {/* flex-col xl:flex-row  */}
-                  <div className=' flex flex-wrap flex-col xl:flex-row justify-around items-center mb-12 w-full'>
-                        <img src={plano} alt="" className="h-92 w-92 lg:w-[475px] rounded-xl bg-cover" />
+                  <div className=' flex flex-wrap flex-col-reverse xl:flex-row justify-around items-center mb-12 w-full'>
+                        <img src={plano} alt="" className="h-92 w-[350px] lg:w-[450px] m-5 rounded-xl bg-cover" />
                         <div className='flex flex-col'>
                               <div className='grid grid-cols-1 grid-rows-4 gap-14 lg:grid-cols-3 lg:grid-rows-2 xl:grid-cols-3 xl:grid-rows-2'>
                                     <section className='item-card relative h-52 rounded shadow-2xl shadow-black m-1  xl:m-0 w-[275px] xl:w-[250px] 2xl:w-[300px]'>
