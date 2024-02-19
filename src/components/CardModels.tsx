@@ -22,7 +22,7 @@ const CardModels = () => {
             {
                   "title": "Hormigon",
                   "subTitle": "Se colocará una vez finalizado el revoque. Los mismos pueden ser nacionales o importados con distintos tipos de guardas.",
-                  "image": "https://piscinasmurillo.com.ar/wp-content/uploads/2021/07/piscina-2.jpg",
+                  "image": "https://www.topciment.com/es/img/news/piscina-hormigon-impreso-madera.jpg",
             },
             {
                   "title": "Revestimiento",
