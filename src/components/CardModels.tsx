@@ -7,31 +7,37 @@ const CardModels = () => {
             {
                   "title": "Marcado",
                   "subTitle": "Una vez finalizada la excavación, se darán las pendientes exactas del fondo de la piscina.",
-                  "image": "https://www.piscinadecor.com/wp-content/uploads/2023/07/piscinas-fibra-madrid.jpg",
+                  "image": '/public/imagen/marcado.jpg'
+                  // "image": "https://www.piscinadecor.com/wp-content/uploads/2023/07/piscinas-fibra-madrid.jpg",
             },
             {
                   "title": "Excavacion",
                   "subTitle": "Se ejecuta mediante máquina excavadora, previo trazado de la piscina sobre el terreno.",
-                  "image": "https://vodapiscinas.com.ar/wp-content/uploads/2022/11/voda-piscinas-jacuzzi-redondo-scaled.jpg",
+                  "image": '/public/imagen/excavacion.jpg'
+                  // "image": "https://vodapiscinas.com.ar/wp-content/uploads/2022/11/voda-piscinas-jacuzzi-redondo-scaled.jpg",
             },
             {
                   "title": "Armadura",
                   "subTitle": "Sobre el encofrado se colocará una doble capa de armadura, cuya cuantía y separaciones dependerán, en cada caso, del tipo de terreno y de las distintas profundidades de agua. Todo esto según los cálculos del equipo técnico.",
-                  "image": "https://images.homify.com/v1475255908/p/photo/image/1662676/7.jpg",
+                  "image": '/public/imagen/armadura.jpg'
+                  // "image": "https://images.homify.com/v1475255908/p/photo/image/1662676/7.jpg",
             },
             {
                   "title": "Hormigon",
                   "subTitle": "Se colocará una vez finalizado el revoque. Los mismos pueden ser nacionales o importados con distintos tipos de guardas.",
-                  "image": "https://www.topciment.com/es/img/news/piscina-hormigon-impreso-madera.jpg",
+                  "image": '/public/imagen/hormigon.jpg'
+                  // "image": "https://www.topciment.com/es/img/news/piscina-hormigon-impreso-madera.jpg",
             },
             {
                   "title": "Revestimiento",
                   "subTitle": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis minus voluptates ut incidunt voluptatem reprehenderit voluptas impedit inventore iure eos?",
-                  "image": "https://www.rubi.com/es/blog/wp-content/uploads/2022/08/MicrosoftTeams-image-16-1024x684.jpg",
+                  "image": "/public/imagen/revestimiento.jpg",
+                  // "image": "https://www.rubi.com/es/blog/wp-content/uploads/2022/08/MicrosoftTeams-image-16-1024x684.jpg",
             },
             {
                   "title": "De Obra",
                   "subTitle": "Sobre el encofrado y la armadura se proyectará una capa de Hormigón en piso y paredes. El espesor de la capa dependerá del tipo de terreno, de las profundidades de agua y se hará según los cálculos de nuestro departamento técnico.",
+                  // "image": '/public/imagen/obra.jpg'
                   "image": "https://grupo-pages.com/wp-content/uploads/2021/05/Tipos-de-Piscinas-Construccio%CC%81n-GRUPO-PAGE%CC%80S-BCN.jpeg",
             }
 

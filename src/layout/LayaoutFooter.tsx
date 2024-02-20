@@ -6,7 +6,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { MdWatchLater } from "react-icons/md";
 import { MdAlternateEmail } from "react-icons/md";
 import { MdSmartphone } from "react-icons/md";
-import { MdEmail } from "react-icons/md";
+// import { MdEmail } from "react-icons/md";
 
 import facebook from '../assets/facebook.png'
 import instagram from '../assets/instagram.png'
@@ -76,15 +76,7 @@ const LayoutFooter: React.FC = () => {
                                                 </section>
                                           )
                                     }
-                              </div>
-
-                              <div className=" flex items-center flex-col my-5 w-72 justify-center z-10">
-                                    <h3 className='text-lg text-[#030608] underline text-center mb-8 border-0 font-semibold'>Envia tu consulta</h3>
-                                    <label className='flex flex-row items-center '>
-                                          <MdEmail />
-                                          <input className='w-72 h-12 border-b-2 outline-none ml-2 p-5 bg-transparent font-semibold placeholder-shown:text-black' type="email" name="" id="" placeholder='Ingrese su mail' />
-                                    </label>
-                                    <div className='flex flex-row items-center gap-10 mt-10 justify-center'>
+                                    <div className='flex flex-row items-center gap-10 justify-center'>
                                           <div className='w-8 flex justify-center items-center'>
                                                 <a href='#'>
                                                       <img
@@ -95,7 +87,8 @@ const LayoutFooter: React.FC = () => {
                                                 </a>
                                           </div>
                                           <div className='w-8 flex justify-center items-center'>
-                                                <a href='#'>
+                                                <a href='https://www.instagram.com/natatoriosturtle/'
+                                                      target='about_blank'>
                                                       <img
                                                             className='w-full'
                                                             src={instagram}
@@ -114,12 +107,20 @@ const LayoutFooter: React.FC = () => {
                                           </div>
                                     </div>
                               </div>
+
+                              <div className=" flex items-center flex-col my-5 w-72 justify-center z-10">
+                                    <p className="text-[#030608] text-lg mb-2 font-semibold">Nos ubicamos en Berazategui centro, Prov. Bs As.</p>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419512.4122877679!2d-58.70162527817395!3d-34.76967881954899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f1029b21ec7%3A0xcd3bcc3bd993eaca!2sBerazategui%20centro!5e0!3m2!1ses!2sar!4v1706205807964!5m2!1ses!2sar"
+                                          style={{ border: 0, width: '300px', height: "160px", borderRadius: '5px' }} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                                    {/* width="350" height="175" */}
+                                    {/* <h3 className='text-lg text-[#030608] underline text-center mb-8 border-0 font-semibold'>Envia tu consulta</h3>
+                                    <label className='flex flex-row items-center '>
+                                          <MdEmail />
+                                          <input className='w-72 h-12 border-b-2 outline-none ml-2 p-5 bg-transparent font-semibold placeholder-shown:text-black' type="email" name="" id="" placeholder='Ingrese su mail' />
+                                    </label> */}
+                              </div>
                         </div>
-
-
-
                   </div>
-
             </>
       );
 };

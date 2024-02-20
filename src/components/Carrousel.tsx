@@ -7,10 +7,16 @@ function Carrousel() {
                   url: 'https://www.waterair.com/wp-content/uploads/2021/10/choisir-sa-piscine.jpg',
             },
             {
+                  url: 'https://www.piscinadecor.com/wp-content/uploads/2023/07/piscinas-fibra-madrid.jpg'
+            },
+            {
                   url: 'https://salamancamolina.com/wp-content/uploads/2019/08/architecture-1477098.jpg',
             },
             {
                   url: 'https://www.topciment.com/imagenes/news/hormigon-impreso-piscina-con-molde-rosa-de-los-vientos.jpg',
+            },
+            {
+                  url: 'https://images.homify.com/v1475255908/p/photo/image/1662676/7.jpg'
             },
             {
                   url: 'https://www.topciment.com/imagenes/news/vivienda-con-terraza-de-hormigon-impreso-piscina.jpg',
