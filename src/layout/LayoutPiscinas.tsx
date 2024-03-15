@@ -16,20 +16,19 @@ const LayoutPiscinas = () => {
 
       const piscinas = [
             { "id": 1, "image": dis2, "imageHover": dis2a },
-            { "id": 2, "image": dis3, "imageHover": dis3a },
-            { "id": 4, "image": dis4, "imageHover": dis4a },
-            { "id": 5, "image": dis5, "imageHover": dis5a },
             { "id": 6, "image": dis6, "imageHover": dis6a },
-            { "id": 7, "image": dis7, "imageHover": dis7a },
-            { "id": 8, "image": dis8, "imageHover": dis8a },
-            { "id": 9, "image": dis9, "imageHover": dis9a },
-            { "id": 10, "image": dis10, "imageHover": dis10a },
-            { "id": 11, "image": dis11, "imageHover": dis11a },
-            { "id": 12, "image": dis12, "imageHover": dis12a },
             { "id": 13, "image": dis13, "imageHover": dis13a },
-            // { "id": 14, "image": dis14, "imageHover": dis14a },
+            { "id": 10, "image": dis10, "imageHover": dis10a },
+            { "id": 4, "image": dis4, "imageHover": dis4a },
+            { "id": 9, "image": dis9, "imageHover": dis9a },
+            { "id": 5, "image": dis5, "imageHover": dis5a },
+            { "id": 8, "image": dis8, "imageHover": dis8a },
+            { "id": 12, "image": dis12, "imageHover": dis12a },
             { "id": 15, "image": dis15, "imageHover": dis15a },
+            { "id": 7, "image": dis7, "imageHover": dis7a },
+            { "id": 2, "image": dis3, "imageHover": dis3a },
             { "id": 16, "image": dis16, "imageHover": dis16a },
+            { "id": 11, "image": dis11, "imageHover": dis11a },
       ];
 
       const [hoverId, setHoverId] = useState<number | null>(null);

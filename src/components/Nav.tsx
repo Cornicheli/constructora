@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import menu from '../assets/menu.png';
+import menu from '../assets/icon/menu.png';
 import image from '../assets/images.png';
+import turtle from '../assets/icon/turtle.png'
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
@@ -21,16 +22,15 @@ const Nav = () => {
                         <ul className={`lg:flex lg:items-center lg:pb-0 absolute lg:static bg-white lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20' : 'top-[-490px]'}`}>
                               <li className='text-xl lg:my-0 my-7' onClick={() => setOpen(!open)}>
                                     <Link className='text-[#030608]' to={'/'}>
-                                          Construcciones
+                                          Inicio
                                     </Link>
                               </li>
                               <li className='lg:ml-6 text-xl lg:my-0 my-7' onClick={() => setOpen(!open)}>
                                     <Link className='text-[#030608] flex flex-row items-center' to={'/piscinas'}>
                                           <img
-                                                className='w-24 h-16 mr-2 py-1'
-                                                src='/public/imagen/turtle.png'
+                                                className='w-22 h-14 mr-2 py-1'
+                                                src={turtle}
                                           />
-                                          Natatorios Turtle
                                     </Link>
                               </li>
                               <li className='lg:ml-6 text-xl lg:my-0 my-7' onClick={() => setOpen(!open)}>

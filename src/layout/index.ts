@@ -1,5 +1,4 @@
-import LayoutAboutUs from "./LayoutAboutUs";
 import LayoutTypologies from "./LayoutTypologies";
-import LayoutFooter from "./LayaoutFooter";
+import LayoutFooter from "../components/LayaoutFooter";
 
-export { LayoutAboutUs, LayoutTypologies, LayoutFooter }
+export { LayoutTypologies, LayoutFooter }

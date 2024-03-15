@@ -1,6 +1,6 @@
-import facebook from '../assets/facebook.png'
-import instagram from '../assets/instagram.png'
-import whatsapp from '../assets/whatsapp.png'
+import facebook from '../assets/icon/facebook.png'
+import instagram from '../assets/icon/instagram.png'
+import whatsapp from '../assets/icon/whatsapp.png'
 
 const SocialNetwoks = () => {
       return (

@@ -1,12 +1,13 @@
-import { Carrousel, Proyect } from "../components"
-import { LayoutAboutUs, LayoutTypologies } from '../layout';
+import { AboutUs, Proyect } from "../components"
+import CarrouselConstru from "../components/carrousel/CarrouselConstru";
+import { LayoutTypologies } from '../layout';
 
 
 const Constructora = () => {
       return (
             <>
-                  <Carrousel />
-                  <LayoutAboutUs />
+                  <CarrouselConstru />
+                  <AboutUs />
                   <Proyect />
                   <LayoutTypologies />
             </>

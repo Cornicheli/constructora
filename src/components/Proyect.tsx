@@ -1,7 +1,6 @@
 import proyect from '../json/proyect.json'
 import '../style/footer.css'
 
-// grid grid-flow-row-dense grid-cols-1 gap-y-10 mt-10 mb-16 w-full md:grid-cols-1 lg:grid-cols-3
 const Proyect = () => {
       return (
             <section className='relative' id='proyect'>
@@ -28,11 +27,3 @@ const Proyect = () => {
 }
 
 export default Proyect
-
-
-
-// {
-//       "image": "https://canalhogar.com/wp-content/uploads/2023/10/25-planos-y-Disenos-de-Casas-de-2-Pisos-Modernas-800x600.jpg",
-//       "title": "Aliwen",
-//       "subTitle": "Barrio La Herradura"
-// },
