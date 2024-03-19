@@ -1,18 +1,8 @@
 import '../style/card.css'
 import { Card } from './card/Card'
 import { CardService } from './card/CardService'
-import marcado from '../assets/image/construccion/marcado.jpg'
-import excavacion from '../assets/image/construccion/excavacion.jpg'
-import armadura from '../assets/image/construccion/armadura.jpg'
-import hormigon from '../assets/image/construccion/hormigon.jpg'
-import revestimiento from '../assets/image/construccion/revestimiento.jpg'
-import deObra from '../assets/image/construccion/deObra.jpeg'
-import materiales from '../assets/image/service/materiales.jpg'
-import manoObra from '../assets/image/service/manoObra.jpg'
-import caldera from '../assets/image/service/caldera.jpg'
-import ionizador from '../assets/image/service/ionizador.png'
-import autocebante from '../assets/image/service/autocebante.jpg'
-import pintura from '../assets/image/service/pintura.jpg'
+import { materiales, manoObra, caldera, ionizador, autocebante, pintura } from '../assets/image/service'
+import { marcado, excavacion, armadura, hormigon, revestimiento, deObra } from '../assets/image/construccion'
 
 const CardModels = () => {
 

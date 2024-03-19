@@ -1,12 +1,5 @@
 import { CardAbout } from './card/CardAbout'
-import asesoramiento from '../assets/image/about/asesoramiento-tecnico-1.png'
-import calculo from '../assets/image/about/calculo-estructural-1.png'
-import experiencia from '../assets/image/about/experiencia-profesional-1.png'
-import direccion from '../assets/image/about/proyecto-direccion-icono.png'
-import inversion from '../assets/image/about/proyectos-de-inversion-1.png'
-
-
-
+import { asesoramiento, calculo, experiencia, direccion, inversion, } from '../assets/image/about'
 
 const AboutUs = () => {
       return (
