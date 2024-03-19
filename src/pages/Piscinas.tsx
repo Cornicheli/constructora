@@ -3,17 +3,19 @@ import { LayoutFooter } from "../layout"
 import LayoutPiscinas from "../layout/LayoutPiscinas"
 import '../style/card.css'
 import CarrouselPisci from '../components/carrousel/CarrouselPisci'
+import piscina from '../assets/image/construccion/piscina.jpg'
+import { WhatsappChat } from "../components/WhatsappChat"
 
 const Piscinas = () => {
 
       return (
-            <span id="piscinas">
+            <span id="piscinas" className="relative">
                   <CarrouselPisci />
                   <main className=' flex flex-col xl:flex-row flex-wrap justify-center items-center h-auto w-full'>
                         <figure className="w-[350px] h-[500px] lg:w-[450px] lg:h-[550px] p-5">
                               <img
                                     className="w-full h-full rounded-xl bg-cover"
-                                    src="https://www.elmueble.com/medio/2022/07/20/porche-de-canizo-con-sofas-al-lado-de-una-piscina-00546518_92a7d570_1280x1920.jpg"
+                                    src={piscina}
                                     alt="imagen-pileta"
                               />
                         </figure>
@@ -30,6 +32,7 @@ const Piscinas = () => {
                   <LayoutPiscinas />
                   <CardModels />
                   <LayoutFooter />
+                  <WhatsappChat />
             </span>
       )
 }

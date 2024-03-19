@@ -28,7 +28,7 @@ const Nav = () => {
                               <li className='lg:ml-6 text-xl lg:my-0 my-7' onClick={() => setOpen(!open)}>
                                     <Link className='text-[#030608] flex flex-row items-center' to={'/piscinas'}>
                                           <img
-                                                className='w-22 h-14 mr-2 py-1'
+                                                className='w-22 h-14 mr-2 py-1 z-50'
                                                 src={turtle}
                                           />
                                     </Link>
