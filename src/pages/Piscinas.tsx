@@ -1,6 +1,6 @@
 import CardModels from "../components/CardModels"
-import { LayoutFooter } from "../layout"
-import LayoutPiscinas from "../layout/LayoutPiscinas"
+import Footer from "../components/Footer"
+import CarrouselMultiPisci from '../components/carrousel/CarrouselMultiPisci'
 import '../style/card.css'
 import CarrouselPisci from '../components/carrousel/CarrouselPisci'
 import piscina from '../assets/image/construccion/piscina.jpg'
@@ -29,9 +29,9 @@ const Piscinas = () => {
                               </section>
                         </div>
                   </main>
-                  <LayoutPiscinas />
+                  <CarrouselMultiPisci />
                   <CardModels />
-                  <LayoutFooter />
+                  <Footer />
                   <WhatsappChat />
             </span>
       )

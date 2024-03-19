@@ -10,9 +10,9 @@ import {
       dis4a, dis5a, dis6a, dis7a,
       dis8a, dis9a, dis10a, dis11a,
       dis12a, dis13a, dis15a, dis16a,
-} from '../assets/piscinas';
+} from '../../assets/piscinas';
 
-const LayoutPiscinas = () => {
+const CarrouselMultiPisci = () => {
 
       const piscinas = [
             { "id": 1, "image": dis2, "imageHover": dis2a },
@@ -69,4 +69,4 @@ const LayoutPiscinas = () => {
       );
 };
 
-export default LayoutPiscinas;
+export default CarrouselMultiPisci;

@@ -1,12 +1,12 @@
 import lineaClasica from '../assets/image/typologies/linea-clasica.jpg'
 import lineaModerna from '../assets/image/typologies/linea-moderna.jpg'
 import lineaPremium from '../assets/image/typologies/linea-premium.jpg'
-
 import { CardTypologies } from "./card/CardTypologie";
 
 const Typologies = () => {
       return (
-            <>
+            <main className="flex flex-col items-center justify-center bg-[#0E2230] relative">
+                  <div className="absolute -top-20" id="tipologias" />
                   <div className="flex flex-col items-center justify-center w-3/4">
                         <h1 className=" text-4xl text-center font-bold  text-white">
                               Tipologías
@@ -36,7 +36,7 @@ const Typologies = () => {
                               title={'Línea Premium'}
                         />
                   </div>
-            </>
+            </main>
       );
 };
 

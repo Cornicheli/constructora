@@ -5,10 +5,10 @@ import { IoLocationSharp } from "react-icons/io5";
 import { MdWatchLater } from "react-icons/md";
 import { MdAlternateEmail } from "react-icons/md";
 import { MdSmartphone } from "react-icons/md";
-import { facebook, instagram, whatsapp } from '../assets/icon/'
+import { facebook, instagram, whatsapp } from '../assets/icon'
 import { CardFooter } from './card/CardFooter';
 
-const LayoutFooter: React.FC = () => {
+const Footer: React.FC = () => {
       return (
             <div className="header" id='footer'>
                   <svg
@@ -89,4 +89,4 @@ const LayoutFooter: React.FC = () => {
       );
 };
 
-export default LayoutFooter;
+export default Footer;
