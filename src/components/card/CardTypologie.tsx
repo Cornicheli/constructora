@@ -1,7 +1,7 @@
 export const CardTypologies = ({ title, image }: { title: string, image: string }) => {
       return (
             <div
-                  className="flex flex-col items-center justify-center shadow-md shadow-[#ffffff4d] h-max-64 m-auto relative rounded-xl hover:scale-105 transition duration-100 ease-out md:ease-in w-[375px] md:w-[450px] lg:w-[375px] 2xl:w-[475px]"
+                  className="flex flex-col items-center justify-center shadow-md shadow-[#ffffff4d] h-72 m-auto relative rounded-xl hover:scale-105 transition duration-100 ease-out md:ease-in w-[375px] md:w-[450px] lg:w-[375px] 2xl:w-[475px]"
             >
                   <div className=" w-full h-42 group overflow-hidden rounded-xl">
                         <img

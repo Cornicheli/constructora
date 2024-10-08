@@ -3,7 +3,7 @@ import Footer from "../components/Footer"
 import CarrouselMultiPisci from '../components/carrousel/CarrouselMultiPisci'
 import '../style/card.css'
 import CarrouselPisci from '../components/carrousel/CarrouselPisci'
-import piscina from '../assets/image/construccion/piscina.jpg'
+import cascadaPiscina from '../assets/cascadaPiscina.mp4'
 import { WhatsappChat } from "../components/WhatsappChat"
 
 const Piscinas = () => {
@@ -11,12 +11,14 @@ const Piscinas = () => {
       return (
             <span id="piscinas" className="relative">
                   <CarrouselPisci />
-                  <main className=' flex flex-col xl:flex-row flex-wrap justify-center items-center h-auto w-full'>
-                        <figure className="w-[350px] h-[500px] lg:w-[450px] lg:h-[550px] p-5">
-                              <img
+                  <main className=' flex flex-col xl:flex-row flex-wrap justify-center items-center h-auto w-full py-3' id="aboutus">
+                        <figure className="w-[350px] h-[500px] lg:w-[750px] lg:h-[650px] py-4">
+                              <video
                                     className="w-full h-full rounded-xl bg-cover"
-                                    src={piscina}
-                                    alt="imagen-pileta"
+                                    src={cascadaPiscina}
+                                    autoPlay
+                                    loop
+                                    muted
                               />
                         </figure>
                         <div className='grid grid-cols-1 grid-rows-1'>

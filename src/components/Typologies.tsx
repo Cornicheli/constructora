@@ -1,6 +1,6 @@
-import lineaClasica from '../assets/image/typologies/linea-clasica.jpg'
-import lineaModerna from '../assets/image/typologies/linea-moderna.jpg'
-import lineaPremium from '../assets/image/typologies/linea-premium.jpg'
+import lineaClasica from '../assets/image/typologies/clasica.jpeg'
+import lineaModerna from '../assets/image/typologies/moderna.jpeg'
+import lineaPremium from '../assets/image/typologies/premium.jpeg'
 import { CardTypologies } from "./card/CardTypologie";
 
 const Typologies = () => {

@@ -1,6 +1,6 @@
 import '../style/footer.css'
 import { Card } from '../components/card/Card'
-import { house9, house10, house11, house12, house13, house14, house15, house16, house17 } from '../assets/image/house';
+import { house10, house11, house12, house13, house14, house17, house18, house19, house21 } from '../assets/image/house';
 
 const Proyect = () => {
       return (
@@ -9,7 +9,7 @@ const Proyect = () => {
                   <h1 className='text-4xl text-center font-bold text-[#0E2230] pt-10'>Proyectos</h1>
                   <div className="flex flex-wrap flex-row gap-10 items-center justify-center py-10">
                         <Card
-                              image={house9}
+                              image={house18}
                               title={'La Faustina'}
                               subTitle={"Casas De Campo"}
                         />
@@ -39,12 +39,12 @@ const Proyect = () => {
                               subTitle={"Barrio Los Lagos"}
                         />
                         <Card
-                              image={house15}
+                              image={house21}
                               title={"Canning"}
                               subTitle={"Los Jazmines"}
                         />
                         <Card
-                              image={house16}
+                              image={house19}
                               title={"Escobar"}
                               subTitle={"Puertos Del Lago"}
                         />
