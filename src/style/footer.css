@@ -1,12 +1,12 @@
 body {
-      margin: 0;
+    margin: 0;
 }
 
 .header {
-      position: relative;
-      height: 30vh;
-      background: #0E2230;
-      /* background: linear-gradient(60deg, rgb(58, 91, 183) 0%, rgb(27, 31, 109, 1) 100%); */
+    position: relative;
+    height: 30vh;
+    background: #0e2230;
+    /* background: linear-gradient(60deg, rgb(58, 91, 183) 0%, rgb(27, 31, 109, 1) 100%); */
 }
 
 /* .inner-header {
@@ -19,64 +19,64 @@ body {
 } */
 
 .waves {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
 .content {
-      position: relative;
+    position: relative;
 }
 
 /* Animation */
 
 .parallax {
-      height: 15vh;
+    height: 15vh;
 }
 
-.parallax>use {
-      animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
-.parallax>use:nth-child(1) {
-      animation-delay: -2s;
-      animation-duration: 7s;
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
 }
 
-.parallax>use:nth-child(2) {
-      animation-delay: -3s;
-      animation-duration: 10s;
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
 }
 
-.parallax>use:nth-child(3) {
-      animation-delay: -4s;
-      animation-duration: 13s;
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
 }
 
-.parallax>use:nth-child(4) {
-      animation-delay: -5s;
-      animation-duration: 20s;
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
 }
 
 @keyframes move-forever {
-      0% {
-            transform: translate3d(-90px, 0, 0);
-      }
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
 
-      100% {
-            transform: translate3d(85px, 0, 0);
-      }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
 }
 
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
-      .waves {
-            height: 100%;
-            /* min-height: 40px; */
-      }
+    .waves {
+        height: 100%;
+        /* min-height: 40px; */
+    }
 
-      .content {
-            height: 10vh;
-      }
+    .content {
+        height: 10vh;
+    }
 }

@@ -1,25 +1,34 @@
+interface PropsCard {
+    title: string;
+    image: string;
+    subTitle?: string;
+    isOpenModal: (id: string) => void;
+    id: string | number;
+}
+
 export const Card = ({
-  title,
-  image,
-  subTitle,
-}: {
-  title: string;
-  image: string;
-  subTitle?: string;
-}) => {
-  return (
-    <div className="flex flex-col items-center justify-center h-80 m-auto shadow-lg rounded-xl mx-5 my-5 hover:scale-105 transition duration-100 ease-out md:ease-in w-[375px] md:w-[450px] lg:w-[375px] 2xl:w-[475px]">
-      <div className=" w-full h-4/5 overflow-hidden rounded-t-xl">
-        <img
-          className="w-full h-full rounded-t-xl bg-cover"
-          src={image}
-          alt="Image"
-        />
-      </div>
-      <div className=" w-full flex flex-col justify-center h-1/4 bg-white rounded-b-xl">
-        <h1 className="font-semibold text-[#0E2230] ml-5 text-lg">{title}</h1>
-        <h1 className="font-medium text-[#1b1b1cab] ml-5">{subTitle}</h1>
-      </div>
-    </div>
-  );
+    title,
+    image,
+    subTitle,
+    isOpenModal,
+    id,
+}: PropsCard) => {
+    return (
+        <div
+            className="m-auto mx-5 my-5 flex h-80 w-[375px] cursor-pointer flex-col items-center justify-center rounded-xl shadow-lg transition duration-100 ease-out hover:scale-105 md:w-[450px] md:ease-in lg:w-[375px] 2xl:w-[475px]"
+            onClick={() => isOpenModal(id)}>
+            <div
+                className="h-4/5 w-full overflow-hidden rounded-t-xl bg-cover bg-center"
+                style={{ backgroundImage: `url(${image})` }}
+            />
+            <div className="flex h-1/4 w-full flex-col justify-center rounded-b-xl bg-white">
+                <h1 className="ml-5 text-lg font-semibold text-[#0E2230]">
+                    {title}
+                </h1>
+                <h1 className="ml-5 font-medium text-[#1b1b1cab]">
+                    {subTitle}
+                </h1>
+            </div>
+        </div>
+    );
 };
