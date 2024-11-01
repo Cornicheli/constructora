@@ -33,7 +33,7 @@ export const ModalPiscinas = ({ isVisible, isClose, images }: ShowModal) => {
 
     return (
         <section
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-25 backdrop-blur-sm"
             id="wrapper"
             onClick={handleClose}>
             <div className="z-50 flex h-auto max-h-[90vh] w-full max-w-screen-lg flex-col sm:w-full">
@@ -74,11 +74,6 @@ export const ModalPiscinas = ({ isVisible, isClose, images }: ShowModal) => {
                             className="mx-auto rounded-lg bg-cover bg-center md:h-[500px] md:w-[600px] lg:h-[500px] lg:w-[700px] xl:h-[500px] xl:w-[830px]"
                             aria-label={`Imagen ${handleIndex + 1}`}
                         />
-
-                        {/* <img
-              src={images[handleIndex]}
-              alt={`Imagen ${handleIndex + 1}`}
-              className="xl:h-[500px] xl:w-[830px] object-cover rounded-lg mx-auto lg:h-[500px] lg:w-[700px] md:w-[600px] md:h-[500px]" /> */}
 
                         {/* Botón para ir adelante */}
                         <button

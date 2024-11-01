@@ -2,7 +2,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import piscina11 from '../../assets/image/carrousel/piscinas/piscina12.jpg';
 import piscina2 from '../../assets/image/carrousel/piscinas/piscina2.webp';
-// import piscina3 from '../../assets/image/carrousel/piscinas/piscina3.jpg'
 import piscina4 from '../../assets/image/carrousel/piscinas/piscina4.jpg';
 import piscina01 from '../../assets/Carrusel/piscina01.jpg';
 import piscina5 from '../../assets/image/carrousel/piscinas/piscina5.webp';

@@ -2,8 +2,8 @@ interface PropsCard {
     title: string;
     image: string;
     subTitle?: string;
-    isOpenModal: (id: string) => void;
-    id: string | number;
+    isOpenModal?: (id: string) => void;
+    id?: any;
 }
 
 export const Card = ({
@@ -15,8 +15,8 @@ export const Card = ({
 }: PropsCard) => {
     return (
         <div
-            className="m-auto mx-5 my-5 flex h-80 w-[375px] cursor-pointer flex-col items-center justify-center rounded-xl shadow-lg transition duration-100 ease-out hover:scale-105 md:w-[450px] md:ease-in lg:w-[375px] 2xl:w-[475px]"
-            onClick={() => isOpenModal(id)}>
+            className="mx-5 my-5 flex h-80 w-[375px] cursor-pointer flex-col items-center justify-center rounded-xl shadow-lg transition duration-100 ease-out hover:scale-105 md:w-[450px] md:ease-in lg:w-[375px] 2xl:w-[475px]"
+            onClick={() => isOpenModal && isOpenModal(id)}>
             <div
                 className="h-4/5 w-full overflow-hidden rounded-t-xl bg-cover bg-center"
                 style={{ backgroundImage: `url(${image})` }}

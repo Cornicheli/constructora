@@ -8,10 +8,8 @@ const Nav = () => {
 
     return (
         <header className="fixed top-0 z-10 w-full shadow-md">
-            <div className="flex items-center justify-between bg-white">
-                <span className="h-26 w-72">
-                    <img className="ml-2 h-24 w-60" src={image} alt="Logo" />
-                </span>
+            <div className="flex items-center justify-between bg-white px-3">
+                <img className="h-24 w-60" src={image} alt="Logo" />
                 <div
                     onClick={() => setOpen(!open)}
                     className="absolute right-8 top-3.5 cursor-pointer text-3xl xl:hidden">
@@ -21,8 +19,9 @@ const Nav = () => {
                         <img className="h-10 w-10" src={menu} alt="Menu" />
                     </button>
                 </div>
+
                 <ul
-                    className={`absolute left-0 z-[-1] w-full bg-white pl-9 transition-all duration-500 ease-in lg:static lg:z-auto lg:flex lg:w-auto lg:items-center lg:pb-0 lg:pl-0 ${
+                    className={`absolute left-0 right-0 z-[-1] w-full bg-white pl-9 transition-all duration-500 ease-in lg:static lg:z-auto lg:flex lg:w-auto lg:items-center lg:pb-0 lg:pl-0 ${
                         open ? 'top-20' : 'top-[-490px]'
                     }`}>
                     <li
@@ -39,6 +38,15 @@ const Nav = () => {
                             className="flex flex-row items-center text-[#030608]"
                             to={'/piscinas'}>
                             Piscinas
+                        </Link>
+                    </li>
+                    <li
+                        className="my-7 text-xl lg:my-0 lg:ml-6"
+                        onClick={() => setOpen(!open)}>
+                        <Link
+                            className="flex flex-row items-center text-[#030608]"
+                            to={'/cortinas'}>
+                            Cortinas
                         </Link>
                     </li>
                     <li

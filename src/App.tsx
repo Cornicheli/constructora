@@ -3,6 +3,7 @@ import { Nav } from './components';
 import Constructora from './pages/Constructora';
 import Piscinas from './pages/Piscinas';
 import FormContact from './components/FormContact';
+import { Cortinas } from './pages/Cortinas';
 
 const App = () => {
     return (
@@ -11,6 +12,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Constructora />} />
                 <Route path="/piscinas" element={<Piscinas />} />
+                <Route path="/cortinas" element={<Cortinas />} />
                 <Route path="/contact" element={<FormContact />} />
             </Routes>
         </BrowserRouter>

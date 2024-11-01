@@ -204,7 +204,7 @@ const CardModels = () => {
                     <ModalPiscinas
                         isVisible={showModal}
                         isClose={() => {
-                            setShowModal(false), selectedImages[''];
+                            setShowModal(false);
                         }}
                         images={selectedImages}
                     />
