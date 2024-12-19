@@ -11,7 +11,7 @@ const CarrouselPisci = () => {
         <Carousel>
             <Carousel.Item
                 interval={1000}
-                className="lg:h-[500px] xl:h-[800px]">
+                className="lg:h-[500px] xl:h-[700px]">
                 <div
                     className={`h-full w-full bg-cover bg-center`}
                     style={{ backgroundImage: `url(${piscina11})` }}
@@ -25,7 +25,7 @@ const CarrouselPisci = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={500} className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item interval={500} className="lg:h-[500px] xl:h-[700px]">
                 <div
                     className={`h-full w-full bg-cover bg-center`}
                     style={{ backgroundImage: `url(${piscina2})` }}
@@ -43,7 +43,7 @@ const CarrouselPisci = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item className="lg:h-[500px] xl:h-[700px]">
                 <img
                     className="h-full w-full"
                     src={piscina01}
@@ -57,7 +57,7 @@ const CarrouselPisci = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item className="lg:h-[500px] xl:h-[700px]">
                 <img
                     className="h-full w-full"
                     src={piscina4}
@@ -71,7 +71,7 @@ const CarrouselPisci = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item className="lg:h-[500px] xl:h-[700px]">
                 <img
                     className="h-full w-full"
                     src={piscina5}

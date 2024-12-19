@@ -7,9 +7,9 @@ const Nav = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 z-10 w-full shadow-md">
-            <div className="flex items-center justify-between bg-white px-3">
-                <img className="h-24 w-60" src={image} alt="Logo" />
+        <header className="fixed top-0 z-20 w-full shadow-md">
+            <div className="flex items-center justify-between bg-white">
+                <img className="h-24 w-60 pl-3" src={image} alt="Logo" />
                 <div
                     onClick={() => setOpen(!open)}
                     className="absolute right-8 top-3.5 cursor-pointer text-3xl xl:hidden">
@@ -21,7 +21,7 @@ const Nav = () => {
                 </div>
 
                 <ul
-                    className={`absolute left-0 right-0 z-[-1] w-full bg-white pl-9 transition-all duration-500 ease-in lg:static lg:z-auto lg:flex lg:w-auto lg:items-center lg:pb-0 lg:pl-0 ${
+                    className={`absolute left-0 right-0 z-[-1] w-full bg-white pl-9 pr-3 transition-all duration-500 ease-in lg:static lg:z-auto lg:flex lg:w-auto lg:items-center lg:pb-0 lg:pl-0 ${
                         open ? 'top-20' : 'top-[-490px]'
                     }`}>
                     <li

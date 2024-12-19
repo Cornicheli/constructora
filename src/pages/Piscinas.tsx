@@ -44,28 +44,38 @@ const Piscinas = () => {
                 {/* </figure> */}
                 <div className="grid grid-cols-1 grid-rows-1">
                     <section className="m-5 lg:ml-20 lg:w-[600px]">
-                        <p className="my-4 text-xl font-bold text-[#1b1b1cab]">
+                        <p className="text-xl font-bold text-[#1b1b1cab]">
                             Quiénes somos{' '}
                         </p>
-                        <h1 className="py-4 text-2xl font-semibold text-[#0E2230]">
-                            Somos una empresa dedicada a la construcción de
-                            piscinas, diseño y ejecución.
+                        <h1 className="py-2 text-2xl font-semibold text-[#0E2230]">
+                            Con más de 15 años de experiencia en la construcción
+                            de piscinas
                         </h1>
-                        <h3 className="my-4 text-lg">
-                            Con mas de{' '}
-                            <span className="font-bold">15 años</span> de
-                            experiencia en el rubro te brindamos responsabilidad
-                            y cumplimiento en la realización de tu proyecto
-                            soñado. Contamos con mas de 200 obras realizadas en
-                            AMBA y Cordoba.
-                            <br /> Contamos con un equipo de profesionales
-                            altamente calificados y las herramientas necesarias
-                            para lograr la piscina de tus sueños.
-                        </h3>
+                        <div className="my-2 flex flex-col justify-center">
+                            <p className="my-1 text-lg">
+                                En Home Deluxe ofrecemos un servicio integral
+                                que abarca desde los planos y diseños hasta la
+                                instalación final de piscinas en todo tipo de
+                                terrenos.
+                            </p>
+                            <p className="my-1 text-lg">
+                                Nos aseguramos de que cada piscina sea
+                                construida con los mejores materiales,
+                                garantizando una estructura duradera, segura y
+                                visualmente atractiva.
+                            </p>
+                            <p className="my-1 text-lg">
+                                Construimos piscinas para uso residencial,
+                                comercial o recreativo, proporcionando
+                                soluciones personalizadas que se integran
+                                perfectamente en su entorno, brindando 15 años
+                                de garantía.
+                            </p>
+                        </div>
                     </section>
                 </div>
             </main>
-            <CarrouselMultiPisci />
+            {/* <CarrouselMultiPisci /> */}
             <CardModels />
             <Footer />
             <WhatsappChat />

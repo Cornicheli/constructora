@@ -8,9 +8,9 @@ import {
     house14,
     house18,
     house19,
-    house21,
     house22,
-} from '../assets/image/house';
+    hosue23,
+} from '@/assets/image/house';
 
 const Proyect = () => {
     return (
@@ -31,7 +31,7 @@ const Proyect = () => {
                     subTitle={'Cariló'}
                 />
                 <Card
-                    image={house21}
+                    image={hosue23}
                     title={'Tres Pinos'}
                     subTitle={'Villa de campo'}
                 />

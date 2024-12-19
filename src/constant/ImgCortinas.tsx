@@ -11,7 +11,7 @@ export const ImgCortinas = [
     {
         id: 2,
         url: 'https://www.rappachiani.com.ar/img/homepage/cortinas-desk.jpg',
-        title: 'Cortinas de interior',
+        title: 'Roller Design',
     },
     {
         id: 3,

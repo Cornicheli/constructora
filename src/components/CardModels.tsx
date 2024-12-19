@@ -14,11 +14,11 @@ import {
     armadura,
     hormigon,
     revestimiento,
-    deObra,
     encofrado03,
     encofrado02,
     encofrado01,
 } from '../assets/image/construccion';
+import deObra from '../assets/deObra.jpg';
 import { useState } from 'react';
 import { ModalPiscinas } from './modal/ModalPiscinas';
 import {
