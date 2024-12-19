@@ -2,7 +2,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import piscina11 from '../../assets/image/carrousel/piscinas/piscina12.jpg';
 import piscina2 from '../../assets/image/carrousel/piscinas/piscina2.webp';
-// import piscina3 from '../../assets/image/carrousel/piscinas/piscina3.jpg'
 import piscina4 from '../../assets/image/carrousel/piscinas/piscina4.jpg';
 import piscina01 from '../../assets/Carrusel/piscina01.jpg';
 import piscina5 from '../../assets/image/carrousel/piscinas/piscina5.webp';
@@ -12,7 +11,7 @@ const CarrouselPisci = () => {
         <Carousel>
             <Carousel.Item
                 interval={1000}
-                className="lg:h-[500px] xl:h-[800px]">
+                className="lg:h-[500px] xl:h-[700px]">
                 <div
                     className={`h-full w-full bg-cover bg-center`}
                     style={{ backgroundImage: `url(${piscina11})` }}
@@ -26,7 +25,7 @@ const CarrouselPisci = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={500} className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item interval={500} className="lg:h-[500px] xl:h-[700px]">
                 <div
                     className={`h-full w-full bg-cover bg-center`}
                     style={{ backgroundImage: `url(${piscina2})` }}
@@ -44,7 +43,7 @@ const CarrouselPisci = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item className="lg:h-[500px] xl:h-[700px]">
                 <img
                     className="h-full w-full"
                     src={piscina01}
@@ -58,7 +57,7 @@ const CarrouselPisci = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item className="lg:h-[500px] xl:h-[700px]">
                 <img
                     className="h-full w-full"
                     src={piscina4}
@@ -72,7 +71,7 @@ const CarrouselPisci = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item className="lg:h-[500px] xl:h-[700px]">
                 <img
                     className="h-full w-full"
                     src={piscina5}

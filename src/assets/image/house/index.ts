@@ -20,6 +20,7 @@ import house19 from './house-19.jpeg';
 import house20 from './house-20.jpeg';
 import house21 from './house-21.jpeg';
 import house22 from './house-22.jpeg';
+import hosue23 from './house-23.jpeg';
 
 export {
     house1,
@@ -44,4 +45,5 @@ export {
     house20,
     house21,
     house22,
+    hosue23,
 };

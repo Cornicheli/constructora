@@ -1,0 +1,48 @@
+{
+    "1": {
+        "title": "Toldos",
+        "images": [
+            "https://www.rappachiani.com.ar/img/toldos/grupo-producto-pergolato.jpg",
+            "https://www.rappachiani.com.ar/img/homepage/toldos-desk.jpg",
+            "https://www.rappachiani.com.ar/img/toldos/grupo-producto-toldo-punto-fijo.jpg",
+            "https://www.rappachiani.com.ar/img/toldos/grupo-producto-toldo-corredizo.jpg"
+        ]
+    },
+    "2": {
+        "title": "Cortinas",
+        "images": [
+            "https://www.rappachiani.com.ar/img/cortinas/grupo-producto-cortinas-rollers.jpg",
+            "https://www.rappachiani.com.ar/img/cortinas/grupo-producto-cortinas-bandas-verticales.jpg",
+            "https://www.rappachiani.com.ar/img/cortinas/grupo-producto-cortinas-parcelle.jpg",
+            "https://www.rappachiani.com.ar/img/cortinas/grupo-producto-cortinas-venecianas.jpg",
+            "https://www.rappachiani.com.ar/img/cortinas/grupo-producto-cortinas-paneles-orientales.jpg"
+        ]
+    },
+    "3": {
+        "title": "Cerramientos",
+        "images": [
+            "https://www.rappachiani.com.ar/img/cerramientos/cerramientos-de-lona-03-th.jpg",
+            "https://www.rappachiani.com.ar/img/cerramientos/cerramientos-de-lona-04-th.jpg",
+            "https://www.rappachiani.com.ar/img/cerramientos/cerramientos-de-lona-05-th.jpg",
+            "https://www.rappachiani.com.ar/img/cerramientos/cerramientos-de-lona-06-th.jpg",
+            "https://www.rappachiani.com.ar/img/cerramientos/cerramientos-de-lona-07-th.jpg",
+            "https://www.rappachiani.com.ar/img/cerramientos/cerramientos-de-lona-08-th.jpg"
+        ]
+    },
+    "4": {
+        "title": "Zebra",
+        "images": [
+            "https://www.rappachiani.com.ar/img/cubre-piletas/cubre-piletas-01-th.jpg",
+            "https://www.rappachiani.com.ar/img/cubre-piletas/cubre-piletas-03-th.jpg",
+            "https://www.rappachiani.com.ar/img/cubre-piletas/cubre-piletas-08-th.jpg"
+        ]
+    },
+    "5": {
+        "title": "Blackout",
+        "images": []
+    },
+    "6": {
+        "title": "Sistema Doble",
+        "images": []
+    }
+}

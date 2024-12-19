@@ -11,7 +11,7 @@ const CarrouselConstru = () => {
         <Carousel>
             <Carousel.Item
                 interval={1000}
-                className="lg:h-[500px] xl:h-[800px]">
+                className="lg:h-[500px] xl:h-[700px]">
                 <img
                     className="h-full w-full bg-contain"
                     src={house1}
@@ -26,7 +26,7 @@ const CarrouselConstru = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={500} className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item interval={500} className="lg:h-[500px] xl:h-[700px]">
                 <img
                     className="h-full w-full"
                     src={house2}
@@ -41,7 +41,7 @@ const CarrouselConstru = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item className="lg:h-[500px] xl:h-[700px]">
                 <img
                     className="h-full w-full"
                     src={house3}
@@ -55,7 +55,7 @@ const CarrouselConstru = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item className="lg:h-[500px] xl:h-[700px]">
                 <img
                     className="h-full w-full"
                     src={house4}
@@ -69,7 +69,7 @@ const CarrouselConstru = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
+            <Carousel.Item className="lg:h-[500px] xl:h-[700px]">
                 <img
                     className="h-full w-full"
                     src={house5}

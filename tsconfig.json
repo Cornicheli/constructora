@@ -1,18 +1,17 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        },
         "target": "ESNext",
         "module": "ESNext",
         "lib": ["DOM", "ESNext"],
         "jsx": "react-jsx",
         "moduleResolution": "Node",
-        "baseUrl": "./",
-        "paths": {
-            "@components/*": ["src/components/*"],
-            "@utils/*": ["src/utils/*"],
-            "@assets/*": ["src/assets/*"]
-        },
         "strict": true,
         "esModuleInterop": true,
+        "resolveJsonModule": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true
     },
