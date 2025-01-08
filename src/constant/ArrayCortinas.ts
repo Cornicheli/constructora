@@ -1,4 +1,10 @@
-import { brazoInvisible03, toldosPvc01 } from '@/assets/cortinas';
+import {
+    brazoInvisible03,
+    sunscreen09,
+    sunscreen10,
+    sunscreen11,
+    toldosPvc01,
+} from '@/assets/cortinas';
 
 import {
     cubrePileta01,
@@ -54,7 +60,16 @@ import {
     sistemaDoble07,
     sistemaDoble08,
 } from '@/assets/cortinas';
-import { sunscreen01 } from '@/assets/cortinas/sunscreen';
+import {
+    sunscreen01,
+    sunscreen02,
+    sunscreen03,
+    sunscreen04,
+    sunscreen05,
+    sunscreen06,
+    sunscreen07,
+    sunscreen08,
+} from '@/assets/cortinas';
 
 export const arrayCortinasRoller = [
     {
@@ -65,7 +80,7 @@ export const arrayCortinasRoller = [
     {
         id: 2,
         title: 'Sunscreen',
-        photo: sunscreen01,
+        photo: sunscreen08,
     },
     {
         id: 6,
@@ -137,42 +152,42 @@ export const arrayCortinasSunscreen = [
     {
         id: 1,
         altPhoto: 'Cortina sunscreen modelo 01',
-        photo: cortinasToldos01,
+        photo: sunscreen01,
     },
     {
         id: 2,
         altPhoto: 'Cortina sunscreen modelo 02',
-        photo: cortinasToldos02,
+        photo: sunscreen11,
     },
     {
         id: 3,
         altPhoto: 'Cortina sunscreen modelo 03',
-        photo: cortinasToldos03,
+        photo: sunscreen03,
     },
     {
         id: 4,
         altPhoto: 'Cortina sunscreen modelo 04',
-        photo: cortinasToldos04,
+        photo: sunscreen04,
     },
     {
         id: 5,
         altPhoto: 'Cortina sunscreen modelo 05',
-        photo: cortinasToldos05,
+        photo: sunscreen05,
     },
     {
         id: 6,
         altPhoto: 'Cortina sunscreen modelo 06',
-        photo: cortinasToldos06,
+        photo: sunscreen06,
     },
     {
         id: 7,
         altPhoto: 'Cortina sunscreen modelo 07',
-        photo: cortinasToldos07,
+        photo: sunscreen09,
     },
     {
         id: 8,
         altPhoto: 'Cortina sunscreen modelo 08',
-        photo: cortinasToldos08,
+        photo: sunscreen10,
     },
 ];
 

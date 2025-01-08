@@ -7,39 +7,6 @@ import { arrayCortinasSunscreen } from '@/constant/ArrayCortinas';
 import { GridSection } from '@/components/GridSection';
 
 export const CortinasSunscreen = () => {
-    const ArrayCortinasBandas = [
-        {
-            id: 1,
-            title: 'Cortinas Roller',
-            photo: 'https://www.rappachiani.com.ar/img/homepage/toldos-desk.jpg',
-        },
-        {
-            id: 2,
-            title: 'Cortinas Bandas Verticales',
-            photo: 'https://www.rappachiani.com.ar/img/homepage/toldos-desk.jpg',
-        },
-        {
-            id: 3,
-            title: 'Cortinas Parcelle',
-            photo: 'https://www.rappachiani.com.ar/img/homepage/toldos-desk.jpg',
-        },
-        {
-            id: 4,
-            title: 'Cortinas Venecia',
-            photo: 'https://www.rappachiani.com.ar/img/homepage/toldos-desk.jpg',
-        },
-        {
-            id: 5,
-            title: 'Paneles Orientales',
-            photo: 'https://www.rappachiani.com.ar/img/homepage/toldos-desk.jpg',
-        },
-        {
-            id: 6,
-            title: 'Paneles Europeo',
-            photo: 'https://www.rappachiani.com.ar/img/homepage/toldos-desk.jpg',
-        },
-    ];
-
     return (
         <div>
             <CardHomeCortinas
@@ -53,7 +20,7 @@ export const CortinasSunscreen = () => {
                     'control solar y de la iluminación para tus ambientes'
                 }
             />
-            <div className="flex flex-col items-center justify-center p-5 text-center">
+            {/* <div className="flex flex-col items-center justify-center p-5 text-center">
                 <p className='" py-1 text-lg tracking-wide text-[#545454] lg:text-3xl'>
                     Las{' '}
                     <span className="font-medium text-black">
@@ -65,7 +32,7 @@ export const CortinasSunscreen = () => {
                     mecanismos <br /> de automatización.
                 </p>
             </div>
-            <DividerBlack />
+            <DividerBlack /> */}
             <GridSection>
                 {arrayCortinasSunscreen.map(item => (
                     <CardCortinasDetail
@@ -83,7 +50,6 @@ export const CortinasSunscreen = () => {
                 buttonText="Solicita tu presupuesto..."
                 onButtonClick={() => console.log('Presupuesto solicitado')}
             />
-
             <Footer />
         </div>
     );

@@ -18,7 +18,7 @@ export const CortinasToldos = () => {
                     'Una solución a medida para Tu Hogar y Espacios. Ofrecemos una amplia variedad de cortinas y toldos para personalizar y mejorar tus ambientes..'
                 }
             />
-            <div className="flex flex-col items-center justify-center p-5 text-center">
+            {/* <div className="flex flex-col items-center justify-center p-5 text-center">
                 <p className='" py-1 text-lg tracking-wide text-[#545454] lg:text-3xl'>
                     Diversos sistemas de Roller Design{' '}
                     <span className="font-medium text-black"> HomeDeluxe</span>{' '}
@@ -26,7 +26,7 @@ export const CortinasToldos = () => {
                     arquitecturas, <br /> estilos y presupuestos.
                 </p>
             </div>
-            <DividerBlack />
+            <DividerBlack /> */}
 
             <GridSection>
                 {arrayCortinasToldos.map((item: any) => (
@@ -39,7 +39,13 @@ export const CortinasToldos = () => {
             <ContentSection
                 title={'Toldos'}
                 description={
-                    'Sistema de protección solar para balcones, galerías, ventanas y frente de locales comerciales. Podes elegir toldos de brazos invisibles, punto recto, y toldo tijera. Son toldos de exterior  fáciles de instalar y requieren poco mantenimiento. Enviamos toldos a todo el país y brindamos servicio de instalación en Buenos Aires'
+                    'Sistema de protección solar para balcones, galerías, ventanas y frente de locales comerciales. Podes elegir toldos de brazos invisibles, punto recto, y toldo tijera. '
+                }
+                subDescription={
+                    'Son toldos de exterior  fáciles de instalar y requieren poco mantenimiento.'
+                }
+                textDescription={
+                    'Enviamos toldos a todo el país y brindamos servicio de instalación en Buenos Aires'
                 }
                 buttonText="Solicita tu presupuesto..."
                 onButtonClick={() => console.log('Presupuesto solicitado')}
