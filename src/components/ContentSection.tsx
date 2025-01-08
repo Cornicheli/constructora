@@ -4,6 +4,7 @@ interface ContentSectionProps {
     title: string;
     description: string;
     subDescription?: string;
+    textDescription?: string;
     buttonText: string;
     onButtonClick?: () => void;
     children?: React.ReactNode;
@@ -13,6 +14,7 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
     title,
     description,
     subDescription,
+    textDescription,
     buttonText,
     onButtonClick,
     children,
@@ -20,11 +22,14 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
     return (
         <section className="flex flex-col items-center justify-center p-5 text-center">
             <h1 className="my-4 text-3xl text-[#393939]">{title}</h1>
-            <p className="w-3/4 py-1 text-lg tracking-wide text-[#464646] lg:w-3/5 lg:text-2xl">
+            <p className="my-2 w-3/4 text-left text-lg tracking-wide text-[#464646] lg:w-3/5 lg:text-2xl">
                 {description}
             </p>
-            <p className="w-3/4 py-1 text-lg tracking-wide text-[#464646] lg:w-3/5 lg:text-2xl">
+            <p className="my-2 w-3/4 text-left text-lg tracking-wide text-[#464646] lg:w-3/5 lg:text-2xl">
                 {subDescription}
+            </p>
+            <p className="my-2 w-3/4 text-left text-lg tracking-wide text-[#464646] lg:w-3/5 lg:text-2xl">
+                {textDescription}
             </p>
             {children}
             <button

@@ -44,9 +44,6 @@ const Piscinas = () => {
                 {/* </figure> */}
                 <div className="grid grid-cols-1 grid-rows-1">
                     <section className="m-5 lg:ml-20 lg:w-[600px]">
-                        <p className="text-xl font-bold text-[#1b1b1cab]">
-                            Quiénes somos{' '}
-                        </p>
                         <h1 className="py-2 text-2xl font-semibold text-[#0E2230]">
                             Con más de 15 años de experiencia en la construcción
                             de piscinas

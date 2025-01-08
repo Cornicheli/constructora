@@ -4,6 +4,7 @@ import { DividerBlack } from '@/components/DividerBlack';
 import Footer from '@/components/Footer';
 import { arrayCortinasCubrePileta } from '@/constant/ArrayCortinas';
 import { GridSection } from '@/components/GridSection';
+import { ContentSection } from '@/components/ContentSection';
 
 export const CortinasCubrePileta = () => {
     return (
@@ -18,7 +19,7 @@ export const CortinasCubrePileta = () => {
                     'control solar y de la iluminación para tus ambientes'
                 }
             />
-            <div className="flex flex-col items-center justify-center p-5 text-center">
+            {/* <div className="flex flex-col items-center justify-center p-5 text-center">
                 <p className='" py-1 text-lg tracking-wide text-[#545454] lg:text-3xl'>
                     Diversos sistemas de Roller Design{' '}
                     <span className="font-medium text-black"> HomeDeluxe</span>{' '}
@@ -26,7 +27,7 @@ export const CortinasCubrePileta = () => {
                     arquitecturas, <br /> estilos y presupuestos.
                 </p>
             </div>
-            <DividerBlack />
+            <DividerBlack /> */}
             <GridSection>
                 {arrayCortinasCubrePileta.map((item: any) => (
                     <CardCortinasDetail
@@ -36,6 +37,20 @@ export const CortinasCubrePileta = () => {
                     />
                 ))}
             </GridSection>
+            <ContentSection
+                title={'Cubre Piletas'}
+                description={
+                    'Es una lona protectora resistente. Mantiene el agua limpia todo el año, disminuye el uso de químicos en la piscina, y es segura para mascotas y niños en caso de una caída accidental, soporta el peso de una persona. '
+                }
+                subDescription={
+                    'La lona es de pvc con un entramado de poliéster antidesgarro, de alta resistencia de 500 micrones, la que habitualmente usan los camiones.'
+                }
+                textDescription={
+                    'Colocamos ojales de bronce para evitar la oxidación y que estos terminen manchando las bordes de la piscina.'
+                }
+                buttonText="Solicita tu presupuesto..."
+                onButtonClick={() => console.log('Presupuesto solicitado')}
+            />
             <Footer />
         </div>
     );

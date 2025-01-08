@@ -43,20 +43,20 @@ import {
     obraFinalizada02,
     obraFinalizada03,
 } from '../assets/image/finalizada';
+import {
+    piscinaBaldosasAtermicas,
+    jacuzzi,
+    lucesLed,
+    piscinaBancoDeck,
+    piscinaCascada,
+    piscinaLona,
+    revestimientoPiedra,
+    revestimientoPintura,
+    piscinaBancoPvc,
+    piscinaClasica,
+} from '@/assets/servicesPiscinas';
 
 const CardModels = () => {
-    const [showModal, setShowModal] = useState(false);
-    const [selectedImages, setSelectedImages] = useState<string[]>([]);
-
-    const imageMap: { [key: string]: string[] } = {
-        1: [marcado01, marcado02, excavacion03, excavacion04, excavacion02],
-        2: [armaduraAcero01, armaduraAcero02, armaduraAcero03],
-        3: [encofrado01, encofrado02, encofrado03],
-        4: [hormigonado02, hormigonado03],
-        5: [revestimiento01, revestimiento04, revestimiento05],
-        6: [obraFinalizada01, obraFinalizada02, obraFinalizada03],
-    };
-
     const cardsData = [
         {
             id: '1',
@@ -106,10 +106,84 @@ const CardModels = () => {
         },
     ];
 
+    const [showModal, setShowModal] = useState(false);
+    const [selectedImages, setSelectedImages] = useState<string[]>([]);
+
+    const imageMap: { [key: string]: string[] } = {
+        1: [marcado01, marcado02, excavacion03, excavacion04, excavacion02],
+        2: [armaduraAcero01, armaduraAcero02, armaduraAcero03],
+        3: [encofrado01, encofrado02, encofrado03],
+        4: [hormigonado02, hormigonado03],
+        5: [revestimiento01, revestimiento04, revestimiento05],
+        6: [obraFinalizada01, obraFinalizada02, obraFinalizada03],
+    };
+
     const handleOpenModal = (id: string) => {
         setSelectedImages(imageMap[id]); // Establece las imágenes según el id
         setShowModal(true);
     };
+
+    const servicesData = [
+        { title: 'Materiales', image: materiales, alt: 'materiales' },
+        { title: 'Mano de Obra', image: manoObra, alt: 'mano de obra' },
+        {
+            title: 'Sistema de Filtrado y Bomba Autocebante',
+            image: autocebante,
+            alt: 'autocebante',
+        },
+        { title: 'Luces y Accesorios', image: ionizador, alt: 'ionizador' },
+        {
+            title: 'Sistema de Preclimatizacion',
+            image: caldera,
+            alt: 'caldera',
+        },
+        { title: 'Pintura y Revestimiento', image: pintura, alt: 'pintura' },
+        { title: 'Pintura y Revestimiento', image: pintura, alt: 'pintura' },
+        { title: 'Pintura y Revestimiento', image: pintura, alt: 'pintura' },
+        { title: 'Pintura y Revestimiento', image: pintura, alt: 'pintura' },
+        { title: 'Pintura y Revestimiento', image: pintura, alt: 'pintura' },
+    ];
+
+    const servicesPiscinasData = [
+        {
+            title: 'Piscina Baldosas Atermicas',
+            image: piscinaBaldosasAtermicas,
+            alt: 'piscina baldosas atermicas',
+        },
+        { title: 'Jacuzzi', image: jacuzzi, alt: 'jacuzzi' },
+        { title: 'Luces LED', image: lucesLed, alt: 'luces led' },
+        {
+            title: 'Piscina Banco Deck',
+            image: piscinaBancoDeck,
+            alt: 'piscina banco deck',
+        },
+        {
+            title: 'Piscina Cascada',
+            image: piscinaCascada,
+            alt: 'piscina cascada',
+        },
+        { title: 'Piscina Lona', image: piscinaLona, alt: 'piscina lona' },
+        {
+            title: 'Revestimiento Piedra',
+            image: revestimientoPiedra,
+            alt: 'revestimiento piedra',
+        },
+        {
+            title: 'Revestimiento Pintura',
+            image: revestimientoPintura,
+            alt: 'revestimiento pintura',
+        },
+        {
+            title: 'Piscina Banco PVC',
+            image: piscinaBancoPvc,
+            alt: 'piscina banco pvc',
+        },
+        {
+            title: 'Piscina Clasica',
+            image: piscinaClasica,
+            alt: 'piscina clasica',
+        },
+    ];
 
     return (
         <main className="flex h-auto flex-col items-center justify-center">
@@ -118,37 +192,15 @@ const CardModels = () => {
             </h1>
             <div className="mb-12 flex w-full flex-col-reverse flex-wrap items-center justify-around xl:flex-row">
                 <div className="flex flex-col">
-                    <div className="grid grid-cols-1 grid-rows-4 gap-14 lg:grid-cols-3 lg:grid-rows-2 xl:grid-cols-3 xl:grid-rows-2">
-                        <CardService
-                            title={'Materiales'}
-                            image={materiales}
-                            alt={'materiales'}
-                        />
-                        <CardService
-                            title={'Mano de Obra'}
-                            image={manoObra}
-                            alt={'mano de obra'}
-                        />
-                        <CardService
-                            title={'Sistema de Filtrado y Bomba Autocebante'}
-                            image={autocebante}
-                            alt={'autocebante'}
-                        />
-                        <CardService
-                            title={'Luces y Accesorios'}
-                            image={ionizador}
-                            alt={'ionizador'}
-                        />
-                        <CardService
-                            title={'Sistema de Preclimatizacion'}
-                            image={caldera}
-                            alt={'caldera'}
-                        />
-                        <CardService
-                            title={'Pintura y Revestimiento'}
-                            image={pintura}
-                            alt={'pintura'}
-                        />
+                    <div className="grid grid-cols-1 grid-rows-4 gap-14 lg:grid-cols-3 lg:grid-rows-2 xl:grid-cols-5 xl:grid-rows-2">
+                        {servicesPiscinasData.map((service, index) => (
+                            <CardService
+                                key={index}
+                                title={service.title}
+                                image={service.image}
+                                alt={service.alt}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

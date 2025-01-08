@@ -23,7 +23,7 @@ export const CortinaBlackout = () => {
                     'control solar y de la iluminación para tus ambientes'
                 }
             />
-            <div className="flex flex-col items-center justify-center p-5 text-center">
+            {/* <div className="flex flex-col items-center justify-center p-5 text-center">
                 <p className='" py-1 text-lg tracking-wide text-[#545454] lg:text-3xl'>
                     Diversos sistemas de Roller Design{' '}
                     <span className="font-medium text-black"> HomeDeluxe</span>{' '}
@@ -31,7 +31,7 @@ export const CortinaBlackout = () => {
                     arquitecturas, <br /> estilos y presupuestos.
                 </p>
             </div>
-            <DividerBlack />
+            <DividerBlack /> */}
             <GridSection>
                 {arrayCortinasBlackout.map(item => (
                     <CardCortinasDetail

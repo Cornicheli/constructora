@@ -87,16 +87,16 @@ export const Cortinas = () => {
                     'Una solución a medida para Tu Hogar y Espacios. Ofrecemos una amplia variedad de cortinas y toldos para personalizar y mejorar tus ambientes..'
                 }
             />
-            <div className="flex flex-col items-center justify-center p-5 text-center">
+            {/* <div className="flex flex-col items-center justify-center p-5 text-center">
                 <p className='" py-1 text-lg tracking-wide text-[#545454] lg:text-3xl'>
                     Diversos sistemas de Cortinas de Interior{' '}
                     <span className="font-medium text-black"> HomeDeluxe</span>{' '}
                     se <br /> adaptan a una gran variedad de espacios,
                     arquitecturas, <br /> estilos y presupuestos.
                 </p>
-            </div>
+            </div> */}
 
-            <DividerBlack />
+            {/* <DividerBlack /> */}
 
             {/* <section className="grid h-screen w-full grid-cols-1 place-items-center lg:grid-cols-2"> */}
             <section className="flex flex-row flex-wrap items-center justify-center gap-10 py-10">
