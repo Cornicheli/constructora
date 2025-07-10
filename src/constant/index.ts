@@ -1,7 +1,6 @@
 import { ImgCortinasCarrousel } from './ImgCortinasCarrousel';
 import { ImgConstruccion } from './ImgConstruccion';
 import { ImgPiscinas } from './ImgPiscinas';
-import { ImgDesignPiscinas } from './ImgDesignPiscinas';
 import { ImgDetailsToldos } from './ImgDetailsToldos';
 import { ImgCortinas } from './ImgCortinas';
 import ImgDetailsCortinas from './ImgDetailsCortinas.json';
@@ -12,7 +11,6 @@ export {
     ImgCortinasCarrousel,
     ImgConstruccion,
     ImgPiscinas,
-    ImgDesignPiscinas,
     ImgDetailsToldos,
     ImgCortinas,
     ImgDetailsCortinas,

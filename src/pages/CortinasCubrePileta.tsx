@@ -2,7 +2,10 @@ import { CardCortinasDetail } from '@/components/card/CardCortinasDetail';
 import { CardHomeCortinas } from '@/components/card/CardHomeCortinas';
 import { DividerBlack } from '@/components/DividerBlack';
 import Footer from '@/components/Footer';
-import { arrayCortinasCubrePileta } from '@/constant/ArrayCortinas';
+import {
+    arrayCortinasCubrePileta,
+    arrayPersianasAmericanas,
+} from '@/constant/ArrayCortinas';
 import { GridSection } from '@/components/GridSection';
 import { ContentSection } from '@/components/ContentSection';
 
@@ -29,7 +32,7 @@ export const CortinasCubrePileta = () => {
             </div>
             <DividerBlack /> */}
             <GridSection>
-                {arrayCortinasCubrePileta.map((item: any) => (
+                {arrayPersianasAmericanas.map((item: any) => (
                     <CardCortinasDetail
                         photo={item.photo}
                         altPhoto={item.photo}

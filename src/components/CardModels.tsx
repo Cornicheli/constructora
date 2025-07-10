@@ -1,189 +1,41 @@
-import '../style/card.css';
-import { Card } from './card/Card';
-import { CardService } from './card/CardService';
-import {
-    materiales,
-    manoObra,
-    caldera,
-    ionizador,
-    autocebante,
-    pintura,
-} from '../assets/image/service';
+import { useState } from 'react';
+import '@/style/card.css';
+import { Card } from '@/components/card/Card';
+import { CardService } from '@/components/card/CardService';
+import { ModalPiscinas } from './modal/ModalPiscinas';
+import { servicesPiscinasData } from '@/constant/ArrayPiscinas';
+import { dataServiceCarrousel, imageMap } from '@/constant/ArrayPiscinas';
 import {
     excavacion,
     armadura,
     hormigon,
     revestimiento,
-    encofrado03,
-    encofrado02,
-    encofrado01,
-} from '../assets/image/construccion';
-import deObra from '../assets/deObra.jpg';
-import { useState } from 'react';
-import { ModalPiscinas } from './modal/ModalPiscinas';
-import {
-    revestimiento01,
-    revestimiento04,
-    revestimiento05,
-} from '../assets/image/revestimiento';
-import { marcado01, marcado02 } from '../assets/image/marcado';
-import {
-    excavacion02,
-    excavacion03,
-    excavacion04,
-} from '../assets/image/excavacion';
-import {
-    armaduraAcero01,
-    armaduraAcero02,
-    armaduraAcero03,
-} from '../assets/image/armaduraAcero';
-import { hormigonado02, hormigonado03 } from '..//assets/image/hormigonado';
-import {
-    obraFinalizada01,
-    obraFinalizada02,
-    obraFinalizada03,
-} from '../assets/image/finalizada';
-import {
-    piscinaBaldosasAtermicas,
-    jacuzzi,
-    lucesLed,
-    piscinaBancoDeck,
-    piscinaCascada,
-    piscinaLona,
-    revestimientoPiedra,
-    revestimientoPintura,
-    piscinaBancoPvc,
-    piscinaClasica,
-} from '@/assets/servicesPiscinas';
+} from '@/assets/image/construccion';
+import { ModalPiscinasService } from './modal/ModalPiscinasService';
 
 const CardModels = () => {
-    const cardsData = [
-        {
-            id: '1',
-            title: 'Marcado y Excavacion',
-            image: excavacion,
-            carouselImages: [
-                marcado01,
-                marcado02,
-                excavacion03,
-                excavacion04,
-                excavacion02,
-            ],
-        },
-        {
-            id: '3',
-            title: 'Armadura de Acero',
-            image: armadura,
-            carouselImages: [armaduraAcero01, armaduraAcero02, armaduraAcero03],
-        },
-        {
-            id: '4',
-            title: 'Proceso de Encofrado',
-            image: encofrado01,
-            carouselImages: [encofrado01, encofrado02, encofrado03],
-        },
-        {
-            id: '5',
-            title: 'Hormigonado',
-            image: hormigon,
-            carouselImages: [hormigonado02, hormigonado03],
-        },
-        {
-            id: '6',
-            title: 'Revestimiento/Pintura',
-            image: revestimiento,
-            carouselImages: [revestimiento01, revestimiento04, revestimiento05],
-        },
-        {
-            id: '7',
-            title: 'Entrega de Obra',
-            image: deObra,
-            carouselImages: [
-                obraFinalizada01,
-                obraFinalizada02,
-                obraFinalizada03,
-            ],
-        },
-    ];
-
     const [showModal, setShowModal] = useState(false);
-    const [selectedImages, setSelectedImages] = useState<string[]>([]);
-
-    const imageMap: { [key: string]: string[] } = {
-        1: [marcado01, marcado02, excavacion03, excavacion04, excavacion02],
-        2: [armaduraAcero01, armaduraAcero02, armaduraAcero03],
-        3: [encofrado01, encofrado02, encofrado03],
-        4: [hormigonado02, hormigonado03],
-        5: [revestimiento01, revestimiento04, revestimiento05],
-        6: [obraFinalizada01, obraFinalizada02, obraFinalizada03],
-    };
+    const [selectedImages, setSelectedImages] = useState<any>([]);
+    console.log('selectedImages', selectedImages);
+    const [showModalService, setShowModalService] = useState<boolean>(false);
+    const [selectedImageService, setSelectedImageService] = useState<{
+        _id: number;
+        title: string;
+        image: string[];
+    } | null>(null);
 
     const handleOpenModal = (id: string) => {
-        setSelectedImages(imageMap[id]); // Establece las imágenes según el id
+        setSelectedImages(imageMap[id]);
         setShowModal(true);
     };
 
-    const servicesData = [
-        { title: 'Materiales', image: materiales, alt: 'materiales' },
-        { title: 'Mano de Obra', image: manoObra, alt: 'mano de obra' },
-        {
-            title: 'Sistema de Filtrado y Bomba Autocebante',
-            image: autocebante,
-            alt: 'autocebante',
-        },
-        { title: 'Luces y Accesorios', image: ionizador, alt: 'ionizador' },
-        {
-            title: 'Sistema de Preclimatizacion',
-            image: caldera,
-            alt: 'caldera',
-        },
-        { title: 'Pintura y Revestimiento', image: pintura, alt: 'pintura' },
-        { title: 'Pintura y Revestimiento', image: pintura, alt: 'pintura' },
-        { title: 'Pintura y Revestimiento', image: pintura, alt: 'pintura' },
-        { title: 'Pintura y Revestimiento', image: pintura, alt: 'pintura' },
-        { title: 'Pintura y Revestimiento', image: pintura, alt: 'pintura' },
-    ];
-
-    const servicesPiscinasData = [
-        {
-            title: 'Piscina Baldosas Atermicas',
-            image: piscinaBaldosasAtermicas,
-            alt: 'piscina baldosas atermicas',
-        },
-        { title: 'Jacuzzi', image: jacuzzi, alt: 'jacuzzi' },
-        { title: 'Luces LED', image: lucesLed, alt: 'luces led' },
-        {
-            title: 'Piscina Banco Deck',
-            image: piscinaBancoDeck,
-            alt: 'piscina banco deck',
-        },
-        {
-            title: 'Piscina Cascada',
-            image: piscinaCascada,
-            alt: 'piscina cascada',
-        },
-        { title: 'Piscina Lona', image: piscinaLona, alt: 'piscina lona' },
-        {
-            title: 'Revestimiento Piedra',
-            image: revestimientoPiedra,
-            alt: 'revestimiento piedra',
-        },
-        {
-            title: 'Revestimiento Pintura',
-            image: revestimientoPintura,
-            alt: 'revestimiento pintura',
-        },
-        {
-            title: 'Piscina Banco PVC',
-            image: piscinaBancoPvc,
-            alt: 'piscina banco pvc',
-        },
-        {
-            title: 'Piscina Clasica',
-            image: piscinaClasica,
-            alt: 'piscina clasica',
-        },
-    ];
+    const handleOpenModalService = (id: number) => {
+        const service = dataServiceCarrousel.find(item => item._id === id);
+        if (service) {
+            setSelectedImageService(service);
+            setShowModalService(true);
+        }
+    };
 
     return (
         <main className="flex h-auto flex-col items-center justify-center">
@@ -196,27 +48,30 @@ const CardModels = () => {
                         {servicesPiscinasData.map((service, index) => (
                             <CardService
                                 key={index}
+                                onOpenModal={() =>
+                                    handleOpenModalService(service._id)
+                                }
                                 title={service.title}
                                 image={service.image}
                                 alt={service.alt}
                             />
                         ))}
                     </div>
+                    <ModalPiscinasService
+                        title={selectedImageService?.title || ''}
+                        isVisible={showModalService}
+                        isClose={() => setShowModalService(false)}
+                        images={selectedImageService?.image || []}
+                    />
                 </div>
             </div>
 
-            <section className="bg-[#0E2230]">
+            <section className="w-full bg-[#0E2230]">
                 <h1 className="m-5 text-center text-4xl font-bold text-white">
                     Proceso De Construcción
                 </h1>
 
-                <div className="flex flex-row flex-wrap items-center justify-center gap-10 pb-10">
-                    {/* <Card
-                                    id={'1'}
-                                    isOpenModal={() => setShowModal(true)}
-                                    title={'Demarcado'}
-                                    image={marcado}
-                              /> */}
+                <div className="grid w-full grid-cols-4 grid-rows-1">
                     <Card
                         id={1}
                         isOpenModal={handleOpenModal}
@@ -229,12 +84,7 @@ const CardModels = () => {
                         title={'Armadura de Acero'}
                         image={armadura}
                     />
-                    <Card
-                        id={3}
-                        isOpenModal={handleOpenModal}
-                        title={'Proceso de Encofrado'}
-                        image={encofrado01}
-                    />
+
                     <Card
                         id={4}
                         isOpenModal={handleOpenModal}
@@ -244,21 +94,17 @@ const CardModels = () => {
                     <Card
                         id={5}
                         isOpenModal={handleOpenModal}
-                        title={'Revestimiento/Pintura'}
+                        title={'Revestimiento'}
                         image={revestimiento}
                     />
-                    <Card
-                        id={6}
-                        isOpenModal={handleOpenModal}
-                        title={'Entrega de Obra'}
-                        image={deObra}
-                    />
+
                     <ModalPiscinas
+                        title={selectedImages.title}
                         isVisible={showModal}
                         isClose={() => {
                             setShowModal(false);
                         }}
-                        images={selectedImages}
+                        images={selectedImages.images}
                     />
                 </div>
             </section>

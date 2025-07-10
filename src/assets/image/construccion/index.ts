@@ -2,7 +2,7 @@ import marcado from './marcado.jpg';
 import excavacion from './excavacion.jpg';
 import armadura from './armadura.jpg';
 import hormigon from './hormigon.jpg';
-import revestimiento from './revestimiento.jpg';
+import revestimiento from './revestimiento.jpeg';
 import deObra from './deObra.jpeg';
 import encofrado01 from './enconfrado-01.jpeg';
 import encofrado02 from './enconfrado-02.jpeg';
