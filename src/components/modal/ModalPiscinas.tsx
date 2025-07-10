@@ -7,9 +7,15 @@ interface ShowModal {
     isVisible: boolean;
     isClose: () => void;
     images: string[];
+    title: any;
 }
 
-export const ModalPiscinas = ({ isVisible, isClose, images }: ShowModal) => {
+export const ModalPiscinas = ({
+    isVisible,
+    isClose,
+    images,
+    title,
+}: ShowModal) => {
     const [handleIndex, setHandleIndex] = useState(0);
 
     const handleOnSuma = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -41,7 +47,7 @@ export const ModalPiscinas = ({ isVisible, isClose, images }: ShowModal) => {
                     {/* Header */}
                     <div className="mx-6 flex h-20 items-center justify-between">
                         <h1 className="w-full text-center text-2xl sm:text-3xl">
-                            Demarcado
+                            {title}
                         </h1>
                         <button className="cursor-pointer" onClick={isClose}>
                             <img

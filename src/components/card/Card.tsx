@@ -15,7 +15,7 @@ export const Card = ({
 }: PropsCard) => {
     return (
         <div
-            className="mx-5 my-5 flex h-80 w-[375px] cursor-pointer flex-col items-center justify-center rounded-xl shadow-lg transition duration-100 ease-out hover:scale-105 md:w-[450px] md:ease-in lg:w-[375px] 2xl:w-[475px]"
+            className="mx-3 my-3 flex h-72 w-[350px] cursor-pointer flex-col items-center justify-center rounded-xl shadow-lg transition duration-100 ease-out hover:scale-105 md:w-[400px] md:ease-in lg:w-[310px] 2xl:w-[410px]"
             onClick={() => isOpenModal && isOpenModal(id)}>
             <div
                 className="h-4/5 w-full overflow-hidden rounded-t-xl bg-cover bg-center"

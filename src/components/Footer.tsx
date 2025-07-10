@@ -48,18 +48,6 @@ const Footer: React.FC = () => {
             </svg>
             <div className="inner-header relative z-10 flex flex-wrap items-center justify-evenly">
                 <div className="z-10 my-5 flex w-72 flex-col items-center justify-center">
-                    <div className="h-36 w-72">
-                        <img
-                            className="h-full w-full rounded-full bg-cover"
-                            src={image}
-                        />
-                    </div>
-                    <h3 className="text-center text-lg font-semibold text-[#030608]">
-                        Constructora especializada en la construcción de
-                        viviendas y piscinas industrializadas
-                    </h3>
-                </div>
-                <div className="z-10 my-5 flex w-[300px] flex-col items-center justify-center">
                     <section>
                         <div className="flex flex-row items-center">
                             <MdAlternateEmail />
@@ -86,6 +74,20 @@ const Footer: React.FC = () => {
                             </h3>
                         </div>
                     </section>
+
+                    {/* <h3 className="text-center text-lg font-semibold text-[#030608]">
+                        Constructora especializada en la construcción de
+                        viviendas y piscinas industrializadas
+                    </h3> */}
+                </div>
+                <div className="z-10 my-5 flex w-[300px] flex-col items-center justify-center">
+                    <div className="h-36 w-72">
+                        <img
+                            className="h-full w-full rounded-full bg-cover"
+                            src={image}
+                        />
+                    </div>
+
                     <div className="flex flex-row items-center justify-center gap-10">
                         <CardFooter
                             url={

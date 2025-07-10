@@ -70,6 +70,64 @@ import {
     sunscreen07,
     sunscreen08,
 } from '@/assets/cortinas';
+import {
+    persianaAmericana01,
+    persianaAmericana02,
+    persianaAmericana03,
+    persianaAmericana04,
+    persianaAmericana05,
+    persianaAmericana06,
+    persianaAmericana07,
+} from '@/assets/cortinas/persianasAmericanas';
+
+import {
+    jacuzzi,
+    lucesLed,
+    piscinaBancoDeck,
+    piscinaCascada,
+    piscinaLona,
+    revestimientoPiedra,
+    revestimientoPintura,
+    piscinaBancoPvc,
+    piscinaClasica,
+} from '@/assets/piscinaService';
+
+import { marcado01, marcado02 } from '@/assets/image/marcado';
+import {
+    obraFinalizada01,
+    obraFinalizada02,
+    obraFinalizada03,
+} from '@/assets/image/finalizada';
+
+import deObra from '@/assets/deObra.jpg';
+import {
+    revestimiento01,
+    revestimiento04,
+    revestimiento05,
+} from '@/assets/image/revestimiento';
+
+import {
+    excavacion02,
+    excavacion03,
+    excavacion04,
+} from '@/assets/image/excavacion';
+import {
+    armaduraAcero01,
+    armaduraAcero02,
+    armaduraAcero03,
+} from '@/assets/image/armaduraAcero';
+import {
+    excavacion,
+    armadura,
+    hormigon,
+    revestimiento,
+    encofrado03,
+    encofrado02,
+    encofrado01,
+} from '@/assets/image/construccion';
+
+import { hormigonado02, hormigonado03 } from '@/assets/image/hormigonado';
+import { pintura01 } from '@/assets/serviceCarrousel/pintura';
 
 export const arrayCortinasRoller = [
     {
@@ -100,8 +158,8 @@ export const arrayCortinasRoller = [
     },
     {
         id: 4,
-        title: 'Cubre Piletas',
-        photo: cubrePileta05,
+        title: 'Persianas Americanas',
+        photo: persianaAmericana06,
     },
 ];
 
@@ -288,11 +346,11 @@ export const arrayCortinasBlackout = [
         altPhoto: 'Cortina estilo blackout modelo 02',
         photo: blackout02,
     },
-    {
-        id: 3,
-        altPhoto: 'Cortina estilo blackout modelo 03',
-        photo: blackout03,
-    },
+    // {
+    //     id: 3,
+    //     altPhoto: 'Cortina estilo blackout modelo 03',
+    //     photo: blackout03,
+    // },
     {
         id: 4,
         altPhoto: 'Cortina estilo blackout modelo 04',
@@ -360,5 +418,117 @@ export const arrayCortinasSistemaDoble = [
         id: 8,
         altPhoto: 'Cortina sistema doble modelo 08',
         photo: sistemaDoble08,
+    },
+];
+
+export const arrayPersianasAmericanas = [
+    {
+        id: 1,
+        altPhoto: 'Persiana americana modelo 01',
+        photo: persianaAmericana01,
+    },
+    {
+        id: 2,
+        altPhoto: 'Persiana americana modelo 02',
+        photo: persianaAmericana02,
+    },
+    {
+        id: 3,
+        altPhoto: 'Persiana americana modelo 03',
+        photo: persianaAmericana03,
+    },
+    {
+        id: 4,
+        altPhoto: 'Persiana americana modelo 04',
+        photo: persianaAmericana04,
+    },
+    {
+        id: 5,
+        altPhoto: 'Persiana americana modelo 05',
+        photo: persianaAmericana05,
+    },
+    {
+        id: 7,
+        altPhoto: 'Persiana americana modelo 07',
+        photo: persianaAmericana07,
+    },
+];
+
+const cardsData = [
+    {
+        id: '1',
+        title: 'Marcado y Excavacion',
+        image: excavacion,
+        carouselImages: [
+            marcado01,
+            marcado02,
+            excavacion03,
+            excavacion04,
+            excavacion02,
+        ],
+    },
+    {
+        id: '3',
+        title: 'Armadura de Acero',
+        image: armadura,
+        carouselImages: [armaduraAcero01, armaduraAcero02, armaduraAcero03],
+    },
+    {
+        id: '4',
+        title: 'Proceso de Encofrado',
+        image: encofrado01,
+        carouselImages: [encofrado01, encofrado02, encofrado03],
+    },
+    {
+        id: '5',
+        title: 'Hormigonado',
+        image: hormigon,
+        carouselImages: [hormigonado02, hormigonado03],
+    },
+    {
+        id: '6',
+        title: 'Revestimiento/Pintura',
+        image: revestimiento,
+        carouselImages: [revestimiento01, revestimiento04, revestimiento05],
+    },
+    {
+        id: '7',
+        title: 'Entrega de Obra',
+        image: deObra,
+        carouselImages: [obraFinalizada01, obraFinalizada02, obraFinalizada03],
+    },
+];
+
+export const imageMapArrayObj: {
+    _id: number;
+    title: string;
+    image: string[];
+}[] = [
+    {
+        _id: 1,
+        title: 'Marcado y Excavacion',
+        image: [excavacion03, excavacion04, excavacion02],
+    },
+    {
+        _id: 2,
+        title: 'Armadura de Acero',
+        image: [
+            armaduraAcero01,
+            armaduraAcero02,
+            armaduraAcero03,
+            encofrado01,
+            encofrado02,
+            encofrado03,
+        ],
+    },
+    {
+        _id: 3,
+        title: 'Horimigonado',
+        image: [hormigonado02, hormigonado03],
+    },
+    {
+        _id: 4,
+        title: 'Revestimiento',
+        image: [revestimiento04, revestimiento05],
     },
 ];
