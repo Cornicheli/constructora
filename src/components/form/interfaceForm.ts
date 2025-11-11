@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface titleProps {
     title: string;
 }
@@ -7,6 +9,7 @@ export interface typeFormProps extends titleProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     name: string;
     placeholder?: string;
+    type?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface typeDropdownProps extends titleProps {

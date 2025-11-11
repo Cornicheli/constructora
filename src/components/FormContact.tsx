@@ -18,9 +18,10 @@ const FormContact = () => {
     const [name, setName] = useState('');
     const [service, setService] = useState('');
     const [location, setLocation] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
 
-    // const telefono = '541136821653';
-    const telefono = '541159286582';
+    const telefono = '541136821653';
+    // const telefono = '541133758362';
 
     // Función para validar si el formulario está completo
     const isFormValid = () => {
@@ -28,17 +29,20 @@ const FormContact = () => {
             name.trim() !== '' &&
             location.trim() !== '' &&
             service.trim() !== '' &&
-            message.trim() !== ''
+            message.trim() !== '' &&
+            phoneNumber.trim() !== ''
         );
     };
 
     const mensajeCodificado = encodeURIComponent(
         `
-        Nombre: ${name} 
-        Localidad: ${location} 
-        Tipo de servicio: ${service}
+        *Tipo de servicio: ${service}*
+        Nombre: ${name}
+        Teléfono: ${phoneNumber}
+        Localidad: ${location}        
         ${' '}        
-        ${message}`,
+        ${message}
+        `,
     );
 
     const linkWhatsApp = `https://wa.me/${telefono}?text=${mensajeCodificado}`;
@@ -51,6 +55,7 @@ const FormContact = () => {
 
                     <div className="mt-4 space-y-6">
                         <InputForm
+                            type={String}
                             value={name}
                             onChange={e => setName(e.target.value)}
                             name={'name'}
@@ -58,11 +63,21 @@ const FormContact = () => {
                             title={'Nombre'}
                         />
                         <InputForm
+                            type={String}
                             value={location}
                             onChange={e => setLocation(e.target.value)}
                             name={'location'}
                             placeholder={'Localidad'}
                             title={'Localidad'}
+                        />
+
+                        <InputForm
+                            type={Number}
+                            value={phoneNumber}
+                            onChange={e => setPhoneNumber(e.target.value)}
+                            name={''}
+                            placeholder={'Teléfono'}
+                            title={'Teléfono'}
                         />
 
                         <InputDropdown

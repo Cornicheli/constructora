@@ -1,0 +1,92 @@
+PRD: Proyecto Constructora - Contexto, dependencias y reutilización de componentes
+
+1) Visión general
+- Descripción: Documento de requerimientos y alineación para el proyecto de una constructora, enfocado en contexto técnico, dependencias y patrones de reutilización de componentes UI.
+- Propósito: Alinear equipo y stakeholders sobre el alcance, arquitectura, dependencias y prácticas de reutilización.
+
+2) Alcance
+- Este PRD aplica a la plataforma frontend construida con React + TypeScript sobre Vite, usando Tailwind y Bootstrap para estilos.
+- Contempla las páginas principales: Constructora, Piscinas, Cortinas, Toldos, Cerramientos, CubrePileta, y secciones de servicio.
+- Incluye componentes reutilizables, patrones de diseño y flujos de navegación.
+
+3) Stakeholders
+- Equipo de Producto
+- Equipo de Desarrollo Frontend
+- Equipo UX/UI
+- QA/QA Automática
+- Stakeholders de negocio (representantes de ventas/operaciones)
+
+4) Contexto del negocio
+- La plataforma sirve para presentar servicios de construcción y remodelación/resguardo estético para hogares, con énfasis en cortinas, toldos, piscinas y cerramientos.
+- El objetivo es proporcionar una experiencia de usuario coherente y reutilizable, que permita mostrar soluciones de manera modular y escalable.
+
+5) Arquitectura de alto nivel
+- Stack tecnológico:
+  - Frontend: React 18, TypeScript, Vite
+  - Estilos: Tailwind CSS, Bootstrap (para ciertos componentes)
+  - Enrutamiento: react-router-dom
+  - Carousels/slider: react-slick
+- Estructura de código relevante:
+  - `src/components/` (componentes reutilizables)
+  - `src/pages/` (páginas de alto nivel)
+  - `src/constant/` (datos estáticos y colección de assets)
+  - Barrel exports en `src/components/index.ts` para facilitar importaciones
+  - Archivos de configuración: `vite.config.ts`, `tailwind.config.js`, `tsconfig.json`
+
+6) Dependencias técnicas
+- Dependencias principales (en package.json):
+  - React, React DOM, React Router, React Icons, Bootstrap, React Bootstrap, React Slick, Slick Carousel
+- Dev dependencies:
+  - TypeScript, Vite, ESLint, Prettier, Tailwind CSS, PostCSS, SWC-based React plugin
+- Herramientas de construcción y linting: ESLint, Prettier, Tailwind plugin
+- Configuraciones relevantes:
+  - `tailwind.config.js` para contenido de tailwind
+  - `vite.config.ts` con alias `@/` a `src`
+  - `tsconfig.json` y `tsconfig.node.json` para paths y strict mode
+- Observaciones:
+  - No hay llamadas a APIs externas en el código base actual; el contenido es mayormente estático y orientado a presentación de servicios.
+
+7) Patrones de reutilización de componentes
+- Barrel exports: `src/components/index.ts` agrupa componentes principales (AboutUs, Nav, Typologies, SocialNetwoks, Proyect)
+- Tipos de componentes:
+  - Tarjetas (Card*, CardService, CardTypologie, CardFooter, etc.)
+  - Navegación (Nav)
+  - Carruseles y galerías (Carrousel*, CarrouselPisci, CarrouselConstru, etc.)
+  - Formularios (FormContact y subcomponentes en `src/components/form/`)
+- Uso de recursos estáticos:
+  - Imagenes y assets en `src/assets/` y `public/`
+- Patrones de diseño:
+  - Componentes modulares para secciones de contenido (ContentSection)
+  - Componentes de servicio y tipologías reutilizables (Typologies, Proyect)
+
+8) Modelo de datos y contenido
+- Datos estáticos globales:
+  - Arrays y datos en `src/constant/` (p. ej., `ArrayCortinas.ts`, `ImgCortinas.tsx`, `ImgPiscinas.tsx`, etc.)
+- Recursos de medios:
+  - Imágenes y iconos en `src/assets/` y subcarpetas (p. ej., cortinas, piscina, maison)
+- No se observan endpoints de API en el código actual; integración futura podría ir a través de un servicio de API separado.
+
+9) Requisitos no funcionales
+- Rendimiento y experiencia de usuario:
+  - Uso de carruseles y lazy loading básico a través de librerías estándar
+- Calidad de código:
+  - ESLint + Prettier + TypeScript estricto
+- Accesibilidad y diseño:
+  - Estructuras semánticas a través de componentes y clases de Tailwind/Bootstrap
+- Construcción y despliegue:
+  - Vite como bundler, Tailwind para estilo, PostCSS para procesamiento
+
+10) Plan de entrega y criterios de aceptación
+- Entregar PRD completo y validado por Vendor/Equipo de Producto
+- Verificar que la estructura de imports y exports facilita la reutilización
+- Comprobar que la documentación de componentes corresponde a su uso y ejemplos en las páginas
+- Confirmar que la configuración de dev/build funciona localmente (npm install, npm run dev)
+
+Anexos
+- Archivos clave citados:
+  - `package.json` (stack y dependencias)
+  - `src/components/index.ts` (barrel de componentes)
+  - `src/pages/*` (páginas principales)
+  - `src/constant/*` (datos estáticos)
+  - `vite.config.ts`, `tailwind.config.js`, `tsconfig.json` (configuración)
+

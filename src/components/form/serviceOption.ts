@@ -1,26 +1,26 @@
 export const optionService = [
     {
         title: 'Piscinas',
-        value: 'piscinas',
+        value: 'Piscinas',
     },
     {
         title: 'Refacciones',
-        value: 'refacciones',
+        value: 'Refacciones',
     },
     {
         title: 'Proyecto de 0',
-        value: 'proyecto-de-0',
+        value: 'Proyecto-de-0',
     },
     {
         title: 'Toldos - Cortinas',
-        value: 'toldos-cortinas',
+        value: 'Toldos-Cortinas',
     },
     {
         title: 'Parquizado y poda',
-        value: 'parquizado-y-poda',
+        value: 'Parquizado-y-Poda',
     },
     {
         title: 'Movimiento de suelo',
-        value: 'movimiento-de-suelo',
+        value: 'Movimiento-de-Suelo',
     },
 ];
