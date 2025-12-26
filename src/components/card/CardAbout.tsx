@@ -1,14 +1,11 @@
-export const CardAbout = ({
-    title,
-    subtitle,
-    image,
-    alt,
-}: {
+interface CardAboutProps {
     title: string;
-    image: string;
     subtitle: string;
+    image: string;
     alt: string;
-}) => {
+}
+
+export const CardAbout = ({ title, subtitle, image, alt }: CardAboutProps) => {
     return (
         <div className="flex h-72 flex-col items-center justify-center">
             <img src={image} alt={alt} />

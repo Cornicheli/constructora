@@ -11,6 +11,8 @@
             "@utils/*": ["src/utils/*"],
             "@assets/*": ["src/assets/*"]
         },
+        "types": ["vite/client"],
+        "noEmit": true,
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,

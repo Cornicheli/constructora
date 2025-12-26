@@ -1,10 +1,9 @@
-export const CardTypologies = ({
-    title,
-    image,
-}: {
+interface CardTypologiesProps {
     title: string;
     image: string;
-}) => {
+}
+
+export const CardTypologies = ({ title, image }: CardTypologiesProps) => {
     return (
         <div className="relative m-auto flex h-72 w-[375px] flex-col items-center justify-center rounded-xl shadow-md shadow-[#ffffff4d] transition duration-100 ease-out hover:scale-105 md:w-[450px] md:ease-in lg:w-[375px] 2xl:w-[475px]">
             {/* <div
