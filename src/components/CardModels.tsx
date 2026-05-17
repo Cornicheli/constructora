@@ -47,6 +47,7 @@ import {
 const CardModels = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedImages, setSelectedImages] = useState<string[]>([]);
+    const [selectedTitle, setSelectedTitle] = useState<string>('');
 
     const imageMap: { [key: string]: string[] } = {
         1: [marcado01, marcado02, excavacion03, excavacion04, excavacion02],
@@ -71,31 +72,31 @@ const CardModels = () => {
             ],
         },
         {
-            id: '3',
+            id: '2',
             title: 'Armadura de Acero',
             image: armadura,
             carouselImages: [armaduraAcero01, armaduraAcero02, armaduraAcero03],
         },
         {
-            id: '4',
+            id: '3',
             title: 'Proceso de Encofrado',
             image: encofrado01,
             carouselImages: [encofrado01, encofrado02, encofrado03],
         },
         {
-            id: '5',
+            id: '4',
             title: 'Hormigonado',
             image: hormigon,
             carouselImages: [hormigonado02, hormigonado03],
         },
         {
-            id: '6',
+            id: '5',
             title: 'Revestimiento/Pintura',
             image: revestimiento,
             carouselImages: [revestimiento01, revestimiento04, revestimiento05],
         },
         {
-            id: '7',
+            id: '6',
             title: 'Entrega de Obra',
             image: deObra,
             carouselImages: [
@@ -108,6 +109,8 @@ const CardModels = () => {
 
     const handleOpenModal = (id: string) => {
         setSelectedImages(imageMap[id]); // Establece las imágenes según el id
+        const card = cardsData.find(c => c.id === id);
+        setSelectedTitle(card?.title || 'Proceso de Construcción');
         setShowModal(true);
     };
 
@@ -206,8 +209,10 @@ const CardModels = () => {
                         isClose={() => {
                             setShowModal(false);
                             setSelectedImages([]);
+                            setSelectedTitle('');
                         }}
                         images={selectedImages}
+                        title={selectedTitle}
                     />
                 </div>
             </section>

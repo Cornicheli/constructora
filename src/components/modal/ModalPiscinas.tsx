@@ -7,9 +7,10 @@ interface ShowModal {
     isVisible: boolean;
     isClose: () => void;
     images: string[];
+    title?: string;
 }
 
-export const ModalPiscinas = ({ isVisible, isClose, images }: ShowModal) => {
+export const ModalPiscinas = ({ isVisible, isClose, images, title }: ShowModal) => {
     const [handleIndex, setHandleIndex] = useState(0);
 
     const handleOnSuma = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -41,7 +42,7 @@ export const ModalPiscinas = ({ isVisible, isClose, images }: ShowModal) => {
                     {/* Header */}
                     <div className="mx-6 flex h-20 items-center justify-between">
                         <h1 className="w-full text-center text-2xl sm:text-3xl">
-                            Demarcado
+                            {title || 'Proceso de Construcción'}
                         </h1>
                         <button className="cursor-pointer" onClick={isClose}>
                             <img
@@ -53,11 +54,11 @@ export const ModalPiscinas = ({ isVisible, isClose, images }: ShowModal) => {
                     </div>
 
                     {/* Content */}
-                    <div className="relative flex h-full w-full flex-row items-center justify-between pb-4">
+                    <div className="relative flex h-full w-full flex-row items-center justify-between px-6 pb-4">
                         {/* Botón para ir atrás */}
                         <button
                             onClick={handleOnResta}
-                            className="absolute left-0 top-1/2 z-10 h-10 w-10 -translate-y-1/2 transform sm:h-8 sm:w-8">
+                            className="absolute left-4 top-1/2 z-10 h-10 w-10 -translate-y-1/2 transform sm:h-8 sm:w-8">
                             <img
                                 className="h-full w-full"
                                 src={back}
@@ -67,23 +68,16 @@ export const ModalPiscinas = ({ isVisible, isClose, images }: ShowModal) => {
 
                         {/* Imagen */}
 
-                        <div
-                            style={{
-                                backgroundImage: `url(${images[handleIndex]})`,
-                            }}
-                            className="mx-auto rounded-lg bg-cover bg-center md:h-[500px] md:w-[600px] lg:h-[500px] lg:w-[700px] xl:h-[500px] xl:w-[830px]"
-                            aria-label={`Imagen ${handleIndex + 1}`}
+                        <img
+                            src={images[handleIndex]}
+                            alt={`Proceso de construcción - Imagen ${handleIndex + 1} de ${images.length}`}
+                            className="w-full max-w-[90vw] max-h-[60vh] object-contain rounded-lg mx-auto"
                         />
-
-                        {/* <img
-              src={images[handleIndex]}
-              alt={`Imagen ${handleIndex + 1}`}
-              className="xl:h-[500px] xl:w-[830px] object-cover rounded-lg mx-auto lg:h-[500px] lg:w-[700px] md:w-[600px] md:h-[500px]" /> */}
 
                         {/* Botón para ir adelante */}
                         <button
                             onClick={handleOnSuma}
-                            className="absolute right-0 top-1/2 z-10 h-10 w-10 -translate-y-1/2 transform sm:h-8 sm:w-8">
+                            className="absolute right-4 top-1/2 z-10 h-10 w-10 -translate-y-1/2 transform sm:h-8 sm:w-8">
                             <img
                                 className="h-full w-full"
                                 src={next}

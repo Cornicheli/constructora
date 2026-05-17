@@ -73,7 +73,7 @@ const CarrouselMultiPisci = () => {
                             className="m-6 flex scale-105 transform flex-row rounded-2xl"
                             key={d.id}>
                             <div
-                                className="h-46 w-[100px] rounded-2xl border transition duration-700 ease-in-out md:w-[188px] lg:w-[200px] 2xl:w-[250px]"
+                                className="h-auto aspect-[3/4] w-[140px] rounded-2xl border transition duration-700 ease-in-out sm:w-[160px] md:w-[188px] lg:w-[200px] xl:w-[220px] 2xl:w-[250px]"
                                 onMouseEnter={() => setHoverId(d.id)}
                                 onMouseLeave={() => setHoverId(null)}>
                                 <img
@@ -83,7 +83,7 @@ const CarrouselMultiPisci = () => {
                                             ? d.imageHover
                                             : d.image
                                     }
-                                    alt="Design"
+                                    alt={`Diseño de piscina ${d.id} - ${hoverId === d.id ? 'Vista con medidas' : 'Vista general'}`}
                                 />
                             </div>
                         </div>

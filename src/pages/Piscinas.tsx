@@ -14,9 +14,9 @@ const Piscinas = () => {
             <main
                 className="flex h-auto w-full flex-col flex-wrap items-center justify-center py-3 xl:flex-row"
                 id="aboutus">
-                <figure className="h-[500px] w-[350px] py-4 lg:h-[650px] lg:w-[750px]">
+                <figure className="w-full max-w-[350px] py-4 aspect-[9/16] lg:max-w-[750px] lg:aspect-video">
                     <video
-                        className="h-full w-full rounded-xl bg-cover"
+                        className="h-full w-full rounded-xl object-cover"
                         src={cascadaPiscina}
                         autoPlay
                         loop

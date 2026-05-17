@@ -13,76 +13,67 @@ const CarrouselPisci = () => {
             <Carousel.Item
                 interval={1000}
                 className="lg:h-[500px] xl:h-[800px]">
-                <div
-                    className={`h-full w-full bg-cover bg-center`}
-                    style={{ backgroundImage: `url(${piscina11})` }}
+                <img
+                    className="h-full w-full object-cover"
+                    src={piscina11}
+                    alt="Piscina ejecutiva con iluminación LED nocturna"
                 />
-
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
+                    <h3>Piscinas de Alta Calidad</h3>
                     <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
+                        Diseños personalizados para tu espacio ideal
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={500} className="lg:h-[500px] xl:h-[800px]">
-                <div
-                    className={`h-full w-full bg-cover bg-center`}
-                    style={{ backgroundImage: `url(${piscina2})` }}
+                <img
+                    className="h-full w-full object-cover"
+                    src={piscina2}
+                    alt="Vista aérea de piscina con paisajismo completo"
                 />
-
-                {/* <img
-                              className='h-full w-full'
-                              src={piscina2}
-                              alt="Second slide"
-                        /> */}
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
+                    <h3>Más de 15 Años de Experiencia</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        200+ proyectos realizados en AMBA y Córdoba
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
                 <img
-                    className="h-full w-full"
+                    className="h-full w-full object-cover"
                     src={piscina01}
-                    alt="Second slide"
+                    alt="Piscina moderna con deck de madera y cascada"
                 />
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
+                    <h3>Construcción Profesional</h3>
                     <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl
-                        consectetur.
+                        Equipos altamente calificados y tecnología de punta
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
                 <img
-                    className="h-full w-full"
+                    className="h-full w-full object-cover"
                     src={piscina4}
-                    alt="Second slide"
+                    alt="Piscina rectangular con revestimiento cerámico azul"
                 />
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
+                    <h3>Diseños Modernos</h3>
                     <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl
-                        consectetur.
+                        Piscinas adaptadas a tu estilo de vida
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="lg:h-[500px] xl:h-[800px]">
                 <img
-                    className="h-full w-full"
+                    className="h-full w-full object-cover"
                     src={piscina5}
-                    alt="Second slide"
+                    alt="Piscina de hormigón en proceso de construcción"
                 />
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
+                    <h3>De la Idea a la Realidad</h3>
                     <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl
-                        consectetur.
+                        Convertimos tu proyecto soñado en realidad
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
