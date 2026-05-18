@@ -1,26 +1,92 @@
+import { ArrowRight } from '../icons';
+
 interface CardTypologiesProps {
     title: string;
+    titleAccent: string;
     image: string;
+    lineNum: string;
 }
 
-export const CardTypologies = ({ title, image }: CardTypologiesProps) => {
+export const CardTypologies = ({
+    title,
+    titleAccent,
+    image,
+    lineNum,
+}: CardTypologiesProps) => {
     return (
-        <div className="relative m-auto flex h-72 w-[375px] flex-col items-center justify-center rounded-xl shadow-md shadow-[#ffffff4d] transition duration-100 ease-out hover:scale-105 md:w-[450px] md:ease-in lg:w-[375px] 2xl:w-[475px]">
-            {/* <div
-                        className="w-full h-42 group overflow-hidden rounded-xl bg-cover bg-center"
-                        style={{ backgroundImage: `url(${image})` }}
-                  /> */}
-            <div className="h-42 group w-full overflow-hidden rounded-xl">
-                <img
-                    className="h-full w-full rounded-xl"
-                    src={image}
-                    alt="Image"
-                />
+        <div
+            className="group relative cursor-pointer overflow-hidden"
+            style={{ aspectRatio: '4/5' }}>
+            {/* Background image */}
+            <div
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-[600ms] ease-out group-hover:scale-[1.04]"
+                style={{ backgroundImage: `url(${image})` }}
+            />
+
+            {/* Gradient overlay */}
+            <div
+                className="absolute inset-0"
+                style={{
+                    background:
+                        'linear-gradient(180deg, rgba(14,33,56,0) 30%, rgba(14,33,56,.85) 100%)',
+                }}
+            />
+
+            {/* Top left: line label */}
+            <div
+                className="absolute left-6 top-6 z-10 flex items-center gap-3 text-sm text-white"
+                style={{
+                    fontFamily: '"Instrument Serif", "Times New Roman", serif',
+                    fontStyle: 'italic',
+                }}>
+                <span className="block h-px w-6 bg-gold" />
+                {lineNum}
             </div>
-            <div className="absolute bottom-0 left-5 h-10 w-36 rounded-t-md bg-[#00000061]">
-                <h1 className="absolute bottom-2 left-5 font-semibold text-white">
+
+            {/* Top right: arrow */}
+            <div
+                className="absolute right-6 top-6 z-10 flex h-[38px] w-[38px] items-center justify-center rounded-full border border-white/40 text-white transition-all duration-200 group-hover:border-gold group-hover:bg-gold group-hover:text-navy"
+                style={{ color: '#fff' }}>
+                <ArrowRight />
+            </div>
+
+            {/* Bottom: title + specs */}
+            <div className="absolute bottom-6 left-6 right-6 z-10 flex items-end justify-between text-white">
+                <h3
+                    className="m-0 font-light leading-[1.05] tracking-[-0.015em]"
+                    style={{ fontSize: 30 }}>
                     {title}
-                </h1>
+                    <em
+                        className="block"
+                        style={{
+                            fontFamily:
+                                '"Instrument Serif", "Times New Roman", serif',
+                            fontStyle: 'italic',
+                            fontWeight: 400,
+                            fontSize: 32,
+                            color: '#d9bd91',
+                        }}>
+                        {titleAccent}
+                    </em>
+                </h3>
+                <div className="text-white/78 text-right text-[11px] uppercase tracking-[.18em]">
+                    <strong
+                        className="block"
+                        style={{
+                            fontFamily:
+                                '"Instrument Serif", "Times New Roman", serif',
+                            fontStyle: 'italic',
+                            fontWeight: 400,
+                            fontSize: 22,
+                            letterSpacing: 0,
+                            color: '#fff',
+                            textTransform: 'none',
+                            marginBottom: 4,
+                        }}>
+                        1 — 3
+                    </strong>
+                    Dormitorios
+                </div>
             </div>
         </div>
     );

@@ -1,7 +1,12 @@
-import { AboutUs, Proyect, Typologies } from '../components';
-import { WhatsappChat } from '../components/WhatsappChat';
-import CarrouselConstru from '../components/carrousel/CarrouselConstru';
-import Footer from '../components/Footer';
+import {
+    AboutUs,
+    Proyect,
+    Typologies,
+    CarrouselConstru,
+    CTABanner,
+    Footer,
+    WhatsappChat,
+} from '../components';
 
 const Constructora = () => {
     return (
@@ -10,6 +15,7 @@ const Constructora = () => {
             <AboutUs />
             <Proyect />
             <Typologies />
+            <CTABanner />
             <Footer />
             <WhatsappChat />
         </>

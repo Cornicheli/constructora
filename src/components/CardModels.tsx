@@ -1,5 +1,6 @@
 import { CardService } from './card/CardService';
 import { Card } from './card/Card';
+import { Eyebrow } from './ui';
 import {
     materiales,
     manoObra,
@@ -54,7 +55,8 @@ const servicesData = [
     {
         index: 2,
         title: 'Mano de Obra',
-        description: 'Equipo técnico calificado con más de 15 años de experiencia.',
+        description:
+            'Equipo técnico calificado con más de 15 años de experiencia.',
         image: manoObra,
         alt: 'mano de obra',
     },
@@ -75,7 +77,8 @@ const servicesData = [
     {
         index: 5,
         title: 'Sistema de Preclimatización',
-        description: 'Instalación lista para futura climatización de tu piscina.',
+        description:
+            'Instalación lista para futura climatización de tu piscina.',
         image: caldera,
         alt: 'caldera',
     },
@@ -100,7 +103,13 @@ const stepsData: StepData[] = [
             { k: 'Profundidad media', v: '1.5 — 2.2 m' },
             { k: 'Duración estimada', v: '1 — 2 días' },
         ],
-        carouselImages: [marcado01, marcado02, excavacion03, excavacion04, excavacion02],
+        carouselImages: [
+            marcado01,
+            marcado02,
+            excavacion03,
+            excavacion04,
+            excavacion02,
+        ],
     },
     {
         id: '02',
@@ -183,7 +192,9 @@ const CardModels = () => {
     return (
         <div>
             {/* ── Nuestros Servicios ── */}
-            <section className="py-[110px] px-10" style={{ background: '#fafaf7' }}>
+            <section
+                className="px-10 py-[110px]"
+                style={{ background: '#fafaf7' }}>
                 <div style={{ maxWidth: 1320, margin: '0 auto' }}>
                     {/* Head — 2 col */}
                     <div
@@ -195,25 +206,29 @@ const CardModels = () => {
                             alignItems: 'end',
                         }}>
                         <div>
-                            <div className="mb-3 flex items-center gap-2.5">
-                                <span className="h-px w-7 bg-gold" />
-                                <span className="text-[11px] font-semibold uppercase tracking-[.32em] text-gold">
-                                    Qué ofrecemos
-                                </span>
-                            </div>
+                            <Eyebrow label="Qué ofrecemos" className="mb-3" />
                             <h2
                                 className="m-0 font-light tracking-[-0.02em] text-ink"
-                                style={{ fontSize: 'clamp(36px, 3.4vw, 52px)', lineHeight: 1.05 }}>
+                                style={{
+                                    fontSize: 'clamp(36px, 3.4vw, 52px)',
+                                    lineHeight: 1.05,
+                                }}>
                                 Nuestros{' '}
-                                <em className="font-serif not-italic text-navy">servicios</em>
+                                <em className="font-serif not-italic text-navy">
+                                    servicios
+                                </em>
                             </h2>
                         </div>
-                        <p className="m-0 self-end text-[14px] leading-[1.6] text-mute" style={{ maxWidth: 380, justifySelf: 'end' }}>
-                            Cobertura integral: materiales, mano de obra calificada y sistemas técnicos para que tu piscina funcione de forma impecable.
+                        <p
+                            className="m-0 self-end text-[14px] leading-[1.6] text-mute"
+                            style={{ maxWidth: 380, justifySelf: 'end' }}>
+                            Cobertura integral: materiales, mano de obra
+                            calificada y sistemas técnicos para que tu piscina
+                            funcione de forma impecable.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[18px]">
+                    <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-3">
                         {servicesData.map(s => (
                             <CardService
                                 key={s.index}
@@ -230,26 +245,30 @@ const CardModels = () => {
 
             {/* ── Proceso de Construcción ── */}
             <section
-                className="relative overflow-hidden py-[110px] px-10"
+                className="relative overflow-hidden px-10 py-[110px]"
                 style={{ background: '#0E2138' }}>
                 <div style={{ maxWidth: 1320, margin: '0 auto' }}>
                     {/* Head — centered */}
                     <div className="mb-16 text-center">
-                        <div className="mb-3 flex items-center justify-center gap-2.5">
-                            <span className="h-px w-7 bg-gold" />
-                            <span className="text-[11px] font-semibold uppercase tracking-[.32em] text-gold">
-                                Cómo trabajamos
-                            </span>
-                        </div>
+                        <Eyebrow
+                            label="Cómo trabajamos"
+                            centered
+                            className="mb-3"
+                        />
                         <h2
                             className="m-0 font-light tracking-[-0.02em] text-paper"
-                            style={{ fontSize: 'clamp(36px, 3.4vw, 52px)', lineHeight: 1.05 }}>
+                            style={{
+                                fontSize: 'clamp(36px, 3.4vw, 52px)',
+                                lineHeight: 1.05,
+                            }}>
                             Proceso de{' '}
-                            <em className="font-serif not-italic text-gold-soft">Construcción</em>
+                            <em className="font-serif not-italic text-gold-soft">
+                                Construcción
+                            </em>
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px]">
+                    <div className="grid grid-cols-1 gap-[16px] sm:grid-cols-2 lg:grid-cols-3">
                         {stepsData.map(step => (
                             <Card
                                 key={step.id}
