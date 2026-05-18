@@ -1,98 +1,233 @@
-import React, { useState } from 'react';
-import close from '../../assets/close.png';
-import next from '../../assets/next.png';
-import back from '../../assets/back.png';
+import { useState, useEffect, useCallback } from 'react';
+
+export interface StepSpec {
+    k: string;
+    v: string;
+}
+
+export interface StepData {
+    id: string;
+    title: string;
+    image: string;
+    sub: string;
+    desc: string;
+    specs: StepSpec[];
+    carouselImages: string[];
+}
 
 interface ShowModal {
     isVisible: boolean;
     isClose: () => void;
-    images: string[];
+    stepsData: StepData[];
+    initialIndex: number;
 }
 
-export const ModalPiscinas = ({ isVisible, isClose, images }: ShowModal) => {
-    const [handleIndex, setHandleIndex] = useState(0);
+export const ModalPiscinas = ({
+    isVisible,
+    isClose,
+    stepsData,
+    initialIndex,
+}: ShowModal) => {
+    const [stepIdx, setStepIdx] = useState(initialIndex);
+    const [imgIdx, setImgIdx] = useState(0);
 
-    const handleOnSuma = (e: React.MouseEvent<HTMLButtonElement>) => {
+    useEffect(() => {
+        setStepIdx(initialIndex);
+        setImgIdx(0);
+    }, [initialIndex, isVisible]);
+
+    const goToStep = useCallback(
+        (i: number) => {
+            setStepIdx((i + stepsData.length) % stepsData.length);
+            setImgIdx(0);
+        },
+        [stepsData.length],
+    );
+
+    useEffect(() => {
+        if (!isVisible) return;
+        const onKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') isClose();
+            if (e.key === 'ArrowLeft') goToStep(stepIdx - 1);
+            if (e.key === 'ArrowRight') goToStep(stepIdx + 1);
+        };
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+    }, [isVisible, stepIdx, goToStep, isClose]);
+
+    useEffect(() => {
+        document.body.style.overflow = isVisible ? 'hidden' : '';
+        return () => { document.body.style.overflow = ''; };
+    }, [isVisible]);
+
+    if (!isVisible || !stepsData.length) return null;
+
+    const step = stepsData[stepIdx];
+    const images = step.carouselImages;
+    const currentImg = images[imgIdx] ?? step.image;
+
+    const prevImg = (e: React.MouseEvent) => {
         e.stopPropagation();
-        setHandleIndex(prevIndex =>
-            prevIndex === images.length - 1 ? 0 : prevIndex + 1,
-        );
+        setImgIdx(i => (i - 1 + images.length) % images.length);
     };
-
-    const handleOnResta = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const nextImg = (e: React.MouseEvent) => {
         e.stopPropagation();
-        setHandleIndex(prevIndex =>
-            prevIndex === 0 ? images.length - 1 : prevIndex - 1,
-        );
-    };
-
-    if (!isVisible) return null;
-    const handleClose = (e: React.MouseEvent<HTMLElement>) => {
-        if (e.currentTarget.id === 'wrapper') isClose();
+        setImgIdx(i => (i + 1) % images.length);
     };
 
     return (
-        <section
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm"
-            id="wrapper"
-            onClick={handleClose}>
-            <div className="z-50 flex h-auto max-h-[90vh] w-full max-w-screen-lg flex-col sm:w-full">
-                <div className="relative m-5 h-full overflow-hidden rounded-lg bg-white object-cover">
-                    {/* Header */}
-                    <div className="mx-6 flex h-20 items-center justify-between">
-                        <h1 className="w-full text-center text-2xl sm:text-3xl">
-                            Demarcado
-                        </h1>
-                        <button className="cursor-pointer" onClick={isClose}>
-                            <img
-                                className="h-8 w-8 sm:h-6 sm:w-6"
-                                src={close}
-                                alt="close"
-                            />
-                        </button>
+        <div
+            className="fixed inset-0 z-50 grid place-items-center p-10"
+            style={{
+                background: 'rgba(8,17,30,.68)',
+                backdropFilter: 'blur(10px)',
+            }}
+            onClick={isClose}>
+            {/* Modal box */}
+            <div
+                className="w-full overflow-hidden bg-paper"
+                style={{
+                    maxWidth: 1100,
+                    maxHeight: '88vh',
+                    display: 'grid',
+                    gridTemplateColumns: '1.4fr 1fr',
+                }}
+                onClick={e => e.stopPropagation()}>
+                {/* ── Left: image panel ── */}
+                <div
+                    className="relative min-h-[480px]"
+                    style={{ background: '#000' }}>
+                    {/* Image */}
+                    <img
+                        key={`${stepIdx}-${imgIdx}`}
+                        src={currentImg}
+                        alt={step.title}
+                        className="absolute inset-0 h-full w-full object-cover"
+                        style={{ transition: 'opacity .4s' }}
+                    />
+
+                    {/* Counter */}
+                    <div
+                        className="absolute left-[22px] top-[22px] flex items-baseline gap-1"
+                        style={{ color: '#fff' }}>
+                        <span
+                            className="font-serif italic leading-none"
+                            style={{ fontSize: 28 }}>
+                            {String(stepIdx + 1).padStart(2, '0')}
+                        </span>
+                        <span style={{ opacity: .4, fontSize: 14 }}>/</span>
+                        <span style={{ opacity: .55, fontSize: 14 }}>
+                            {String(stepsData.length).padStart(2, '0')}
+                        </span>
                     </div>
 
-                    {/* Content */}
-                    <div className="relative flex h-full w-full flex-row items-center justify-between pb-4">
-                        {/* Botón para ir atrás */}
+                    {/* Prev / Next arrows */}
+                    <div className="pointer-events-none absolute inset-x-0 top-1/2 flex -translate-y-1/2 justify-between px-[18px]">
                         <button
-                            onClick={handleOnResta}
-                            className="absolute left-0 top-1/2 z-10 h-10 w-10 -translate-y-1/2 transform sm:h-8 sm:w-8">
-                            <img
-                                className="h-full w-full"
-                                src={back}
-                                alt="back"
-                            />
-                        </button>
-
-                        {/* Imagen */}
-
-                        <div
+                            className="pointer-events-auto grid h-11 w-11 place-items-center rounded-full border text-white transition hover:bg-white/30"
                             style={{
-                                backgroundImage: `url(${images[handleIndex]})`,
+                                background: 'rgba(255,255,255,.14)',
+                                borderColor: 'rgba(255,255,255,.4)',
+                                backdropFilter: 'blur(8px)',
                             }}
-                            className="mx-auto rounded-lg bg-cover bg-center md:h-[500px] md:w-[600px] lg:h-[500px] lg:w-[700px] xl:h-[500px] xl:w-[830px]"
-                            aria-label={`Imagen ${handleIndex + 1}`}
-                        />
-
-                        {/* <img
-              src={images[handleIndex]}
-              alt={`Imagen ${handleIndex + 1}`}
-              className="xl:h-[500px] xl:w-[830px] object-cover rounded-lg mx-auto lg:h-[500px] lg:w-[700px] md:w-[600px] md:h-[500px]" /> */}
-
-                        {/* Botón para ir adelante */}
+                            onClick={prevImg}
+                            aria-label="Anterior">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M15 6l-6 6 6 6" /></svg>
+                        </button>
                         <button
-                            onClick={handleOnSuma}
-                            className="absolute right-0 top-1/2 z-10 h-10 w-10 -translate-y-1/2 transform sm:h-8 sm:w-8">
-                            <img
-                                className="h-full w-full"
-                                src={next}
-                                alt="next"
-                            />
+                            className="pointer-events-auto grid h-11 w-11 place-items-center rounded-full border text-white transition hover:bg-white/30"
+                            style={{
+                                background: 'rgba(255,255,255,.14)',
+                                borderColor: 'rgba(255,255,255,.4)',
+                                backdropFilter: 'blur(8px)',
+                            }}
+                            onClick={nextImg}
+                            aria-label="Siguiente">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 6l6 6-6 6" /></svg>
                         </button>
                     </div>
                 </div>
+
+                {/* ── Right: body panel ── */}
+                <div
+                    className="flex flex-col overflow-y-auto"
+                    style={{ padding: '36px 36px 28px' }}>
+                    {/* Top row: eyebrow + close */}
+                    <div className="mb-7 flex items-center justify-between">
+                        <div className="flex items-center gap-2.5">
+                            <span className="h-px w-6 bg-gold" />
+                            <span className="text-[11px] font-semibold uppercase tracking-[.28em] text-gold">
+                                Etapa {step.id}
+                            </span>
+                        </div>
+                        <button
+                            onClick={isClose}
+                            aria-label="Cerrar"
+                            className="grid h-[34px] w-[34px] place-items-center rounded-full border border-line text-mute transition hover:border-navy hover:bg-navy hover:text-white">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M6 6l12 12M18 6L6 18" /></svg>
+                        </button>
+                    </div>
+
+                    {/* Title */}
+                    <h3
+                        className="m-0 font-light tracking-[-0.02em] text-ink"
+                        style={{ fontSize: 'clamp(22px, 2.4vw, 32px)', lineHeight: 1.05 }}>
+                        {step.title.split(' ').slice(0, -1).join(' ')}{' '}
+                        <em className="font-serif not-italic text-navy">
+                            {step.title.split(' ').slice(-1)[0]}
+                        </em>
+                    </h3>
+
+                    {/* Subtitle */}
+                    <p className="mt-2 mb-5 text-[13px] text-mute">{step.sub}</p>
+
+                    {/* Description */}
+                    <p className="mb-6 text-sm leading-[1.65] text-mute">
+                        {step.desc}
+                    </p>
+
+                    {/* Specs */}
+                    <ul className="m-0 mb-7 list-none p-0" style={{ display: 'grid', gap: 10 }}>
+                        {step.specs.map((sp, i) => (
+                            <li
+                                key={i}
+                                className="flex items-center gap-3 text-[13.5px]"
+                                style={{
+                                    paddingBottom: 10,
+                                    borderBottom: i < step.specs.length - 1
+                                        ? '1px dashed #e6e2d8'
+                                        : 'none',
+                                }}>
+                                <span className="flex-1 text-mute">{sp.k}</span>
+                                <span className="font-semibold text-ink">{sp.v}</span>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {/* Step thumbnails */}
+                    <div
+                        className="mt-auto flex gap-2 border-t border-line pt-[18px]">
+                        {stepsData.map((s, i) => (
+                            <button
+                                key={s.id}
+                                onClick={() => goToStep(i)}
+                                className="min-w-0 flex-1 transition hover:opacity-85"
+                                style={{
+                                    aspectRatio: '16/12',
+                                    backgroundImage: `url('${s.image}')`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    opacity: i === stepIdx ? 1 : 0.55,
+                                    border: i === stepIdx
+                                        ? '2px solid #0E2138'
+                                        : '2px solid transparent',
+                                }}
+                                aria-label={s.title}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
     );
 };

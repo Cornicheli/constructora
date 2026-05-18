@@ -1,12 +1,10 @@
-export const CardAboutUs = ({
-    image,
-    title,
-    subTitle,
-}: {
+interface CardAboutUsProps {
     image: string;
     title: string;
     subTitle: string;
-}) => {
+}
+
+export const CardAboutUs = ({ image, title, subTitle }: CardAboutUsProps) => {
     return (
         <div className="mt-5 flex h-96 w-[375px] flex-col items-center justify-around px-5 md:w-[450px] lg:w-[275px] 2xl:w-[475px]">
             <div className="group relative h-44 w-44 overflow-hidden">
