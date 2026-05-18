@@ -1,131 +1,145 @@
 import React from 'react';
-import '../style/footer.css';
-import image from '../assets/images.png';
-import { IoLocationSharp } from 'react-icons/io5';
-import { MdWatchLater } from 'react-icons/md';
-import { MdAlternateEmail } from 'react-icons/md';
-import { MdSmartphone } from 'react-icons/md';
-import { facebook, instagram, whatsapp } from '../assets/icon';
-import { CardFooter } from './card/CardFooter';
+import { Link } from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
     return (
-        <div className="header" id="footer">
-            <svg
-                className="waves"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28"
-                preserveAspectRatio="none"
-                shapeRendering="auto">
-                <defs>
-                    <path
-                        id="gentle-wave"
-                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-                    />
-                </defs>
-                <g className="parallax">
-                    <use
-                        xlinkHref="#gentle-wave"
-                        x="60"
-                        y="0"
-                        fill="rgba(255,255,255,0.7)"
-                    />
-                    <use
-                        xlinkHref="#gentle-wave"
-                        x="60"
-                        y="3"
-                        fill="rgba(255,255,255,0.5)"
-                    />
-                    <use
-                        xlinkHref="#gentle-wave"
-                        x="60"
-                        y="5"
-                        fill="rgba(255,255,255,0.3)"
-                    />
-                    <use xlinkHref="#gentle-wave" x="60" y="7" fill="#fff" />
-                </g>
-            </svg>
-            <div className="inner-header relative z-10 flex flex-wrap items-center justify-evenly">
-                <div className="z-10 my-5 flex w-72 flex-col items-center justify-center">
-                    <div className="h-36 w-72">
-                        <img
-                            className="h-full w-full rounded-full bg-cover"
-                            src={image}
-                        />
+        <footer className="border-t border-line bg-paper-2" style={{ marginTop: 80 }}>
+            <div
+                className="mx-auto"
+                style={{ maxWidth: 1320, padding: '70px 40px 28px' }}>
+                <div
+                    className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4"
+                    style={{ gridTemplateColumns: '1.4fr 1fr 1fr 1fr' }}>
+                    {/* Col 1: Logo + descripción */}
+                    <div className="flex flex-col gap-4">
+                        <Link to="/" className="flex items-center gap-3">
+                            <div className="flex h-[38px] w-[38px] items-center justify-center bg-navy">
+                                <span className="font-serif text-[22px] italic leading-none tracking-[-0.02em] text-white">
+                                    H
+                                </span>
+                            </div>
+                            <div>
+                                <div className="text-[17px] font-bold tracking-[0.14em] text-navy">
+                                    HOME
+                                    <span className="ml-0.5 font-light tracking-[0.22em]">
+                                        DELUXE
+                                    </span>
+                                </div>
+                                <div className="mt-[3px] text-[9.5px] font-medium uppercase tracking-[0.32em] text-mute">
+                                    Empresa Constructora
+                                </div>
+                            </div>
+                        </Link>
+                        <p className="text-sm leading-relaxed text-mute">
+                            Constructora especializada en la construcción de
+                            viviendas y piscinas industrializadas.
+                        </p>
                     </div>
-                    <h3 className="text-center text-lg font-semibold text-[#030608]">
-                        Constructora especializada en la construcción de
-                        viviendas y piscinas industrializadas
-                    </h3>
-                </div>
-                <div className="z-10 my-5 flex w-[300px] flex-col items-center justify-center">
-                    <section>
-                        <div className="flex flex-row items-center">
-                            <MdAlternateEmail />
-                            <h3 className="my-2 ml-2 text-lg font-semibold text-[#030608]">
-                                Email:constructorahomedeluxe@gmail.com
-                            </h3>
-                        </div>
-                        <div className="flex flex-row items-center">
-                            <MdSmartphone />
-                            <h3 className="my-2 ml-1 text-lg font-semibold text-[#030608]">
-                                Tel: +54 11 36821653
-                            </h3>
-                        </div>
-                        <div className="flex flex-row items-center">
-                            <IoLocationSharp />
-                            <h3 className="my-2 ml-2 text-lg font-semibold text-[#030608]">
-                                Berazategui, Calle 5 4340
-                            </h3>
-                        </div>
-                        <div className="flex flex-row items-center">
-                            <MdWatchLater />
-                            <h3 className="my-2 ml-2 text-lg font-semibold text-[#030608]">
-                                Lunes a Viernes de 9 a 18 hs.
-                            </h3>
-                        </div>
-                    </section>
-                    <div className="flex flex-row items-center justify-center gap-10">
-                        <CardFooter
-                            url={
-                                'https://www.facebook.com/constructorahomedeluxe/'
-                            }
-                            image={facebook}
-                            alt={'link facebook'}
-                        />
-                        <CardFooter
-                            url={
-                                'https://www.instagram.com/constructorahomedeluxe'
-                            }
-                            image={instagram}
-                            alt={'link instagram'}
-                        />
-                        <CardFooter
-                            url={'http://wa.me/541136821653'}
-                            image={whatsapp}
-                            alt={'link whatsapp'}
-                        />
+
+                    {/* Col 2: Navegación */}
+                    <div className="flex flex-col gap-3">
+                        <p className="text-[11px] font-semibold uppercase tracking-[.28em] text-mute">
+                            Navegación
+                        </p>
+                        <Link
+                            to="/"
+                            className="text-[14px] font-medium text-ink transition hover:text-navy">
+                            Inicio
+                        </Link>
+                        <Link
+                            to="/piscinas"
+                            className="text-[14px] font-medium text-ink transition hover:text-navy">
+                            Piscinas
+                        </Link>
+                        <a
+                            href="#aboutus"
+                            className="cursor-pointer text-[14px] font-medium text-ink transition hover:text-navy">
+                            Sobre Nosotros
+                        </a>
+                        <a
+                            href="#tipologias"
+                            className="cursor-pointer text-[14px] font-medium text-ink transition hover:text-navy">
+                            Tipologías
+                        </a>
+                        <Link
+                            to="/contact"
+                            className="text-[14px] font-medium text-ink transition hover:text-navy">
+                            Contacto
+                        </Link>
                     </div>
-                </div>
-                <div className="z-10 my-5 flex w-72 flex-col items-center justify-center">
-                    <p className="mb-2 text-lg font-semibold text-[#030608]">
-                        Nos ubicamos en Berazategui centro, Prov. Bs As.
-                    </p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419512.4122877679!2d-58.70162527817395!3d-34.76967881954899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f1029b21ec7%3A0xcd3bcc3bd993eaca!2sBerazategui%20centro!5e0!3m2!1ses!2sar!4v1706205807964!5m2!1ses!2sar"
-                        style={{
-                            border: 0,
-                            width: '300px',
-                            height: '160px',
-                            borderRadius: '5px',
-                        }}
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                    />
+
+                    {/* Col 3: Contacto */}
+                    <div className="flex flex-col gap-3">
+                        <p className="text-[11px] font-semibold uppercase tracking-[.28em] text-mute">
+                            Contacto
+                        </p>
+                        <span className="text-[14px] text-mute">
+                            <em
+                                className="font-serif italic"
+                                style={{ marginRight: 4 }}>
+                                @
+                            </em>
+                            constructorahomedeluxe@gmail.com
+                        </span>
+                        <span className="text-[14px] text-mute">
+                            +54 11 36821653
+                        </span>
+                        <span className="text-[14px] text-mute">
+                            Lunes a Viernes 9 a 18 hs.
+                        </span>
+                    </div>
+
+                    {/* Col 4: Ubicación */}
+                    <div className="flex flex-col gap-3">
+                        <p className="text-[11px] font-semibold uppercase tracking-[.28em] text-mute">
+                            Ubicación
+                        </p>
+                        <span className="text-[14px] text-mute">
+                            Berazategui, Calle 5 4340
+                        </span>
+                        <span className="text-[14px] text-mute">
+                            Prov. Buenos Aires
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            {/* Bottom bar */}
+            <div className="border-t border-line" style={{ marginTop: 40 }}>
+                <div
+                    className="mx-auto flex flex-col items-center justify-between gap-2 px-10 py-4 sm:flex-row"
+                    style={{ maxWidth: 1320 }}>
+                    <p className="text-xs text-mute">
+                        © {new Date().getFullYear()} Home Deluxe Constructora.
+                        Todos los derechos reservados.
+                    </p>
+                    <div className="flex gap-4">
+                        <a
+                            href="https://www.facebook.com/constructorahomedeluxe/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-mute transition hover:border-navy hover:text-navy">
+                            <FaFacebook size={14} />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/constructorahomedeluxe"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-mute transition hover:border-navy hover:text-navy">
+                            <FaInstagram size={14} />
+                        </a>
+                        <a
+                            href="http://wa.me/541136821653"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-mute transition hover:border-navy hover:text-navy">
+                            <FaWhatsapp size={14} />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     );
 };
 

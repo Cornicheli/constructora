@@ -6,7 +6,7 @@ import {
     WhatsappChat,
     Eyebrow,
 } from '../components';
-import cascadaPiscina from '../assets/cascadaPiscina.mp4';
+import piscina1 from '../assets/image/carrousel/piscinas/piscina1.webp';
 
 const Piscinas = () => {
     return (
@@ -14,82 +14,173 @@ const Piscinas = () => {
             <CarrouselPisci />
 
             {/* About pools — 2 column grid */}
-            <section className="bg-paper py-20" id="aboutus">
-                <div className="mx-auto max-w-7xl px-6">
-                    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-                        {/* Video */}
-                        <figure className="overflow-hidden rounded-2xl">
-                            <video
-                                className="h-full w-full rounded-2xl object-cover"
-                                src={cascadaPiscina}
-                                autoPlay
-                                loop
-                                muted
-                                controls={false}
-                            />
-                        </figure>
+            <section className="bg-paper" id="aboutus">
+                <div
+                    className="mx-auto grid grid-cols-1 items-start gap-[80px] px-10 lg:grid-cols-[1.05fr_1fr]"
+                    style={{
+                        maxWidth: 1240,
+                        paddingTop: 120,
+                        paddingBottom: 100,
+                    }}
+                >
+                    {/* Image column */}
+                    <div
+                        className="relative overflow-hidden"
+                        style={{
+                            aspectRatio: '4/5',
+                            background: `linear-gradient(180deg, rgba(14,33,56,0) 60%, rgba(14,33,56,.5) 100%), url(${piscina1}) center/cover`,
+                        }}
+                    >
+                        {/* Vertical decorative text */}
+                        <span
+                            className="absolute hidden text-[11px] font-medium uppercase text-mute lg:block"
+                            style={{
+                                left: -34,
+                                top: 24,
+                                writingMode: 'vertical-rl',
+                                transform: 'rotate(180deg)',
+                                letterSpacing: '.32em',
+                            }}
+                        >
+                            Home Deluxe — 2009 / 2026
+                        </span>
 
-                        {/* Content */}
-                        <div>
-                            <Eyebrow label="Quiénes Somos" className="mb-4" />
-
-                            <h2 className="mb-4 text-[clamp(1.75rem,3vw,2.75rem)] font-extralight tracking-tight text-ink">
-                                Construcción de{' '}
-                                <em className="font-serif not-italic text-navy">
-                                    piscinas
+                        {/* Badge */}
+                        <div
+                            className="absolute backdrop-blur-[8px]"
+                            style={{
+                                bottom: 24,
+                                left: 24,
+                                background: 'rgba(250,250,247,.92)',
+                                padding: '14px 18px',
+                                border: '1px solid rgba(255,255,255,.5)',
+                            }}
+                        >
+                            <div
+                                className="font-serif italic leading-none"
+                                style={{ fontSize: 28, color: '#0E2138' }}
+                            >
+                                15
+                                <em
+                                    className="font-normal"
+                                    style={{ color: '#c9a876' }}
+                                >
+                                    +
                                 </em>
-                            </h2>
+                            </div>
+                            <div
+                                className="uppercase text-mute"
+                                style={{
+                                    fontSize: 11,
+                                    letterSpacing: '.18em',
+                                    fontWeight: 500,
+                                    marginTop: 6,
+                                }}
+                            >
+                                Años de experiencia
+                            </div>
+                        </div>
+                    </div>
 
-                            <p className="mb-6 text-base leading-relaxed text-mute">
-                                Somos una empresa dedicada a la construcción de
-                                piscinas, diseño y ejecución. Con más de{' '}
-                                <span className="font-semibold text-ink">
-                                    15 años
-                                </span>{' '}
-                                de experiencia en el rubro te brindamos
-                                responsabilidad y cumplimiento en la realización
-                                de tu proyecto soñado.
-                            </p>
+                    {/* Content column */}
+                    <div>
+                        <Eyebrow
+                            label="Quiénes Somos"
+                            className="mb-[24px]"
+                        />
 
-                            <p className="mb-8 text-base leading-relaxed text-mute">
-                                Contamos con más de 200 obras realizadas en AMBA
-                                y Córdoba, y un equipo de profesionales
-                                altamente calificados con las herramientas
-                                necesarias para lograr la piscina de tus sueños.
-                            </p>
+                        <h2
+                            className="font-light leading-[1.05] tracking-[-0.02em] text-ink"
+                            style={{
+                                fontSize: 'clamp(36px, 3.4vw, 52px)',
+                                margin: '0 0 28px',
+                            }}
+                        >
+                            Una empresa dedicada a la construcción de
+                            piscinas,{' '}
+                            <em
+                                className="font-serif italic font-normal"
+                                style={{ color: '#d9bd91' }}
+                            >
+                                diseño y ejecución.
+                            </em>
+                        </h2>
 
-                            {/* Stats */}
-                            <div className="grid grid-cols-3 gap-6 border-t border-line pt-8">
-                                <div>
-                                    <p className="text-3xl font-extralight text-navy">
-                                        <em className="font-serif not-italic">
-                                            15+
-                                        </em>
-                                    </p>
-                                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-mute">
-                                        Años de exp.
-                                    </p>
-                                </div>
-                                <div>
-                                    <p className="text-3xl font-extralight text-navy">
-                                        <em className="font-serif not-italic">
-                                            200+
-                                        </em>
-                                    </p>
-                                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-mute">
-                                        Obras realizadas
-                                    </p>
-                                </div>
-                                <div>
-                                    <p className="text-3xl font-extralight text-navy">
-                                        <em className="font-serif not-italic">
-                                            2
-                                        </em>
-                                    </p>
-                                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-mute">
-                                        Regiones
-                                    </p>
-                                </div>
+                        <p
+                            className="text-ink"
+                            style={{
+                                fontSize: 17,
+                                lineHeight: 1.55,
+                                maxWidth: 520,
+                                margin: '0 0 22px',
+                            }}
+                        >
+                            Con más de{' '}
+                            <strong className="font-semibold">15 años</strong>{' '}
+                            de experiencia en el rubro te brindamos
+                            responsabilidad y cumplimiento en la realización de
+                            tu proyecto soñado.
+                        </p>
+
+                        <p
+                            className="text-mute"
+                            style={{
+                                fontSize: 15,
+                                lineHeight: 1.65,
+                                maxWidth: 520,
+                                margin: '0 0 36px',
+                            }}
+                        >
+                            Contamos con más de{' '}
+                            <strong className="font-semibold text-navy">
+                                200 obras realizadas
+                            </strong>{' '}
+                            en AMBA y Córdoba. Tenemos un equipo de
+                            profesionales altamente calificados y las
+                            herramientas necesarias para lograr la piscina de
+                            tus sueños.
+                        </p>
+
+                        {/* Stats */}
+                        <div
+                            className="grid grid-cols-3 border-t border-line pt-[28px]"
+                            style={{ maxWidth: 520 }}
+                        >
+                            <div>
+                                <p className="font-extralight leading-none tracking-[-0.02em] text-navy text-[40px]">
+                                    15
+                                    <em
+                                        className="font-serif italic font-normal"
+                                        style={{ color: '#c9a876' }}
+                                    >
+                                        +
+                                    </em>
+                                </p>
+                                <p className="mt-2 text-[12px] font-medium uppercase tracking-[.18em] text-mute">
+                                    Años
+                                </p>
+                            </div>
+                            <div>
+                                <p className="font-extralight leading-none tracking-[-0.02em] text-navy text-[40px]">
+                                    200
+                                    <em
+                                        className="font-serif italic font-normal"
+                                        style={{ color: '#c9a876' }}
+                                    >
+                                        +
+                                    </em>
+                                </p>
+                                <p className="mt-2 text-[12px] font-medium uppercase tracking-[.18em] text-mute">
+                                    Obras
+                                </p>
+                            </div>
+                            <div>
+                                <p className="font-extralight leading-none tracking-[-0.02em] text-navy text-[40px]">
+                                    2
+                                </p>
+                                <p className="mt-2 text-[12px] font-medium uppercase tracking-[.18em] text-mute">
+                                    Provincias
+                                </p>
                             </div>
                         </div>
                     </div>
