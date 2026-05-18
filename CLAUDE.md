@@ -99,20 +99,22 @@ This project includes two specialized agents to help with UI development:
 ### Design Review Agent (`@design-review`)
 
 Use this agent for comprehensive design reviews when:
-- Making significant UI changes or refactoring components
-- Before creating pull requests with UI modifications
-- You need to verify visual consistency and user experience quality
-- Testing responsive design across different viewports
+
+-   Making significant UI changes or refactoring components
+-   Before creating pull requests with UI modifications
+-   You need to verify visual consistency and user experience quality
+-   Testing responsive design across different viewports
 
 The agent will systematically test interaction flows, responsiveness, accessibility (WCAG 2.1 AA), and visual polish.
 
 ### Premium UI Designer Agent (`@premium-ui-designer`)
 
 Use this agent when you need to:
-- Enhance existing components with sophisticated styling and animations
-- Create premium visual effects and micro-interactions
-- Implement advanced CSS techniques for better visual hierarchy
-- Transform basic UI elements into polished, professional interfaces
+
+-   Enhance existing components with sophisticated styling and animations
+-   Create premium visual effects and micro-interactions
+-   Implement advanced CSS techniques for better visual hierarchy
+-   Transform basic UI elements into polished, professional interfaces
 
 Both agents are configured in `.claude/agents/` directory.
 

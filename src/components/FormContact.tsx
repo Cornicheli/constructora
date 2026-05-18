@@ -1,128 +1,181 @@
+import { useState } from 'react';
 import { IoLocationSharp } from 'react-icons/io5';
-import { MdWatchLater } from 'react-icons/md';
-import { MdAlternateEmail } from 'react-icons/md';
-import { MdSmartphone } from 'react-icons/md';
-import { facebook, instagram, whatsapp } from '../assets/icon';
-import { CardFooter } from './card/CardFooter';
+import { MdWatchLater, MdAlternateEmail, MdSmartphone } from 'react-icons/md';
 import React from 'react';
 
+const interestOptions = [
+    'Vivienda nueva',
+    'Piscinas',
+    'Proyecto a medida',
+    'Inversión',
+    'Otros',
+];
+
 const FormContact = () => {
-    const handleEventForm = (e: React.ChangeEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        console.log(e.target);
+    const [selected, setSelected] = useState<string[]>([]);
+
+    const toggleOption = (option: string) => {
+        setSelected(prev =>
+            prev.includes(option)
+                ? prev.filter(o => o !== option)
+                : [...prev, option],
+        );
     };
-    console.log(handleEventForm);
+
+    const handleEventForm = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+    };
 
     return (
-        <section className="mt-52 inline-grid h-screen w-full grid-flow-row grid-cols-1 md:grid-cols-2">
-            <div className="mx-auto flex flex-col px-5 py-12 sm:px-4 md:px-0">
-                <h2 className="mt-4 pb-2 text-4xl font-semibold text-black">
-                    Contacto
-                </h2>
-                <div className="flex flex-row items-center">
-                    <MdAlternateEmail />
-                    <h3 className="my-2 ml-2 text-lg font-semibold text-[#030608]">
-                        Email:constructorahomedeluxe@gmail.com
-                    </h3>
-                </div>
-                <div className="flex flex-row items-center">
-                    <MdSmartphone />
-                    <h3 className="my-2 ml-1 text-lg font-semibold text-[#030608]">
-                        Tel: +54 11 36821653
-                    </h3>
-                </div>
-                <div className="flex flex-row items-center">
-                    <IoLocationSharp />
-                    <h3 className="my-2 ml-2 text-lg font-semibold text-[#030608]">
-                        Berazategui, Calle 5 4340
-                    </h3>
-                </div>
-                <div className="flex flex-row items-center">
-                    <MdWatchLater />
-                    <h3 className="my-2 ml-2 text-lg font-semibold text-[#030608]">
-                        Lunes a Viernes de 9 a 18 hs.
-                    </h3>
-                </div>
+        <section className="min-h-screen bg-paper pb-20 pt-24">
+            <div className="mx-auto max-w-7xl px-6">
+                <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+                    {/* Left column */}
+                    <div className="flex flex-col justify-center">
+                        {/* Eyebrow */}
+                        <div className="mb-4 flex items-center gap-3">
+                            <span className="h-px w-6 bg-gold" />
+                            <span className="text-[11px] font-semibold uppercase tracking-widest text-gold">
+                                Hablemos
+                            </span>
+                        </div>
 
-                <div className="mt-3 flex flex-row items-center justify-center gap-10">
-                    <CardFooter
-                        url={'https://www.facebook.com/constructorahomedeluxe/'}
-                        image={facebook}
-                        alt={'link facebook'}
-                    />
-                    <CardFooter
-                        url={'https://www.instagram.com/constructorahomedeluxe'}
-                        image={instagram}
-                        alt={'link instagram'}
-                    />
-                    <CardFooter
-                        url={'http://wa.me/541136821653'}
-                        image={whatsapp}
-                        alt={'link whatsapp'}
-                    />
-                </div>
-            </div>
-            <div className="relative mx-auto w-full max-w-7xl items-center bg-white px-5 py-12 md:px-12 lg:px-20">
-                <div className="mx-auto w-full max-w-md sm:px-4 md:w-96 md:max-w-sm md:px-0">
-                    <div className="flex flex-col">
-                        <div>
-                            <h2 className="pb-2 text-4xl font-semibold text-black">
-                                Envia tu consulta
-                            </h2>
+                        <h1 className="mb-4 text-[clamp(2rem,4vw,3rem)] font-extralight tracking-tight text-ink">
+                            Contactanos{' '}
+                            <em className="font-serif not-italic text-navy">
+                                hoy
+                            </em>
+                        </h1>
+
+                        <p className="mb-8 text-base leading-relaxed text-mute">
+                            Estamos listos para ayudarte a construir el proyecto
+                            de tus sueños. Completá el formulario y nos ponemos
+                            en contacto a la brevedad.
+                        </p>
+
+                        {/* Contact info */}
+                        <div className="flex flex-col gap-4">
+                            <div className="flex items-center gap-3">
+                                <MdAlternateEmail
+                                    className="shrink-0 text-gold"
+                                    size={18}
+                                />
+                                <span className="text-sm text-ink">
+                                    constructorahomedeluxe@gmail.com
+                                </span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <MdSmartphone
+                                    className="shrink-0 text-gold"
+                                    size={18}
+                                />
+                                <span className="text-sm text-ink">
+                                    +54 11 36821653
+                                </span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <IoLocationSharp
+                                    className="shrink-0 text-gold"
+                                    size={18}
+                                />
+                                <span className="text-sm text-ink">
+                                    Berazategui, Calle 5 4340
+                                </span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <MdWatchLater
+                                    className="shrink-0 text-gold"
+                                    size={18}
+                                />
+                                <span className="text-sm text-ink">
+                                    Lunes a Viernes de 9 a 18 hs.
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <form onChange={handleEventForm}>
-                        <input
-                            value="https://jamstacker.studio/thankyou"
-                            type="hidden"
-                            name="_redirect"
-                        />
-                        <div className="mt-4 space-y-6">
-                            <div className="col-span-full">
-                                <label className="mb-3 block text-sm font-medium text-gray-600">
-                                    {' '}
-                                    Tu nombre{' '}
+
+                    {/* Right column — form */}
+                    <div className="rounded-2xl border border-line bg-white p-8 lg:p-10">
+                        <h2 className="mb-6 text-xl font-semibold text-ink">
+                            Enviá tu consulta
+                        </h2>
+
+                        <form onSubmit={handleEventForm} className="space-y-6">
+                            <input
+                                value="https://jamstacker.studio/thankyou"
+                                type="hidden"
+                                name="_redirect"
+                            />
+
+                            {/* Nombre */}
+                            <div>
+                                <label className="mb-2 block text-xs font-medium uppercase tracking-widest text-mute">
+                                    Tu nombre
                                 </label>
                                 <input
-                                    type="email"
+                                    type="text"
                                     name="nombre"
-                                    placeholder="Nombre"
-                                    className="block w-full appearance-none rounded border border-gray-200 bg-white px-6 py-3 text-black placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
+                                    placeholder="Nombre completo"
+                                    className="w-full border-0 border-b border-line bg-transparent pb-2 text-sm text-ink transition placeholder:text-mute focus:border-gold focus:outline-none"
                                 />
                             </div>
-                            <div className="col-span-full">
-                                <label className="mb-3 block text-sm font-medium text-gray-600">
-                                    {' '}
-                                    Email{' '}
+
+                            {/* Email */}
+                            <div>
+                                <label className="mb-2 block text-xs font-medium uppercase tracking-widest text-mute">
+                                    Email
                                 </label>
                                 <input
                                     type="email"
                                     name="email"
                                     placeholder="ejemplo@gmail.com"
-                                    className="block w-full appearance-none rounded border border-gray-200 bg-white px-6 py-3 text-black placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
+                                    className="w-full border-0 border-b border-line bg-transparent pb-2 text-sm text-ink transition placeholder:text-mute focus:border-gold focus:outline-none"
                                 />
                             </div>
-                            <div className="col-span-full">
-                                <label className="mb-3 block text-sm font-medium text-gray-600">
-                                    {' '}
-                                    Consulta{' '}
+
+                            {/* Interés — multi-select chips */}
+                            <div>
+                                <label className="mb-3 block text-xs font-medium uppercase tracking-widest text-mute">
+                                    Me interesa
+                                </label>
+                                <div className="flex flex-wrap gap-2">
+                                    {interestOptions.map(option => (
+                                        <button
+                                            key={option}
+                                            type="button"
+                                            onClick={() => toggleOption(option)}
+                                            className={`rounded-full px-4 py-1.5 text-xs font-medium transition ${
+                                                selected.includes(option)
+                                                    ? 'bg-navy text-paper'
+                                                    : 'border border-line text-mute hover:border-navy hover:text-navy'
+                                            }`}>
+                                            {option}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Consulta */}
+                            <div>
+                                <label className="mb-2 block text-xs font-medium uppercase tracking-widest text-mute">
+                                    Consulta
                                 </label>
                                 <textarea
                                     name="consulta"
-                                    placeholder="Describa su consulta"
-                                    className="block h-40 w-full appearance-none rounded border border-gray-200 bg-white px-6 py-3 text-black placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
+                                    placeholder="Describí tu proyecto o consulta"
+                                    rows={4}
+                                    className="w-full resize-none border-0 border-b border-line bg-transparent pb-2 text-sm text-ink transition placeholder:text-mute focus:border-gold focus:outline-none"
                                 />
                             </div>
-                            <div className="col-span-full">
-                                <button
-                                    type="submit"
-                                    className="nline-flex w-full items-center justify-center rounded-full border-2 border-black bg-black px-6 py-2.5 text-center text-sm text-white duration-200 hover:border-black hover:bg-transparent hover:text-black focus:outline-none focus-visible:outline-black focus-visible:ring-black">
-                                    {' '}
-                                    Enviar su consulta{' '}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+
+                            {/* Submit */}
+                            <button
+                                type="submit"
+                                className="w-full rounded-full bg-navy py-3 text-sm font-medium text-paper transition hover:bg-navy-2">
+                                Enviar consulta
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>

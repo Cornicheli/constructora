@@ -180,6 +180,7 @@ const Proyect = () => {
                         subTitle={p.subTitle}
                         pill={p.pill}
                         photoCount={p.photoCount}
+                        variant="light"
                     />
                 ))}
             </div>

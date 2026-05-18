@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        font-family: 'Manrope', ui-sans-serif, system-ui;
+        background-color: #fafaf7;
+        color: #0b1726;
+    }
+}
+
+@layer components {
+    .slick-dots li button:before {
+        color: theme('colors.mute-dark');
+        font-size: 8px;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: theme('colors.gold');
+    }
+}

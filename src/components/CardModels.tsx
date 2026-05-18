@@ -254,6 +254,7 @@ const CardModels = () => {
                             label="Cómo trabajamos"
                             centered
                             className="mb-3"
+                            variant="dark"
                         />
                         <h2
                             className="m-0 font-light tracking-[-0.02em] text-paper"

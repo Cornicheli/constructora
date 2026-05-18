@@ -16,7 +16,7 @@ export const CardService = ({
     index,
 }: CardServiceProps) => {
     return (
-        <article className="group flex flex-col overflow-hidden border border-line bg-paper transition duration-300 hover:-translate-y-[3px] hover:border-navy hover:shadow-[0_12px_32px_-18px_rgba(14,33,56,.18)]">
+        <article className="group flex flex-col gap-[18px] border border-line bg-white p-6 transition duration-300 hover:-translate-y-[3px] hover:border-navy hover:shadow-[0_12px_32px_-18px_rgba(14,33,56,.18)]">
             {/* Image */}
             <div
                 className="relative overflow-hidden"
@@ -39,7 +39,7 @@ export const CardService = ({
             </div>
 
             {/* Body */}
-            <div className="flex items-start justify-between gap-4 px-5 py-[18px]">
+            <div className="flex items-start justify-between gap-4">
                 <div>
                     <h3 className="m-0 text-[17px] font-semibold tracking-[-0.01em] text-ink">
                         {title}

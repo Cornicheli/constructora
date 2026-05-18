@@ -25,6 +25,7 @@ const Typologies = () => {
                         label="Líneas estandarizadas"
                         centered
                         className="mb-3"
+                        variant="dark"
                     />
                     <h2
                         className="m-0 text-center font-light leading-[1.05] tracking-[-0.02em] text-paper"

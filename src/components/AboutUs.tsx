@@ -29,7 +29,7 @@ const AboutUs = () => {
                 }}>
                 {/* Left: eyebrow + title */}
                 <div>
-                    <Eyebrow label="Quiénes somos" className="mb-3" />
+                    <Eyebrow label="Quiénes somos" className="mb-3" variant="dark" />
                     <h2
                         className="mt-3.5 font-light leading-[1.05] tracking-[-0.02em] text-paper"
                         style={{ fontSize: 'clamp(36px, 3.4vw, 52px)' }}>
