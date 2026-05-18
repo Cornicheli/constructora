@@ -1,19 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
+import { ChevronLeft, ChevronRight, CloseX } from '../icons';
+import { Eyebrow } from '../ui';
+import type { StepData } from '../../types';
 
-export interface StepSpec {
-    k: string;
-    v: string;
-}
-
-export interface StepData {
-    id: string;
-    title: string;
-    image: string;
-    sub: string;
-    desc: string;
-    specs: StepSpec[];
-    carouselImages: string[];
-}
+export type { StepSpec, StepData } from '../../types';
 
 interface ShowModal {
     isVisible: boolean;
@@ -57,7 +47,9 @@ export const ModalPiscinas = ({
 
     useEffect(() => {
         document.body.style.overflow = isVisible ? 'hidden' : '';
-        return () => { document.body.style.overflow = ''; };
+        return () => {
+            document.body.style.overflow = '';
+        };
     }, [isVisible]);
 
     if (!isVisible || !stepsData.length) return null;
@@ -115,8 +107,8 @@ export const ModalPiscinas = ({
                             style={{ fontSize: 28 }}>
                             {String(stepIdx + 1).padStart(2, '0')}
                         </span>
-                        <span style={{ opacity: .4, fontSize: 14 }}>/</span>
-                        <span style={{ opacity: .55, fontSize: 14 }}>
+                        <span style={{ opacity: 0.4, fontSize: 14 }}>/</span>
+                        <span style={{ opacity: 0.55, fontSize: 14 }}>
                             {String(stepsData.length).padStart(2, '0')}
                         </span>
                     </div>
@@ -132,7 +124,7 @@ export const ModalPiscinas = ({
                             }}
                             onClick={prevImg}
                             aria-label="Anterior">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M15 6l-6 6 6 6" /></svg>
+                            <ChevronLeft size={16} />
                         </button>
                         <button
                             className="pointer-events-auto grid h-11 w-11 place-items-center rounded-full border text-white transition hover:bg-white/30"
@@ -143,7 +135,7 @@ export const ModalPiscinas = ({
                             }}
                             onClick={nextImg}
                             aria-label="Siguiente">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 6l6 6-6 6" /></svg>
+                            <ChevronRight size={16} />
                         </button>
                     </div>
                 </div>
@@ -154,24 +146,22 @@ export const ModalPiscinas = ({
                     style={{ padding: '36px 36px 28px' }}>
                     {/* Top row: eyebrow + close */}
                     <div className="mb-7 flex items-center justify-between">
-                        <div className="flex items-center gap-2.5">
-                            <span className="h-px w-6 bg-gold" />
-                            <span className="text-[11px] font-semibold uppercase tracking-[.28em] text-gold">
-                                Etapa {step.id}
-                            </span>
-                        </div>
+                        <Eyebrow label={`Etapa ${step.id}`} />
                         <button
                             onClick={isClose}
                             aria-label="Cerrar"
                             className="grid h-[34px] w-[34px] place-items-center rounded-full border border-line text-mute transition hover:border-navy hover:bg-navy hover:text-white">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M6 6l12 12M18 6L6 18" /></svg>
+                            <CloseX />
                         </button>
                     </div>
 
                     {/* Title */}
                     <h3
                         className="m-0 font-light tracking-[-0.02em] text-ink"
-                        style={{ fontSize: 'clamp(22px, 2.4vw, 32px)', lineHeight: 1.05 }}>
+                        style={{
+                            fontSize: 'clamp(22px, 2.4vw, 32px)',
+                            lineHeight: 1.05,
+                        }}>
                         {step.title.split(' ').slice(0, -1).join(' ')}{' '}
                         <em className="font-serif not-italic text-navy">
                             {step.title.split(' ').slice(-1)[0]}
@@ -179,7 +169,9 @@ export const ModalPiscinas = ({
                     </h3>
 
                     {/* Subtitle */}
-                    <p className="mt-2 mb-5 text-[13px] text-mute">{step.sub}</p>
+                    <p className="mb-5 mt-2 text-[13px] text-mute">
+                        {step.sub}
+                    </p>
 
                     {/* Description */}
                     <p className="mb-6 text-sm leading-[1.65] text-mute">
@@ -187,40 +179,45 @@ export const ModalPiscinas = ({
                     </p>
 
                     {/* Specs */}
-                    <ul className="m-0 mb-7 list-none p-0" style={{ display: 'grid', gap: 10 }}>
+                    <ul
+                        className="m-0 mb-7 list-none p-0"
+                        style={{ display: 'grid', gap: 10 }}>
                         {step.specs.map((sp, i) => (
                             <li
                                 key={i}
                                 className="flex items-center gap-3 text-[13.5px]"
                                 style={{
                                     paddingBottom: 10,
-                                    borderBottom: i < step.specs.length - 1
-                                        ? '1px dashed #e6e2d8'
-                                        : 'none',
+                                    borderBottom:
+                                        i < step.specs.length - 1
+                                            ? '1px dashed #e6e2d8'
+                                            : 'none',
                                 }}>
                                 <span className="flex-1 text-mute">{sp.k}</span>
-                                <span className="font-semibold text-ink">{sp.v}</span>
+                                <span className="font-semibold text-ink">
+                                    {sp.v}
+                                </span>
                             </li>
                         ))}
                     </ul>
 
                     {/* Step thumbnails */}
-                    <div
-                        className="mt-auto flex gap-2 border-t border-line pt-[18px]">
+                    <div className="mt-auto flex gap-2 border-t border-line pt-[18px]">
                         {stepsData.map((s, i) => (
                             <button
                                 key={s.id}
                                 onClick={() => goToStep(i)}
-                                className="min-w-0 flex-1 transition hover:opacity-85"
+                                className="hover:opacity-85 min-w-0 flex-1 transition"
                                 style={{
                                     aspectRatio: '16/12',
                                     backgroundImage: `url('${s.image}')`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     opacity: i === stepIdx ? 1 : 0.55,
-                                    border: i === stepIdx
-                                        ? '2px solid #0E2138'
-                                        : '2px solid transparent',
+                                    border:
+                                        i === stepIdx
+                                            ? '2px solid #0E2138'
+                                            : '2px solid transparent',
                                 }}
                                 aria-label={s.title}
                             />

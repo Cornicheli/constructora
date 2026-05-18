@@ -1,52 +1,101 @@
-import CardModels from '../components/CardModels';
-import Footer from '../components/Footer';
-import CarrouselMultiPisci from '../components/carrousel/CarrouselMultiPisci';
-import '../style/card.css';
-import CarrouselPisci from '../components/carrousel/CarrouselPisci';
+import {
+    CarrouselPisci,
+    CarrouselMultiPisci,
+    CardModels,
+    Footer,
+    WhatsappChat,
+    Eyebrow,
+} from '../components';
 import cascadaPiscina from '../assets/cascadaPiscina.mp4';
-import { WhatsappChat } from '../components/WhatsappChat';
 
 const Piscinas = () => {
     return (
         <span id="piscinas" className="relative">
             <CarrouselPisci />
 
-            <main
-                className="flex h-auto w-full flex-col flex-wrap items-center justify-center py-3 xl:flex-row"
-                id="aboutus">
-                <figure className="w-full max-w-[350px] py-4 aspect-[9/16] lg:max-w-[750px] lg:aspect-video">
-                    <video
-                        className="h-full w-full rounded-xl object-cover"
-                        src={cascadaPiscina}
-                        autoPlay
-                        loop
-                        muted
-                        controls={false}
-                    />
-                </figure>
-                <div className="grid grid-cols-1 grid-rows-1">
-                    <section className="m-5 lg:ml-20 lg:w-[600px]">
-                        <p className="my-4 text-xl font-bold text-[#1b1b1cab]">
-                            Quiénes somos{' '}
-                        </p>
-                        <h1 className="py-4 text-2xl font-semibold text-[#0E2230]">
-                            Somos una empresa dedicada a la construcción de
-                            piscinas, diseño y ejecución.
-                        </h1>
-                        <h3 className="my-4 text-lg">
-                            Con mas de{' '}
-                            <span className="font-bold">15 años</span> de
-                            experiencia en el rubro te brindamos responsabilidad
-                            y cumplimiento en la realización de tu proyecto
-                            soñado. Contamos con mas de 200 obras realizadas en
-                            AMBA y Cordoba.
-                            <br /> Contamos con un equipo de profesionales
-                            altamente calificados y las herramientas necesarias
-                            para lograr la piscina de tus sueños.
-                        </h3>
-                    </section>
+            {/* About pools — 2 column grid */}
+            <section className="bg-paper py-20" id="aboutus">
+                <div className="mx-auto max-w-7xl px-6">
+                    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+                        {/* Video */}
+                        <figure className="overflow-hidden rounded-2xl">
+                            <video
+                                className="h-full w-full rounded-2xl object-cover"
+                                src={cascadaPiscina}
+                                autoPlay
+                                loop
+                                muted
+                                controls={false}
+                            />
+                        </figure>
+
+                        {/* Content */}
+                        <div>
+                            <Eyebrow label="Quiénes Somos" className="mb-4" />
+
+                            <h2 className="mb-4 text-[clamp(1.75rem,3vw,2.75rem)] font-extralight tracking-tight text-ink">
+                                Construcción de{' '}
+                                <em className="font-serif not-italic text-navy">
+                                    piscinas
+                                </em>
+                            </h2>
+
+                            <p className="mb-6 text-base leading-relaxed text-mute">
+                                Somos una empresa dedicada a la construcción de
+                                piscinas, diseño y ejecución. Con más de{' '}
+                                <span className="font-semibold text-ink">
+                                    15 años
+                                </span>{' '}
+                                de experiencia en el rubro te brindamos
+                                responsabilidad y cumplimiento en la realización
+                                de tu proyecto soñado.
+                            </p>
+
+                            <p className="mb-8 text-base leading-relaxed text-mute">
+                                Contamos con más de 200 obras realizadas en AMBA
+                                y Córdoba, y un equipo de profesionales
+                                altamente calificados con las herramientas
+                                necesarias para lograr la piscina de tus sueños.
+                            </p>
+
+                            {/* Stats */}
+                            <div className="grid grid-cols-3 gap-6 border-t border-line pt-8">
+                                <div>
+                                    <p className="text-3xl font-extralight text-navy">
+                                        <em className="font-serif not-italic">
+                                            15+
+                                        </em>
+                                    </p>
+                                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-mute">
+                                        Años de exp.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="text-3xl font-extralight text-navy">
+                                        <em className="font-serif not-italic">
+                                            200+
+                                        </em>
+                                    </p>
+                                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-mute">
+                                        Obras realizadas
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="text-3xl font-extralight text-navy">
+                                        <em className="font-serif not-italic">
+                                            2
+                                        </em>
+                                    </p>
+                                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-mute">
+                                        Regiones
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </main>
+            </section>
+
             <CarrouselMultiPisci />
             <CardModels />
             <Footer />
