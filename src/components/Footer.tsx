@@ -119,6 +119,7 @@ const Footer: React.FC = () => {
                             href="https://www.facebook.com/constructorahomedeluxe/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Facebook de Home Deluxe Constructora"
                             className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-mute transition hover:border-navy hover:text-navy">
                             <FaFacebook size={14} />
                         </a>
@@ -126,6 +127,7 @@ const Footer: React.FC = () => {
                             href="https://www.instagram.com/constructorahomedeluxe"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Instagram de Home Deluxe Constructora"
                             className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-mute transition hover:border-navy hover:text-navy">
                             <FaInstagram size={14} />
                         </a>
@@ -133,6 +135,7 @@ const Footer: React.FC = () => {
                             href="http://wa.me/541136821653"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="WhatsApp de Home Deluxe Constructora"
                             className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-mute transition hover:border-navy hover:text-navy">
                             <FaWhatsapp size={14} />
                         </a>

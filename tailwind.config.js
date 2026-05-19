@@ -11,7 +11,7 @@ export default {
                 paper: '#fafaf7',
                 'paper-2': '#f3f1ea',
                 line: '#e6e2d8',
-                mute: '#6c7689',
+                mute: '#576070',
                 'mute-dark': '#9fb0c8',
                 gold: '#c9a876',
                 'gold-soft': '#d9bd91',
