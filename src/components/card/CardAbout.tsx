@@ -36,11 +36,11 @@ export const CardAbout = ({
                 loading="lazy"
                 decoding="async"
             />
-            <h4 className="m-0 text-[12px] font-semibold uppercase leading-[1.45] tracking-[.22em] text-paper transition-colors duration-200">
+            <h3 className="m-0 text-[12px] font-semibold uppercase leading-[1.45] tracking-[.22em] text-paper transition-colors duration-200">
                 {title}
                 <br />
                 {subtitle}
-            </h4>
+            </h3>
         </div>
     );
 };

@@ -12,6 +12,10 @@ declare module '*.jpg?format=webp&quality=80' {
     const src: string;
     export default src;
 }
+declare module '*.jpeg?format=webp&quality=80' {
+    const src: string;
+    export default src;
+}
 declare module '*.png?format=webp&quality=80' {
     const src: string;
     export default src;
