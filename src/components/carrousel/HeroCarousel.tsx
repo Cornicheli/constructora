@@ -38,6 +38,8 @@ const HeroCarousel = ({
             {slides.map((slide, i) => (
                 <div
                     key={i}
+                    role="img"
+                    aria-label={slide.alt ?? `Slide ${i + 1}`}
                     style={{
                         position: 'absolute',
                         inset: 0,

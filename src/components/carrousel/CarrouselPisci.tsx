@@ -6,10 +6,10 @@ import HeroCarousel from './HeroCarousel';
 import { ArrowRight } from '../icons';
 
 const slides = [
-    { image: piscina2 },
-    { image: piscina01 },
-    { image: piscina4 },
-    { image: piscina5 },
+    { image: piscina2, alt: 'Piscina moderna construida por Home Deluxe en Buenos Aires' },
+    { image: piscina01, alt: 'Piscina residencial con acabado premium' },
+    { image: piscina4, alt: 'Proyecto de piscina terminado con revestimiento de calidad' },
+    { image: piscina5, alt: 'Piscina diseñada a medida en AMBA' },
 ];
 
 const CarrouselPisci = () => (

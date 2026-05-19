@@ -44,6 +44,8 @@ export const Card = ({
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     src={image}
                     alt={title}
+                    loading="lazy"
+                    decoding="async"
                     style={{
                         background:
                             'linear-gradient(180deg, rgba(14,33,56,0) 50%, rgba(14,33,56,.85))',

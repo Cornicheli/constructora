@@ -33,6 +33,8 @@ export const CardAbout = ({
                 }}
                 src={image}
                 alt={alt}
+                loading="lazy"
+                decoding="async"
             />
             <h4 className="m-0 text-[12px] font-semibold uppercase leading-[1.45] tracking-[.22em] text-paper transition-colors duration-200">
                 {title}
