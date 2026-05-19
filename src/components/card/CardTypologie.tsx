@@ -34,8 +34,9 @@ export const CardTypologies = ({
 
             {/* Top left: line label */}
             <div
-                className="absolute left-6 top-6 z-10 flex items-center gap-3 text-sm text-white"
+                className="absolute left-6 top-6 z-10 flex items-center gap-3 text-sm"
                 style={{
+                    color: '#d9bd91',
                     fontFamily: '"Instrument Serif", "Times New Roman", serif',
                     fontStyle: 'italic',
                 }}>
