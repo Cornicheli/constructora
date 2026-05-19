@@ -1,15 +1,13 @@
-import house1 from '../../assets/image/carrousel/house/house1.jpg';
-import house2 from '../../assets/image/carrousel/house/house2.jpg';
-import house3 from '../../assets/image/carrousel/house/house3.png';
-import house4 from '../../assets/image/carrousel/house/house4.jpg';
-import house5 from '../../assets/image/carrousel/house/house5.jpg';
+import house1 from '../../assets/image/carrousel/house/house1.jpg?format=webp&quality=95';
+import house2 from '../../assets/image/carrousel/house/house2.jpg?format=webp&quality=95';
+import house4 from '../../assets/image/carrousel/house/house4.jpg?format=webp&quality=95';
+import house5 from '../../assets/image/carrousel/house/house5.jpg?format=webp&quality=95';
 import HeroCarousel from './HeroCarousel';
 import { ArrowRight } from '../icons';
 
 const slides = [
     { image: house1 },
     { image: house2 },
-    { image: house3 },
     { image: house4 },
     { image: house5 },
 ];

@@ -1,4 +1,3 @@
-import piscina11 from '../../assets/image/carrousel/piscinas/piscina12.jpg';
 import piscina2 from '../../assets/image/carrousel/piscinas/piscina2.webp';
 import piscina4 from '../../assets/image/carrousel/piscinas/piscina4.jpg';
 import piscina01 from '../../assets/Carrusel/piscina01.jpg';
@@ -7,7 +6,6 @@ import HeroCarousel from './HeroCarousel';
 import { ArrowRight } from '../icons';
 
 const slides = [
-    { image: piscina11 },
     { image: piscina2 },
     { image: piscina01 },
     { image: piscina4 },
