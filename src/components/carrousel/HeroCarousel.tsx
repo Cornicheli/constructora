@@ -46,6 +46,9 @@ const HeroCarousel = ({
                         backgroundPosition: 'center',
                         opacity: i === current ? 1 : 0,
                         transition: 'opacity 1s ease',
+                        willChange: 'opacity',
+                        transform: 'translateZ(0)',
+                        filter: 'contrast(1.05) saturate(1.08)',
                     }}>
                     <div
                         style={{
