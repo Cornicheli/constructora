@@ -1,6 +1,6 @@
-import lineaClasica from '../assets/image/typologies/clasica.jpeg';
-import lineaModerna from '../assets/image/typologies/moderna.jpeg';
-import lineaPremium from '../assets/image/typologies/premium.jpeg';
+import lineaClasica from '../assets/image/typologies/clasica.jpeg?format=webp&quality=80';
+import lineaModerna from '../assets/image/typologies/moderna.jpeg?format=webp&quality=80';
+import lineaPremium from '../assets/image/typologies/premium.jpeg?format=webp&quality=80';
 import { CardTypologies } from './card/CardTypologie';
 import { Eyebrow } from './ui';
 

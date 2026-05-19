@@ -40,8 +40,8 @@ const FormContact = () => {
                     <div className="flex flex-col justify-center">
                         {/* Eyebrow */}
                         <div className="mb-4 flex items-center gap-3">
-                            <span className="h-px w-6 bg-gold" />
-                            <span className="text-[11px] font-semibold uppercase tracking-widest text-gold">
+                            <span className="h-px w-6 bg-navy" />
+                            <span className="text-[11px] font-semibold uppercase tracking-widest text-mute">
                                 Hablemos
                             </span>
                         </div>
