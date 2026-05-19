@@ -34,7 +34,7 @@ const piscinasJsonLd = {
 
 const Piscinas = () => {
     return (
-        <span id="piscinas" className="relative">
+        <main id="piscinas" className="relative">
             <SEO
                 title="Construcción de Piscinas en Buenos Aires"
                 description="Diseño y construcción de piscinas con más de 15 años de experiencia. +200 obras realizadas en AMBA y Córdoba. Calidad, responsabilidad y cumplimiento."
@@ -221,7 +221,7 @@ const Piscinas = () => {
             <CardModels />
             <Footer />
             <WhatsappChat />
-        </span>
+        </main>
     );
 };
 

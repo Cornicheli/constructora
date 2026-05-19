@@ -28,7 +28,7 @@ const FormContact = () => {
     };
 
     return (
-        <section className="min-h-screen bg-paper pb-20 pt-24">
+        <main className="min-h-screen bg-paper pb-20 pt-24">
             <SEO
                 title="Contacto"
                 description="Contactate con Home Deluxe Constructora. Estamos en Berazategui, Buenos Aires. Tel: +54 11 36821653. Respondemos a la brevedad."
@@ -184,7 +184,7 @@ const FormContact = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
     );
 };
 
