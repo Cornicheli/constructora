@@ -1,6 +1,6 @@
 import piscina2 from '../../assets/image/carrousel/piscinas/piscina2.webp';
-import piscina4 from '../../assets/image/carrousel/piscinas/piscina4.jpg';
-import piscina01 from '../../assets/Carrusel/piscina01.jpg';
+import piscina4 from '../../assets/image/carrousel/piscinas/piscina4.jpg?format=webp&quality=80';
+import piscina01 from '../../assets/Carrusel/piscina01.jpg?format=webp&quality=80';
 import piscina5 from '../../assets/image/carrousel/piscinas/piscina5.webp';
 import HeroCarousel from './HeroCarousel';
 import { ArrowRight } from '../icons';

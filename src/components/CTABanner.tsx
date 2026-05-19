@@ -13,7 +13,7 @@ const CTABanner = () => {
                 alignItems: 'center',
                 gap: 40,
             }}>
-            <h3
+            <h2
                 className="m-0 font-light leading-[1.15] tracking-[-0.02em]"
                 style={{ fontSize: 'clamp(28px, 2.6vw, 40px)' }}>
                 ¿Tenés un terreno o un proyecto en mente?
@@ -28,7 +28,7 @@ const CTABanner = () => {
                     }}>
                     Conversemos sobre tu casa ideal.
                 </em>
-            </h3>
+            </h2>
             <div className="flex gap-3">
                 <Link
                     to="/contact"

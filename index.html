@@ -27,12 +27,16 @@
         <meta name="twitter:description" content="Empresa constructora con más de 15 años de experiencia en AMBA y Córdoba." />
         <meta name="twitter:image" content="https://homedeluxe.com.ar/og-image.jpg" />
 
-        <!-- Fonts -->
+        <!-- Fonts — async (non-blocking) -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
+        <link rel="preload" as="style"
             href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
-            rel="stylesheet" />
+            onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript>
+            <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" />
+        </noscript>
     </head>
 
     <body>

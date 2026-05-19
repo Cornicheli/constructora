@@ -35,32 +35,68 @@ const HeroCarousel = ({
                 background: '#000',
             }}>
             {/* Slides */}
-            {slides.map((slide, i) => (
-                <div
-                    key={i}
-                    role="img"
-                    aria-label={slide.alt ?? `Slide ${i + 1}`}
-                    style={{
-                        position: 'absolute',
-                        inset: 0,
-                        backgroundImage: `url(${slide.image})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        opacity: i === current ? 1 : 0,
-                        transition: 'opacity 1s ease',
-                        willChange: 'opacity',
-                        transform: 'translateZ(0)',
-                        filter: 'contrast(1.05) saturate(1.08)',
-                    }}>
+            {slides.map((slide, i) =>
+                i === 0 ? (
+                    // First slide: <img> so the browser can fetch it with highest priority (LCP fix)
                     <div
+                        key={0}
                         style={{
                             position: 'absolute',
                             inset: 0,
-                            background: gradient,
-                        }}
-                    />
-                </div>
-            ))}
+                            opacity: current === 0 ? 1 : 0,
+                            transition: 'opacity 1s ease',
+                        }}>
+                        <img
+                            src={slide.image}
+                            alt={slide.alt ?? ''}
+                            {...({ fetchpriority: 'high' } as {})}
+                            loading="eager"
+                            decoding="sync"
+                            style={{
+                                position: 'absolute',
+                                inset: 0,
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                objectPosition: 'center',
+                                filter: 'contrast(1.05) saturate(1.08)',
+                            }}
+                        />
+                        <div
+                            style={{
+                                position: 'absolute',
+                                inset: 0,
+                                background: gradient,
+                            }}
+                        />
+                    </div>
+                ) : (
+                    <div
+                        key={i}
+                        role="img"
+                        aria-label={slide.alt ?? `Slide ${i + 1}`}
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            backgroundImage: `url(${slide.image})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            opacity: i === current ? 1 : 0,
+                            transition: 'opacity 1s ease',
+                            willChange: 'opacity',
+                            transform: 'translateZ(0)',
+                            filter: 'contrast(1.05) saturate(1.08)',
+                        }}>
+                        <div
+                            style={{
+                                position: 'absolute',
+                                inset: 0,
+                                background: gradient,
+                            }}
+                        />
+                    </div>
+                ),
+            )}
 
             {/* Inset frame */}
             <div

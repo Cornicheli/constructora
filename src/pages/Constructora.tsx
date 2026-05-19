@@ -41,7 +41,7 @@ const localBusinessJsonLd = {
 
 const Constructora = () => {
     return (
-        <>
+        <main>
             <SEO
                 title="Diseño y Construcción de Viviendas en Buenos Aires"
                 description="Empresa constructora con más de 15 años de experiencia y 120.000 m² de obras realizadas. Diseñamos, proyectamos y construimos en AMBA y Córdoba."
@@ -55,7 +55,7 @@ const Constructora = () => {
             <CTABanner />
             <Footer />
             <WhatsappChat />
-        </>
+        </main>
     );
 };
 
