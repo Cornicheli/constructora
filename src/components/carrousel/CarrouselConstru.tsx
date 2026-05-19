@@ -6,10 +6,10 @@ import HeroCarousel from './HeroCarousel';
 import { ArrowRight } from '../icons';
 
 const slides = [
-    { image: house1 },
-    { image: house2 },
-    { image: house4 },
-    { image: house5 },
+    { image: house1, alt: 'Fachada de vivienda moderna construida por Home Deluxe' },
+    { image: house2, alt: 'Casa residencial con diseño contemporáneo' },
+    { image: house4, alt: 'Proyecto de vivienda terminado en Buenos Aires' },
+    { image: house5, alt: 'Construcción residencial de alta calidad' },
 ];
 
 const CarrouselConstru = () => (

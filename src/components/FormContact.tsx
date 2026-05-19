@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import React from 'react';
 import { IoLocationSharp } from 'react-icons/io5';
 import { MdWatchLater, MdAlternateEmail, MdSmartphone } from 'react-icons/md';
-import React from 'react';
+import SEO from './SEO';
 
 const interestOptions = [
     'Vivienda nueva',
@@ -28,6 +29,11 @@ const FormContact = () => {
 
     return (
         <section className="min-h-screen bg-paper pb-20 pt-24">
+            <SEO
+                title="Contacto"
+                description="Contactate con Home Deluxe Constructora. Estamos en Berazategui, Buenos Aires. Tel: +54 11 36821653. Respondemos a la brevedad."
+                canonical="/contact"
+            />
             <div className="mx-auto max-w-7xl px-6">
                 <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
                     {/* Left column */}

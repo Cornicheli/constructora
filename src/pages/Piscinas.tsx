@@ -6,11 +6,41 @@ import {
     WhatsappChat,
     Eyebrow,
 } from '../components';
+import SEO from '../components/SEO';
 import piscina1 from '../assets/image/carrousel/piscinas/piscina1.webp';
+
+const piscinasJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'HomeAndConstructionBusiness',
+    name: 'Home Deluxe — Construcción de Piscinas',
+    description:
+        'Diseño y construcción de piscinas con más de 15 años de experiencia y 200+ obras realizadas en AMBA y Córdoba.',
+    url: 'https://homedeluxe.com.ar/piscinas',
+    telephone: '+54-11-36821653',
+    email: 'constructorahomedeluxe@gmail.com',
+    address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Calle 5 4340',
+        addressLocality: 'Berazategui',
+        addressRegion: 'Buenos Aires',
+        addressCountry: 'AR',
+    },
+    areaServed: ['Buenos Aires', 'AMBA', 'Córdoba'],
+    sameAs: [
+        'https://www.facebook.com/constructorahomedeluxe/',
+        'https://www.instagram.com/constructorahomedeluxe',
+    ],
+};
 
 const Piscinas = () => {
     return (
         <span id="piscinas" className="relative">
+            <SEO
+                title="Construcción de Piscinas en Buenos Aires"
+                description="Diseño y construcción de piscinas con más de 15 años de experiencia. +200 obras realizadas en AMBA y Córdoba. Calidad, responsabilidad y cumplimiento."
+                canonical="/piscinas"
+                jsonLd={piscinasJsonLd}
+            />
             <CarrouselPisci />
 
             {/* About pools — 2 column grid */}
